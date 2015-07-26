@@ -1,0 +1,142 @@
+*
+{
+margin: 0;
+padding: 0;
+}
+
+#background
+{
+position: absolute;
+width: 100%;
+height: 400%;
+z-index: -50;
+/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#74e21f+0,31ad18+20,74e21f+37,ffffff+50,74e21f+65,31ad18+81,74e21f+100 */
+background: #74e21f; /* Old browsers */
+background: -moz-linear-gradient(left,  #74e21f 0%, #31ad18 20%, #74e21f 37%, #ffffff 50%, #74e21f 65%, #31ad18 81%, #74e21f 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, right top, color-stop(0%,#74e21f), color-stop(20%,#31ad18), color-stop(37%,#74e21f), color-stop(50%,#ffffff), color-stop(65%,#74e21f), color-stop(81%,#31ad18), color-stop(100%,#74e21f)); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(left,  #74e21f 0%,#31ad18 20%,#74e21f 37%,#ffffff 50%,#74e21f 65%,#31ad18 81%,#74e21f 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(left,  #74e21f 0%,#31ad18 20%,#74e21f 37%,#ffffff 50%,#74e21f 65%,#31ad18 81%,#74e21f 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(left,  #74e21f 0%,#31ad18 20%,#74e21f 37%,#ffffff 50%,#74e21f 65%,#31ad18 81%,#74e21f 100%); /* IE10+ */
+background: linear-gradient(to right,  #74e21f 0%,#31ad18 20%,#74e21f 37%,#ffffff 50%,#74e21f 65%,#31ad18 81%,#74e21f 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#74e21f', endColorstr='#74e21f',GradientType=1 ); /* IE6-9 */
+}
+
+#regular_header /* +3% top difference from #regular_table */
+{
+position: absolute;
+top: 60%;
+width: 100%;
+height: auto;
+text-align: center;
+font-family: bearpawregular;
+font-size: 4vw;
+}
+
+#regular_table
+{
+position: absolute;
+text-align: center;
+top: 63%;
+}
+
+#regular_table table
+{
+border-collapse: collapse;
+margin-top: 2%;
+}
+
+#regular_table th
+{
+border: 0.1em solid #000;
+font-size: 1.3vw;
+font-family: hamburgerheavenregular;
+border-bottom: none;
+}
+
+#regular_table tr.alt th
+{
+border: 0.1em solid #000;
+font-size: 1.3vw;
+font-family: hamburgerheavenregular;
+border-top: none;
+}
+
+#regular_table td
+{
+border-left: 0.1em solid #000;
+border-right: 0.1em solid #000;
+border-top: none;
+font-size: 1.3vw;
+font-family: hamburgerheavenregular;
+}
+
+#regular_table img
+{
+border: 0.2em outset #999;
+border-top-left-radius: 10%;
+border-bottom-right-radius: 10%;
+margin-top: 2%;
+margin-bottom: 2%;
+width: 70%;
+height: auto;
+}
+
+#combination_header /* +3% top difference from #regular_table */
+{
+position: absolute;
+top: 155%;
+width: 100%;
+height: auto;
+text-align: center;
+font-family: bearpawregular;
+font-size: 4vw;
+}
+
+#combination_table
+{
+position: absolute;
+text-align: center;
+top: 158%;
+}
+
+#combination_table table
+{
+border-collapse: collapse;
+margin-top: 2%;
+}
+
+#combination_table th
+{
+border: 0.1em solid #000;
+font-size: 1.3vw;
+font-family: hamburgerheavenregular;
+border-bottom: none;
+}
+
+#combination_table tr.alt th
+{
+border: 0.1em solid #000;
+font-size: 1.3vw;
+font-family: hamburgerheavenregular;
+border-top: none;
+}
+
+#combination_table td
+{
+border-left: 0.1em solid #000;
+border-right: 0.1em solid #000;
+border-top: none;
+font-size: 1.3vw;
+font-family: hamburgerheavenregular;
+}
+
+#combination_table img
+{
+border: 0.2em outset #999;
+border-top-left-radius: 10%;
+border-bottom-right-radius: 10%;
+margin-top: 2%;
+margin-bottom: 2%;
+width: 70%;
+height: auto;
+}
