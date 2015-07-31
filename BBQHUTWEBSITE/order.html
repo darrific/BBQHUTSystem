@@ -10,10 +10,96 @@
 <title></title>
 
 <body>	
+	<div id="order_container">
+		<div id="header"><h1>Make Your Order</h1></div>
+		<div id="main_box">
+			<div id="meat_container">
+				<div id="subhead1" class="subhead">
+					Choose Your Meat
+				</div>
+				<div id="options_container">
+					<ul>
+						<li>
+							<div class="meat_option" id="chicken">
+								<ul>
+									<li id="image"><img src="images/food.jpeg" alt=""></li>
+									<li id="name">Chicken</li>						
+									<li id="add1" class="add">+</li>
+								</ul>
+
+							</div>
+						</li>
+						<li>
+							<div class="meat_option" id="lamb">
+								<ul>
+									<li id="image"><img src="images/food.jpeg" alt=""></li>
+									<li id="name">Lamb</li>
+									<li id="add2" class="add">+</li>
+								</ul>
+							</div>
+						</li>
+						<li>
+							<div class="meat_option" id="beef">
+								<ul>
+									<li id="image"><img src="images/food.jpeg" alt=""></li>
+									<li id="name">beef</li>
+									<li id="add3" class="add">+</li>
+								</ul>
+							</div>
+						</li>
+						<li>
+							<div class="meat_option" id="fish">
+								<ul>
+									<li id="image"><img src="images/food.jpeg" alt=""></li>
+									<li id="name">fish</li>
+									<li id="add4" class="add">+</li>
+								</ul>
+							</div>
+						</li>
+						<li>
+							<div class="meat_option" id="shimp">
+								<ul>
+									<li id="image"><img src="images/food.jpeg" alt=""></li>
+									<li id="name">shrimp</li>
+									<li id="add5" class="add">+</li>
+								</ul>
+							</div>
+						</li>
+						<li>
+							<div class="meat_option" id="none_meat">
+								<ul>
+									<li id="image"><img src="images/food.jpeg" alt=""></li>
+									<li id="name">none	</li>
+									<li id="add6" class="add">+</li>
+								</ul>
+							</div>
+						</li>
+					</ul>
+
+				</div>
+					
+				</ul> 
+			</div>
+			<div id="review_container">
+				<div id="subhead1" class="subhead">
+					Review Your Order
+
+				</div>
+			</div>
+		</div>
+	</div>
 </body>
 
 <footer>
-	<script> //JAVASCRIPT- this makes the buttons do stuff
+	<script> //chicken,lamb,beef,shrimp,fish
+	$(document).ready(function(){
+		$(".add").click(function(tag){
+			var click = tag.target;
+			var current_id = click.id;
+			var ide = current_id.substring(3,4);
+			alert(ide);
+		});
+	});
 	</script>
 </footer>
 
