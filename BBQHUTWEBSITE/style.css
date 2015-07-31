@@ -259,11 +259,77 @@ fill: white;
 fill:#3BCE4C;
 }
 
+/*+++++++About Us Mobile Page +++++++++*/
+#AboutUs
+{
+position: absolute;
+height: 100%;
+width: 100%;
+background-color: #3b3;
+z-index: -1000
+}
 
+#menubutton
+{
+position: absolute;
+background-color: black;
+height: 6%;
+width:10%;
+top:0%;
+left: 0%;
+color: white;
+}
 
+#blueboxtop
+{
+position: relative;
+background-color: blue;
+height:6%;
+width:50%;
+top: 0%;
+left: 22%;
+}
 
+#AboutUsHead
+{
+position: relative;
+background-color: orange;
+height: 4%;
+width:30%;
+top: 12%;
+left: 32%;
+font-size: 7vw
+}
 
+#aboutusbox
+{
+position: relative;
+background-color: white;
+height: 14%;
+width:60%;
+top: 22%;
+left: 18%;
+font-size: 3vw
+}
 
+#about_picture
+{
+position: relative;
+background-color: none;
+height: 14%;
+width:55%;
+top: 2%;
+left: 40%;
+font-size: 3vw;
+z-index: -5;
+}
 
+#about_picture img
+{
+position: relative;
+height: 100%;
+width: 100%;
+left: 0%;
+}
 
-
+/*About Us Mobile Ends*/
