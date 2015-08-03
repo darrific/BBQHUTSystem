@@ -21,7 +21,7 @@ text-align: center;
 /*orders page*/
 body
 {
-background-color: #C5DDC3
+background-color: #C5DDC3;
 }
 
 #order_container
@@ -178,7 +178,7 @@ margin-top: -10%;
 position: absolute;
 width: 28%;
 height: 13%;
-top: 50%;
+top: 55%;
 transform: translate(16%,-50%);
 }
 
@@ -187,7 +187,7 @@ transform: translate(16%,-50%);
 position: absolute;
 width: 28%;
 height: 13%;
-top: 50%;
+top: 55%;
 left: 68%;
 transform: translate(0,-50%);
 }
@@ -277,8 +277,13 @@ cursor: pointer;
 position: absolute;
 height: 100%;
 width: 100%;
+<<<<<<< HEAD
 background-color: #3b3;
 z-index: -1000;
+=======
+background-color: #fff;
+z-index: -1000
+>>>>>>> 0ece10b5eae2af0575af430289c5ae58219a193a
 }
 
 #menubutton
@@ -300,24 +305,28 @@ height:6%;
 width:50%;
 top: 0%;
 left: 22%;
+color: black;
+font-size: 5vw
 }
 
 #AboutUsHead
 {
 position: relative;
-background-color: orange;
-height: 4%;
-width:30%;
-top: 12%;
-left: 32%;
-font-size: 7vw;
+background-color: none;
+height: 6%;
+width:40%;
+top: 8%;
+left: 26%;
+font-size: 9vw;
+font-family: opensanslight;
+color:white;
 }
 
 #aboutusbox
 {
-position: relative;
-background-color: white;
-height: 14%;
+position: absolute;
+background-color: none;
+height: 10vh;
 width:60%;
 top: 22%;
 left: 18%;
@@ -326,22 +335,22 @@ font-size: 3vw;
 
 #about_picture
 {
-position: relative;
+position: absolute;
 background-color: none;
-height: 14%;
-width:55%;
-top: 2%;
-left: 40%;
+height: 45%;
+width: 100%;
+top: 9%;
+left:0%;
 font-size: 3vw;
 z-index: -5;
 }
 
 #about_picture img
 {
-position: relative;
+position: absolute;
 height: 100%;
 width: 100%;
-left: 0%;
 }
+
 
 /*About Us Mobile Ends*/
