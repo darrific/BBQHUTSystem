@@ -18,12 +18,22 @@ text-align: center;
 
 /*end*/
 
-/*orders page*/
 body
 {
 background-color: #C5DDC3;
 -webkit-user-select: none;
 }
+
+/*=================orders page=================*/
+
+#navigation_bar_order
+{
+position: fixed;
+top: 0%;
+width: 100%;
+z-index: 5;
+}
+
 
 #order_container
 {
@@ -321,6 +331,16 @@ top: 0%;
 width: 100%;
 height: 100%;
 }
+
+#navigation_bar_index
+{
+position: fixed;
+top: 0%;
+width: 100%;
+z-index: 5;
+display: none;
+}
+
 
 #background_image
 {
@@ -710,7 +730,7 @@ text-align: center;
 #regular_meals
 {
 position: absolute;
-top: 30%;
+top: 25%;
 width: 100%;
 height: 100%;
 }
@@ -718,7 +738,7 @@ height: 100%;
 #regular_meals_title
 {
 position: absolute;
-top: 15%;
+top: 25%;
 left: 32%;
 font-size: 5vw;
 font-family: asgalt;
@@ -728,7 +748,7 @@ color: #444;
 #regular_meals_images
 {
 position: absolute;
-top: 28%;
+top: 35%;
 left: 5%;
 width: 40%;
 height: 40%;
@@ -792,7 +812,7 @@ height: 100%;
 #combination_meals_title
 {
 position: absolute;
-top: 15%;
+top: 25%;
 left: 55%;
 font-size: 5vw;
 font-family: asgalt;
@@ -802,7 +822,7 @@ color: #444;
 #combination_meals_images
 {
 position: absolute;
-top: 28%;
+top: 35%;
 right: 5%;
 width: 40%;
 height: 40%;
@@ -832,7 +852,7 @@ width: 100%;
 #combination_meals_options
 {
 position: absolute;
-top: 20%;
+top: 25%;
 left: 15%;
 }
 
@@ -869,7 +889,7 @@ height: 100%;
 #sides_meals_title
 {
 position: absolute;
-top: 5%;
+top: 20%;
 left: 50%;
 transform:translate(-50%, 0);
 font-size: 5vw;
@@ -877,57 +897,33 @@ font-family: asgalt;
 color: #444;
 }
 
-#sides_meals_table
+#sides_meals_lists
 {
 position: absolute;
-top: 18%;
-width: 100%;
-height: 80.5%;
-}
-
-#sides_meals_table tr
-{
-text-align: center;
-}
-
-#sides_meals_table th
-{
-font-size: 1.2vw;
-font-family: oranienbaum;
+top: 40%;
+left: 42%;
 width: 20%;
+height: auto;
 }
 
-#sides_meals_table td
+#sides_meals_lists li
 {
+font-family: bebasregular;
+font-size: 1.6vw;
+text-align: left;
+list-style-image: url('images/sides.png');
+padding-left: 5%;
+margin-bottom: 3%;
 }
-
-#sides_meals_table img
-{
-width: 80%;
-border: 0.5em solid #E8FFEC;
-border-top-right-radius: 1em;
-border-bottom-left-radius: 1em;
-margin-top: 4%;
-margin-bottom: 9%;
-}
-
 
 /*======================= NAV BAR ========================*/
-
-#navigation_bar_index
-{
-position: fixed;
-top: 0%;
-width: 100%;
-z-index: 5;
-display: none;
-}
 
 nav 
 {
 text-align: center;
 background-color: #F7AC27;
 width: 100%;
+z-index: 5;
 }
 
 nav ul
@@ -959,4 +955,36 @@ nav a:hover
 {
 -webkit-transition: color 0.1s ease-in;
 color: #999;
+}
+
+nav ul li ul
+{
+position: absolute;
+background-color: #F7AC27;
+visibility: hidden;
+width: 19.8%;
+height: auto;
+left: 20%;
+z-index: 5;
+}
+
+nav ul li:hover > ul,nav ul li ul:hover
+{
+visibility: visible;
+}
+
+nav ul li ul li
+{
+width: 100%;
+}
+
+nav ul li ul li:hover
+{
+background-color: #9B6D1C;
+}
+
+nav ul li ul li a
+{
+padding-top: 5%;
+padding-bottom: 5%;
 }
