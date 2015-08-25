@@ -178,11 +178,13 @@ color: red;
 #edit_box
 {
 position: absolute;
-width: 25%;
+width: 35%;
 height: 70%;
 background-color: white;
 overflow: hidden;
 display: none;
+top: 26%;
+left: 98%;
 }
 
 #edit_box img
@@ -197,7 +199,7 @@ height: 20%;
 {
 position: absolute;
 width: 96%;
-height: 50%;
+height: 75%;
 top: 23%;
 padding: 2%;
 }
@@ -240,7 +242,7 @@ background-color: #C98001;
 position: absolute;
 width: 100%;
 height: 10%;
-margin-top: 120%;
+margin-top: 190%;
 }
 
 #quantity
@@ -292,6 +294,21 @@ margin-top: -4%;
 margin-left: 19%;
 }
 
+#total
+{
+position: fixed;
+width: 49%;
+height: 10%;
+top: 92.7%;
+background-color: white;
+}
+
+#total>h2
+{
+margin-top: 5%;
+margin-left: 8%;
+color: red;
+}
 /*end of orders page*/
 
 /*===================INDEX=================*/

@@ -98,39 +98,42 @@
 						{{/order_result}}
 					</script>
 				</ul>
+				<div id="total">
+					<h2>TOTAL: </h2>
+				</div>
 			</div>
-			<div id="edit_box">
-			<img src="images/bbq.jpg" alt=":/">
-			<div id="size">
-			<h2>SIZE</h2>
-			<ul id="sizes">
-				<li>Small ($35)</li>
-				<li>Medium ($45)</li>
-				<li>Large ($55)</li>
-			</ul>
-			</br>	
-			<h2>SIDES</h2>
-			<ul id="sides">
-				<li>Salad (Free) <input id="toggle" type="checkbox"><label for="toggle"></li>
-				<li>Fries (Free)<input id="toggle" type="checkbox"><label for="toggle"></li>
-				<li>Mashed Potato ($5)<input id="toggle" type="checkbox"><label for="toggle"></li>	
-				<li>Wedges ($5)<input id="toggle" type="checkbox"><label for="toggle"></li>
-				<li>Corn ($5)<input id="toggle" type="checkbox"><label for="toggle"></li>
-			</ul>
-			</br>
-			<h2>QUANTITY: </h2>
-			<ul id="quantity">
-				<li>+</li>
-				<li>-</li>
-			</ul>
-			</div>
-			</br>
-			<div id="subtotal">
-				<h2>Subtotal: </h2>
-			</div>
-			</div>
-		</div>
 	</div>
+	<div id="edit_box">
+				<img src="images/bbq.jpg" alt=":/">
+				<div id="size">
+					<h2>SIZE</h2>
+					<ul id="sizes">
+						<li>Small ($35)</li>
+						<li>Medium ($45)</li>
+						<li>Large ($55)</li>
+					</ul>
+					</br>	
+					<h2>SIDES</h2>
+					<ul id="sides">
+						<li>Salad (Free) <input id="toggle" type="checkbox"><label for="toggle"></li>
+						<li>Fries (Free)<input id="toggle" type="checkbox"><label for="toggle"></li>
+						<li>Mashed Potato ($5)<input id="toggle" type="checkbox"><label for="toggle"></li>	
+						<li>Wedges ($5)<input id="toggle" type="checkbox"><label for="toggle"></li>
+						<li>Corn ($5)<input id="toggle" type="checkbox"><label for="toggle"></li>
+					</ul>
+					</br>
+					<h2>QUANTITY: </h2>
+					<ul id="quantity">
+						<li>+</li>
+						<li>-</li>
+					</ul>
+					</div>
+					</br>
+					<div id="subtotal">
+						<h2>Subtotal: </h2>
+					</div>
+				</div>
+			</div>
 </body>
 
 <footer>
@@ -150,11 +153,16 @@
 		var $popup = $('#edit_box');
 		var counter = 0;
 
+		//=======================
+
+		
+		//=======================
+
 		//bind events
 		$add.on("click", addMeat);
 		$ul.delegate('i.del', 'click', deleteMeat);
 		$ul.delegate('j.edit_', 'click', editMeat);
-
+ 
 		render();
 
 		function render(){
@@ -163,15 +171,15 @@
 		}
 
 		function addMeat(evenh){
-			var $info = $container.find(evenh.target).prev().html();
-			order_result.push($info);
-			edit_array.push(order_number);
-			order_number++;
-			render();
-
 			// var $info = $container.find(evenh.target).prev().html();
 			// order_result.push($info);
+			// edit_array.push(order_number);
+			// order_number++;
 			// render();
+
+			var $info = $container.find(evenh.target).prev().html();
+			order_result.push($info); //pushing the info (eg "Chicken") to the array
+			render();
 		}
 
 		function deleteMeat(even){
@@ -183,17 +191,18 @@
 		}
 
 		function editMeat(e){
-			var test = edit_array;
-			alert(test);
-			// if (counter === 0)
-			// {
-			// 	$popup.fadeIn(1000);	
-			// 	counter++;
-			// }else
-			// {
-			// 	$popup.fadeOut(1000);
-			// 		counter--;
-			// }
+			// var test = edit_array;
+			// alert(test);
+
+			if (counter === 0)
+			{
+				$popup.fadeIn(1000);	
+				counter++;
+			}else
+			{
+				$popup.fadeOut(1000);
+					counter--;
+			}
 			
 
 		}
