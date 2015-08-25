@@ -153,6 +153,174 @@ font-size: 2vw;
 color: red;
 cursor: pointer;
 }
+<<<<<<< HEAD
+=======
+
+#review_container
+{
+overflow-y: auto;
+}
+
+#review_container ul
+{
+background-color: #777;
+margin-top: 8%;
+}
+
+#review_container li
+{
+list-style-type: none;
+padding: 5%;
+}
+
+.del
+{
+float: right;
+color: white;
+font-family: arial;
+}
+
+.del:hover
+{
+cursor: pointer;
+color: red;
+}
+
+#edit_box
+{
+position: absolute;
+width: 35%;
+height: 70%;
+background-color: white;
+overflow: hidden;
+display: none;
+top: 26%;
+left: 98%;
+}
+
+#edit_box img
+{
+position: absolute;
+overflow: hidden;
+width: 100%;
+height: 20%;
+}
+
+#size
+{
+position: absolute;
+width: 96%;
+height: 75%;
+top: 23%;
+padding: 2%;
+}
+
+#sizes li
+{
+list-style-type: none;
+display: inline-block;
+padding: 5%;
+background-color: #999;	
+}
+
+#sides li
+{
+list-style-type: none;
+background-color: #999;
+padding-top: 2%;
+padding-bottom: 2%;
+}
+
+#toggle
+{
+float: right;
+}
+
+#sizes li:hover
+{
+cursor: pointer;
+background-color: #C98001;
+}
+
+#sides li:hover
+{
+cursor: pointer;
+background-color: #C98001;
+}
+
+#subtotal
+{
+position: absolute;
+width: 100%;
+height: 10%;
+margin-top: 190%;
+}
+
+#quantity
+{
+
+}
+
+#quantity li
+{
+list-style-type: none;
+display: inline-block;
+float: right;
+width: 20px;
+height: 20px;
+padding: 2%;
+margin-left: 1%;
+background-color: #111;
+color: white;
+text-transform: bold;
+border-radius: 10px;
+text-align: center;
+}
+
+#quantity li:hover
+{
+cursor: pointer;
+background-color: #888;
+}
+
+.edit_
+{
+padding: 1%;
+background-color: #CF8F04;
+margin-top: -1%;
+margin-left: 80%;
+}
+
+.edit_:hover
+{
+cursor: pointer;
+background-color: white;
+color: red;
+}
+
+#inner_buttons
+{
+width: 80%;
+margin-top: -4%;
+margin-left: 19%;
+}
+
+#total
+{
+position: fixed;
+width: 49%;
+height: 10%;
+top: 92.7%;
+background-color: white;
+}
+
+#total>h2
+{
+margin-top: 5%;
+margin-left: 8%;
+color: red;
+}
+>>>>>>> 922a3f3d6de795befd041a7dc8115babc5420d9e
 /*end of orders page*/
 
 /*===================INDEX=================*/

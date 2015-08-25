@@ -103,13 +103,65 @@
 					Review Your Order
 
 				</div>
+<<<<<<< HEAD
 			</div>
 		</div>
+=======
+				<ul id="order_result">
+					<script id="order_template" type="text/template">
+						{{#order_result}}
+						<li>
+							<span>{{.}}</span>
+							<div id="inner_buttons">
+								<j class= "edit_">EDIT</j>
+								<i class="del">X</i>
+							</div>
+						</li>
+						{{/order_result}}
+					</script>
+				</ul>
+				<div id="total">
+					<h2>TOTAL: </h2>
+				</div>
+			</div>
+>>>>>>> 922a3f3d6de795befd041a7dc8115babc5420d9e
 	</div>
+	<div id="edit_box">
+				<img src="images/bbq.jpg" alt=":/">
+				<div id="size">
+					<h2>SIZE</h2>
+					<ul id="sizes">
+						<li>Small ($35)</li>
+						<li>Medium ($45)</li>
+						<li>Large ($55)</li>
+					</ul>
+					</br>	
+					<h2>SIDES</h2>
+					<ul id="sides">
+						<li>Salad (Free) <input id="toggle" type="checkbox"><label for="toggle"></li>
+						<li>Fries (Free)<input id="toggle" type="checkbox"><label for="toggle"></li>
+						<li>Mashed Potato ($5)<input id="toggle" type="checkbox"><label for="toggle"></li>	
+						<li>Wedges ($5)<input id="toggle" type="checkbox"><label for="toggle"></li>
+						<li>Corn ($5)<input id="toggle" type="checkbox"><label for="toggle"></li>
+					</ul>
+					</br>
+					<h2>QUANTITY: </h2>
+					<ul id="quantity">
+						<li>+</li>
+						<li>-</li>
+					</ul>
+					</div>
+					</br>
+					<div id="subtotal">
+						<h2>Subtotal: </h2>
+					</div>
+				</div>
+			</div>
 </body>
 
 <footer>
 	<script> //chicken,lamb,beef,shrimp,fish
+<<<<<<< HEAD
 	$(document).ready(function(){
 		$(".add").click(function(tag){
 			var click = tag.target;
@@ -118,6 +170,77 @@
 			alert(ide);
 		});
 	});
+=======
+	var choose_meat = (function(){
+		var order_result= [];
+		var order_no= [];
+		var edit_array= [];
+		var order_number= 0;
+		//cache DOM
+		var $container = $('#options_container');
+		var $reviewContainer = $('#review_container');
+		var $add = $container.find('.add');
+		var $ul = $reviewContainer.find('#order_result');
+		var template = $reviewContainer.find('#order_template').html();
+		var b_edit = $('.edit_');
+		var $popup = $('#edit_box');
+		var counter = 0;
+
+		//=======================
+
+		
+		//=======================
+
+		//bind events
+		$add.on("click", addMeat);
+		$ul.delegate('i.del', 'click', deleteMeat);
+		$ul.delegate('j.edit_', 'click', editMeat);
+ 
+		render();
+
+		function render(){
+			$ul.html(Mustache.render(template, {order_result: order_result}));	
+				
+		}
+
+		function addMeat(evenh){
+			// var $info = $container.find(evenh.target).prev().html();
+			// order_result.push($info);
+			// edit_array.push(order_number);
+			// order_number++;
+			// render();
+
+			var $info = $container.find(evenh.target).prev().html();
+			order_result.push($info); //pushing the info (eg "Chicken") to the array
+			render();
+		}
+
+		function deleteMeat(even){
+			var i;
+			var $remove = $(even.target).closest('li');
+			i = $ul.find('li').index($remove);
+			order_result.splice(i,1);
+			render();
+		}
+
+		function editMeat(e){
+			// var test = edit_array;
+			// alert(test);
+
+			if (counter === 0)
+			{
+				$popup.fadeIn(1000);	
+				counter++;
+			}else
+			{
+				$popup.fadeOut(1000);
+					counter--;
+			}
+			
+
+		}
+	})();
+>>>>>>> 922a3f3d6de795befd041a7dc8115babc5420d9e
 	</script>
 </footer>
 
