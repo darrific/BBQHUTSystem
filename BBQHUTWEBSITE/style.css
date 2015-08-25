@@ -145,13 +145,21 @@ cursor: pointer;
 }
 /*end of orders page*/
 
+/*===================INDEX=================*/
 
+#index
+{
+position: absolute;
+top: 0%;
+width: 100%;
+height: 100%;
+}
 
 #background_image
 {
 position: absolute;
 width: 100%;
-height: 350%;
+height: 100%;
 overflow: hidden;
 }
 
@@ -204,17 +212,16 @@ display: inline-block;
 padding-top: 9%;
 padding-bottom: 9%;
 width: 49%;
-background-color: #6C123C;
+background-color: #F7AC27;
 text-align: center;
-color: #28BE00;
+color: #444;
 font-size: 1.5vw;
 font-family: bebasregular;
 }
 
 #nav_bar_left li:hover
 {
-cursor: pointer;
-background-color: #894162;
+background-color: #999;
 }
 
 #nav_bar_right ul
@@ -229,9 +236,9 @@ display: inline-block;
 padding-top: 9%;
 padding-bottom: 9%;
 width: 49%;
-background-color: #6C123C;
+background-color: #F7AC27;
 text-align: center;
-color: #28BE00;
+color: #444;
 font-size: 1.5vw;
 font-family: bebasregular;
 }
@@ -239,7 +246,19 @@ font-family: bebasregular;
 #nav_bar_right li:hover
 {
 cursor: pointer;
-background-color: #894162;
+background-color: #999;
+}
+
+#left_menu
+{
+border-top-left-radius: 0.5em;
+border-bottom-left-radius: 0.5em;
+}
+
+#right_menu
+{
+border-top-right-radius: 0.5em;
+border-bottom-right-radius: 0.5em;
 }
 
 .down_arrow
@@ -316,19 +335,25 @@ width: 100%;
 height: 100%;
 }
 
+#about_us
+{
+position: absolute;
+top: 125%;
+width: 100%;
+height: 100%;
+background-color: green;
+}
+
 /*+++++++About Us Mobile Page +++++++++*/
 #AboutUs
 {
 position: absolute;
 height: 100%;
 width: 100%;
-<<<<<<< HEAD
 background-color: #3b3;
 z-index: -1000;
-=======
 background-color: #fff;
 z-index: -1000
->>>>>>> 0ece10b5eae2af0575af430289c5ae58219a193a
 }
 
 #menubutton
@@ -399,3 +424,374 @@ width: 100%;
 
 
 /*About Us Mobile Ends*/
+
+
+/*=========================== CONTACT US PAGE ==============================*/
+
+#contact_us
+{
+position: absolute;
+top: 250%;
+width: 100%;
+height: 100%;
+}
+
+#contactus_title
+{
+position: absolute;
+top: 20%;
+width: 100%;
+height: 12%;
+font-size: 4vw;
+font-family: asgalt;
+text-align: center;
+}
+
+#recenter_map
+{
+position: absolute;
+top: 35%;
+left: 94.7%;
+width: 5%;
+z-index: 1;
+}
+
+#recenter_map button
+{
+width: 100%;
+text-align: center;
+font-size: 0.8vw;
+background-color: #DCFFDF;
+}
+
+#contact_info
+{
+position: absolute;
+top: 40%;
+left: 5%;
+width: 35%;
+height: 40%;
+}
+
+#contact_info table
+{
+width: 100%;
+height: 100%;
+text-align: center;
+opacity: 0.8;
+font-size: 0.8vw;
+font-family: opensansregular;
+}
+	
+#contact_info tr
+{
+height: 50%;
+}
+
+#contact_info td
+{
+width: 50%;
+background-color: #999;
+}
+
+#contact_info b
+{
+font-family: bebasregular;
+font-size: 2vw;
+color: #C5DDC3;
+}
+
+#contact_info li
+{
+list-style-type: none;
+}
+
+#onlinecontact
+{
+margin-left: 50%;
+transform: translate(-50%,0);
+width: 60%;
+height: 30%;
+}
+
+#onlinecontact li
+{
+margin-top: 5%;
+width: 40%;
+display: inline-block;
+}
+
+/* ============================MENU================================== */
+#navigation_bar_menu
+{
+position: fixed;
+top: 0%;
+width: 100%;
+z-index: 5;
+}
+
+#menu_title
+{
+position: absolute;
+top: 20%;
+width: 100%;
+height: 12%;
+z-index: 2;
+font-size: 4vw;
+font-family: asgalt;
+text-align: center;
+}
+
+#regular_meals
+{
+position: absolute;
+top: 30%;
+width: 100%;
+height: 100%;
+}
+
+#regular_meals_title
+{
+position: absolute;
+top: 15%;
+left: 32%;
+font-size: 5vw;
+font-family: asgalt;
+color: #444;
+}
+
+#regular_meals_images
+{
+position: absolute;
+top: 28%;
+left: 5%;
+width: 40%;
+height: 40%;
+overflow: hidden;
+}
+
+#regular_meals_images ul
+{
+display: block;
+width: 500%;
+height: 25em;
+overflow: hidden;
+}
+
+#regular_meals_images li
+{
+float: left;
+list-style-type: none;
+width: 20%;
+}
+
+#regular_meals_images img
+{
+width: 100%;
+}
+
+#regular_meals_options
+{
+position: absolute;
+top: 25%;
+left: 55%;
+width: 40%;
+}
+
+#regular_meals_options ul
+{
+text-align: left;
+}
+
+#regular_meals_options h1
+{
+font-family: oranienbaum;
+}
+
+#regular_meals_options li
+{
+font-size: 1vw;
+list-style-type: none;
+margin-bottom: 10%;
+width: 90%;
+}
+
+#combination_meals
+{
+position: absolute;
+top: 130%;
+width: 100%;
+height: 100%;
+}
+
+#combination_meals_title
+{
+position: absolute;
+top: 15%;
+left: 55%;
+font-size: 5vw;
+font-family: asgalt;
+color: #444;
+}
+
+#combination_meals_images
+{
+position: absolute;
+top: 28%;
+right: 5%;
+width: 40%;
+height: 40%;
+overflow: hidden;
+}
+
+#combination_meals_images ul
+{
+display: block;
+width: 500%;
+height: 25em;
+overflow: hidden;
+}
+
+#combination_meals_images li
+{
+float: left;
+list-style-type: none;
+width: 20%;
+}
+
+#combination_meals_images img
+{
+width: 100%;
+}
+
+#combination_meals_options
+{
+position: absolute;
+top: 20%;
+left: 15%;
+}
+
+#combination_meals_options ul
+{
+text-align: right;
+}
+
+#combination_meals_options h1
+{
+font-family: oranienbaum;
+}
+
+#combination_meals_options li
+{
+font-size: 1vw;
+list-style-type: none;
+margin-bottom: 10%;
+}
+
+.selected_option
+{
+background-color: #ECFFEF;
+}
+
+#sides_meals
+{
+position: absolute;
+top: 230%;
+width: 100%;
+height: 100%;
+}
+
+#sides_meals_title
+{
+position: absolute;
+top: 5%;
+left: 50%;
+transform:translate(-50%, 0);
+font-size: 5vw;
+font-family: asgalt;
+color: #444;
+}
+
+#sides_meals_table
+{
+position: absolute;
+top: 18%;
+width: 100%;
+height: 80.5%;
+}
+
+#sides_meals_table tr
+{
+text-align: center;
+}
+
+#sides_meals_table th
+{
+font-size: 1.2vw;
+font-family: oranienbaum;
+width: 20%;
+}
+
+#sides_meals_table td
+{
+}
+
+#sides_meals_table img
+{
+width: 80%;
+border: 0.5em solid #E8FFEC;
+border-top-right-radius: 1em;
+border-bottom-left-radius: 1em;
+margin-top: 4%;
+margin-bottom: 9%;
+}
+
+
+/*======================= NAV BAR ========================*/
+
+#navigation_bar_index
+{
+position: fixed;
+top: 0%;
+width: 100%;
+z-index: 5;
+display: none;
+}
+
+nav 
+{
+text-align: center;
+background-color: #F7AC27;
+width: 100%;
+}
+
+nav ul
+{
+width: 100%;
+height: 15%;
+}
+
+nav li
+{
+list-style-type: none;
+display: inline-block;
+width: 19.8%;
+}
+
+nav a
+{
+text-align: center;
+display: block;
+text-decoration: none;
+font-size: 1.5vw;
+font-family: bebasregular;
+color: #444;
+padding-top: 7%;
+padding-bottom: 15%;
+}
+
+nav a:hover
+{
+-webkit-transition: color 0.1s ease-in;
+color: #999;
+}
