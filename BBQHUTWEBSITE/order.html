@@ -3,14 +3,31 @@
 <html>
 
 <link rel="stylesheet" type="text/css" href="style.css">
-<link rel="stylesheet" type="text.css" href="animate.css">
-<link rel="stylesheet" type="text.css" href="fonts.css">
+<link rel="stylesheet" type="text/css" href="animate.css">
+<link rel="stylesheet" type="text/css" href="fonts.css">
 <script type="text/javascript" src="jquery.js"></script>
-<script type="text/javascript" src="mustache.js"></script>
 
-<title>BBQH | Make an Order</title>
+<title></title>
 
-<body>	
+<body>
+	<div id="navigation_bar_order">
+		<nav>	
+			<ul>
+				<li><a href="#" id="logo_image"></a></li>
+				<li><a href="menu.html" id="see_menu_button">SEE THE MENU &#9663</a>
+					<ul class="dropdown">
+				        <li><a href="menu.html#regular_meals">Meats</a></li>
+				        <li><a href="menu.html#combination_meals">Combinations Meals</a></li>
+				        <li class="sides_drop_option"><a href="#sides_meals">Sides</a></li>
+			      </ul>
+				</li>
+				<li><a href="order.html" id="place_order_button">PLACE AN ORDER</a></li>
+				<li><a href="index.html#about_us" id="about_us_button">ABOUT US</a></li>
+				<li><a href="index.html#contact_us" id="contact_us_button">CONTACT US</a></li>
+			</ul>
+		</nav>	
+	</div>
+
 	<div id="order_container">
 		<div id="header"><h1>Make Your Order</h1></div>
 		<div id="main_box">
@@ -43,7 +60,7 @@
 							<div class="meat_option" id="beef">
 								<ul>
 									<li id="image"><img src="images/food.jpeg" alt=""></li>
-									<li id="name">Beef</li>
+									<li id="name">beef</li>
 									<li id="add3" class="add">+</li>
 								</ul>
 							</div>
@@ -52,7 +69,7 @@
 							<div class="meat_option" id="fish">
 								<ul>
 									<li id="image"><img src="images/food.jpeg" alt=""></li>
-									<li id="name">Fish</li>
+									<li id="name">fish</li>
 									<li id="add4" class="add">+</li>
 								</ul>
 							</div>
@@ -61,7 +78,7 @@
 							<div class="meat_option" id="shimp">
 								<ul>
 									<li id="image"><img src="images/food.jpeg" alt=""></li>
-									<li id="name">Shrimp</li>
+									<li id="name">shrimp</li>
 									<li id="add5" class="add">+</li>
 								</ul>
 							</div>
@@ -70,7 +87,7 @@
 							<div class="meat_option" id="none_meat">
 								<ul>
 									<li id="image"><img src="images/food.jpeg" alt=""></li>
-									<li id="name">None</li>
+									<li id="name">none	</li>
 									<li id="add6" class="add">+</li>
 								</ul>
 							</div>
@@ -84,50 +101,8 @@
 			<div id="review_container">
 				<div id="subhead1" class="subhead">
 					Review Your Order
+
 				</div>
-				<ul id="order_result">
-					<script id="order_template" type="text/template">
-						{{#order_result}}
-						<li>
-							<span>{{.}}</span>
-							<div id="inner_buttons">
-								<j class= "edit_">EDIT</j>
-								<i class="del">X</i>
-							</div>
-						</li>
-						{{/order_result}}
-					</script>
-				</ul>
-			</div>
-			<div id="edit_box">
-			<img src="images/bbq.jpg" alt=":/">
-			<div id="size">
-			<h2>SIZE</h2>
-			<ul id="sizes">
-				<li>Small ($35)</li>
-				<li>Medium ($45)</li>
-				<li>Large ($55)</li>
-			</ul>
-			</br>	
-			<h2>SIDES</h2>
-			<ul id="sides">
-				<li>Salad (Free) <input id="toggle" type="checkbox"><label for="toggle"></li>
-				<li>Fries (Free)<input id="toggle" type="checkbox"><label for="toggle"></li>
-				<li>Mashed Potato ($5)<input id="toggle" type="checkbox"><label for="toggle"></li>	
-				<li>Wedges ($5)<input id="toggle" type="checkbox"><label for="toggle"></li>
-				<li>Corn ($5)<input id="toggle" type="checkbox"><label for="toggle"></li>
-			</ul>
-			</br>
-			<h2>QUANTITY: </h2>
-			<ul id="quantity">
-				<li>+</li>
-				<li>-</li>
-			</ul>
-			</div>
-			</br>
-			<div id="subtotal">
-				<h2>Subtotal: </h2>
-			</div>
 			</div>
 		</div>
 	</div>
@@ -135,69 +110,14 @@
 
 <footer>
 	<script> //chicken,lamb,beef,shrimp,fish
-	var choose_meat = (function(){
-		var order_result= [];
-		var order_no= [];
-		var edit_array= [];
-		var order_number= 0;
-		//cache DOM
-		var $container = $('#options_container');
-		var $reviewContainer = $('#review_container');
-		var $add = $container.find('.add');
-		var $ul = $reviewContainer.find('#order_result');
-		var template = $reviewContainer.find('#order_template').html();
-		var b_edit = $('.edit_');
-		var $popup = $('#edit_box');
-		var counter = 0;
-
-		//bind events
-		$add.on("click", addMeat);
-		$ul.delegate('i.del', 'click', deleteMeat);
-		$ul.delegate('j.edit_', 'click', editMeat);
-
-		render();
-
-		function render(){
-			$ul.html(Mustache.render(template, {order_result: order_result}));	
-				
-		}
-
-		function addMeat(evenh){
-			var $info = $container.find(evenh.target).prev().html();
-			order_result.push($info);
-			edit_array.push(order_number);
-			order_number++;
-			render();
-
-			// var $info = $container.find(evenh.target).prev().html();
-			// order_result.push($info);
-			// render();
-		}
-
-		function deleteMeat(even){
-			var i;
-			var $remove = $(even.target).closest('li');
-			i = $ul.find('li').index($remove);
-			order_result.splice(i,1);
-			render();
-		}
-
-		function editMeat(e){
-			var test = edit_array;
-			alert(test);
-			// if (counter === 0)
-			// {
-			// 	$popup.fadeIn(1000);	
-			// 	counter++;
-			// }else
-			// {
-			// 	$popup.fadeOut(1000);
-			// 		counter--;
-			// }
-			
-
-		}
-	})();
+	$(document).ready(function(){
+		$(".add").click(function(tag){
+			var click = tag.target;
+			var current_id = click.id;
+			var ide = current_id.substring(3,4);
+			alert(ide);
+		});
+	});
 	</script>
 </footer>
 

@@ -3,27 +3,32 @@
 <html>
 
 <link rel="stylesheet" type="text/css" href="style.css">
-<link rel="stylesheet" type="text.css" href="animate.css">
-<link rel="stylesheet" type="text.css" href="fonts.css">
+<link rel="stylesheet" type="text/css" href="animate.css">
+<link rel="stylesheet" type="text/css" href="fonts.css">
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="scroll.js"></script>
 <script type="text/javascript" src="jquery-2.1.1.min.js"></script>
 
-
-<title></title>
+<title>The Original BBQ Hut</title>
 
 <body>
 	<div id="navigation_bar_index">
-			<nav>	
-				<ul>
-					<li><a href="menu.html" id="see_menu_button">SEE THE MENU</a></li>
-					<li><a href="order.html" id="place_order_button">PLACE AN ORDER</a></li>
-					<li><a href="#" id="logo_image"></a></li>
-					<li><a href="#about_us" id="about_us_button">ABOUT US</a></li>
-					<li><a href="#contact_us" id="contact_us_button">CONTACT US</a></li>
-				</ul>
-			</nav>	
-		</div>
+		<nav>	
+			<ul>
+				<li><a href="#" id="logo_image"></a></li>
+				<li><a href="menu.html" id="see_menu_button">SEE THE MENU &#9663</a>
+					<ul class="dropdown">
+				        <li><a href="menu.html#regular_meals">Meats</a></li>
+				        <li><a href="menu.html#combination_meals">Combinations Meals</a></li>
+				        <li class="sides_drop_option"><a href="#sides_meals">Sides</a></li>
+			      </ul>
+				</li>
+				<li><a href="order.html" id="place_order_button">PLACE AN ORDER</a></li>
+				<li><a href="index.html#about_us" id="about_us_button">ABOUT US</a></li>
+				<li><a href="index.html#contact_us" id="contact_us_button">CONTACT US</a></li>
+			</ul>
+		</nav>	
+	</div>
 		
 	<div id="index">
 		<div id="background_image">
