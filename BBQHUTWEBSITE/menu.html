@@ -12,18 +12,216 @@
 <title>Our Menu - Original BBQ Hut</title>
 
 <body>
-	<div id="menu">
-		<div id="nav_bar">[PLACEHOLDER]</div>
+	<div id="navigation_bar_menu">
+		<nav>	
+			<ul>
+				<li><a href="menu.html" id="see_menu_button">SEE THE MENU</a></li>
+				<li><a href="order.html" id="place_order_button">PLACE AN ORDER</a></li>
+				<li><a href="#" id="logo_image"></a></li>
+				<li><a href="index.html#about_us" id="about_us_button">ABOUT US</a></li>
+				<li><a href="index.html#contact_us" id="contact_us_button">CONTACT US</a></li>
+			</ul>
+		</nav>	
+	</div>
 
-		<div id="menu_title">Our Menu</div>
+	<div id="menu_title">Our Menu</div>
 
-		<div id="regular_title">Regular Meals</div>
-		
+	<div id="regular_meals">		
+		<div id="regular_meals_title">Our Meats</div>
+
+		<div id="regular_meals_images">
+			<ul>
+				<li><img src="images\bbq.jpg" alt=":("></li>
+				<li><img src="images\bbq.jpg" alt=":("></li>
+				<li><img src="images\bbq.jpg" alt=":("></li>
+				<li><img src="images\bbq.jpg" alt=":("></li>
+				<li><img src="images\bbq.jpg" alt=":("></li>
+			</ul>
+		</div>
+		<div id="regular_meals_options">
+			<ul>
+				<li id="rm0">
+					<h1>Chicken</h1>
+					[text]
+				</li>
+				<li id="rm1">
+					<h1>Lamb</h1>
+					[text]
+				</li>
+				<li id="rm2">
+					<h1>Beef Steak</h1>
+					[text]
+				</li>
+				<li id="rm3">
+					<h1>Fish</h1>
+					[text]
+				</li>
+				<li id="rm4">
+					<h1>Shrimp</h1>
+					[text]
+				</li>
+			</ul>
+		</div>
+	</div>
+
+	<div id="combination_meals">
+		<div id="combination_meals_title">Our Special Combinations</div>
+
+		<div id="combination_meals_images">
+			<ul>
+				<li><img src="images\bbq.jpg" alt=":("></li>
+				<li><img src="images\bbq.jpg" alt=":("></li>
+				<li><img src="images\bbq.jpg" alt=":("></li>
+				<li><img src="images\bbq.jpg" alt=":("></li>
+				<li><img src="images\bbq.jpg" alt=":("></li>
+			</ul>
+		</div>
+		<div id="combination_meals_options">
+			<ul>
+				<li id="cm0">
+					<h1>Lamb, Chicken, Fries & Green Salad</h1>
+					[text]
+				</li>
+				<li id="cm1">
+					<h1>Lamb, Steak, Fries & Green Salad</h1>
+					[text]
+				</li>
+				<li id="cm2">
+					<h1>Steak, Chicken, Fries & Green Salad</h1>
+					[text]
+				</li>
+				<li id="cm3">
+					<h1>Fish, Shrimp, Fries & Green Salad</h1>
+					[text]
+				</li>
+				<li id="cm4">
+					<h1>Shrimp, Fries & any one meat</h1>
+					[text]
+				</li>
+			</ul>
+		</div>
+	</div>
+
+	<div id="sides_meals">
+		<div id="sides_meals_title">Add Some Sides to Your Meal</div>
+		<div id="sides_meals_table">
+			<table>
+				<tr>
+					<th>Fries, Galric Bread & Green Salad
+					</th>
+					<th>Fries Only
+					</th>
+					<th>Baked Potato
+					</th>
+					<th>Garlic Bread
+					</th>
+					<th>Macaroni Pie
+					</th>
+				</tr>
+				<tr>
+					<td><img src="images\bbq.jpg" alt=""></td>
+					<td><img src="images\bbq.jpg" alt=""></td>
+					<td><img src="images\bbq.jpg" alt=""></td>
+					<td><img src="images\bbq.jpg" alt=""></td>
+					<td><img src="images\bbq.jpg" alt=""></td>
+				</tr>
+				<tr>
+					<th>Macaroni Salad
+					</th>
+					<th>Potato Salad
+					</th>
+					<th>Cole Slaw
+					</th>
+					<th>Extra Portion Green Salad
+					</th>
+					<th>Wedges, Garlic Bread & Green Salad
+					</th>
+				</tr>
+				<tr>
+					<td><img src="images\bbq.jpg" alt=""></td>
+					<td><img src="images\bbq.jpg" alt=""></td>
+					<td><img src="images\bbq.jpg" alt=""></td>
+					<td><img src="images\bbq.jpg" alt=""></td>
+					<td><img src="images\bbq.jpg" alt=""></td>
+				</tr>
+				<tr>
+					<th>Wedges Only
+					</th>
+					<th>Fried Rice (Friday & Saturday Only)
+					</th>
+					<th>Noodles (Friday & Saturday Only)
+					</th>
+					<th>Chicken Kebabs
+					</th>
+					<th>Shrimp Kebabs
+					</th>
+				</tr>
+				<tr>
+					<td><img src="images\bbq.jpg" alt=""></td>
+					<td><img src="images\bbq.jpg" alt=""></td>
+					<td><img src="images\bbq.jpg" alt=""></td>
+					<td><img src="images\bbq.jpg" alt=""></td>
+					<td><img src="images\bbq.jpg" alt=""></td>
+				</tr>
+			</table>
+		</div>
 	</div>
 </body>
 
 <footer>
-	
+	<script>
+
+			var width= $(window).width() * 0.4;
+			var animation_speed= 500;
+			var interval;
+			var counter= 0;
+			var arr = [];			
+
+		$("#regular_meals_options li").click(function(tag){
+		        var clickt= tag.target;
+		        var current_id = clickt.id; //grab currentid eg. el0 - el7
+		        var ide = current_id.substring(2,3); //returns id number
+		        var pls = "#"+current_id;
+		        var who = counter-1;
+		        clearInterval(interval);
+		        if (counter === 0){
+		        	$("#regular_meals_images ul").animate({'margin-left': -(width*ide)}, animation_speed);
+		        	arr.push(current_id);
+		        	counter++;
+		        }else{
+		        	$("#regular_meals_images ul").animate({'margin-left': -(width*ide)}, animation_speed);
+		        	arr.push(current_id);
+		        	counter++;
+		        }
+		    });
+
+		$("#combination_meals_options li").click(function(tag){
+		        var clickt= tag.target;
+		        var current_id = clickt.id; //grab currentid eg. el0 - el7
+		        var ide = current_id.substring(2,3); //returns id number
+		        var pls = "#"+current_id;
+		        var who = counter-1;
+		        clearInterval(interval);
+		        if (counter === 0){
+		        	$("#combination_meals_images ul").animate({'margin-left': -(width*ide)}, animation_speed);		        			        	
+		        	arr.push(current_id);
+		        	counter++;
+		        }else{
+		        	$("#combination_meals_images ul").animate({'margin-left': -(width*ide)}, animation_speed);		        			        	
+		        	arr.push(current_id);
+		        	counter++;
+		        }
+		    });
+
+		$('a[href^="#"]').on('click', function(event) {
+
+			var target = $( $(this).attr('href') );
+
+			if( target.length ) {
+    			event.preventDefault();
+    			$('html, body').animate({scrollTop: target.offset().top}, 1000);}
+			});
+	</script>
 </footer>
 
 </html>
