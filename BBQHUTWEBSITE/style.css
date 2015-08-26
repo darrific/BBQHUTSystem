@@ -18,13 +18,13 @@ text-align: center;
 
 /*end*/
 
-
 body
 {
 background-color: #C5DDC3;
+-webkit-user-select: none;
 }
 
-/*orders page*/
+/*=================orders page=================*/
 
 #navigation_bar_order
 {
@@ -33,6 +33,7 @@ top: 0%;
 width: 100%;
 z-index: 5;
 }
+
 
 #order_container
 {
@@ -67,7 +68,7 @@ margin-top: 16%;
 width: 49%;
 height: 100%;
 float: left;
-background-color: #888;
+background-color: white;
 }
 
 #review_container
@@ -75,12 +76,12 @@ background-color: #888;
 float: right;
 width: 49%;
 height: 100%;
-background-color: #888;
+background-color: white;
 }
 
 #options_container
 {
-overflow-y: scroll; 
+overflow-y: auto; 
 height: 79.1%;
 margin-top: 8%;
 }
@@ -331,6 +332,16 @@ width: 100%;
 height: 100%;
 }
 
+#navigation_bar_index
+{
+position: fixed;
+top: 0%;
+width: 100%;
+z-index: 5;
+display: none;
+}
+
+
 #background_image
 {
 position: absolute;
@@ -525,9 +536,7 @@ background-color: green;
 {
 position: absolute;
 height: 100%;
-width: 100%;
-background-color: #3b3;
-z-index: -1000;
+width: 100%;	
 background-color: #fff;
 z-index: -1000
 }
@@ -686,14 +695,14 @@ list-style-type: none;
 {
 margin-left: 50%;
 transform: translate(-50%,0);
-width: 50%;
+width: 60%;
 height: 30%;
 }
 
 #onlinecontact li
 {
 margin-top: 5%;
-width: 30%;
+width: 40%;
 display: inline-block;
 }
 
@@ -892,7 +901,7 @@ color: #444;
 {
 position: absolute;
 top: 40%;
-left: 40%;
+left: 42%;
 width: 20%;
 height: auto;
 }
@@ -909,20 +918,12 @@ margin-bottom: 3%;
 
 /*======================= NAV BAR ========================*/
 
-#navigation_bar_index
-{
-position: fixed;
-top: 0%;
-width: 100%;
-z-index: 5;
-display: none;
-}
-
 nav 
 {
 text-align: center;
 background-color: #F7AC27;
 width: 100%;
+z-index: 5;
 }
 
 nav ul
