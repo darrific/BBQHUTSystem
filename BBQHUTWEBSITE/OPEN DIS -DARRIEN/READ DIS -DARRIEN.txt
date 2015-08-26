@@ -1,0 +1,8 @@
+25.08.15 11:26PM
+
+work still to be done:
+1. Add in "Place order button".
+2. STABBS Add a cart icon to the nav bar pls. When clicked on i will handle tomorrow.
+3. JUSTIN finish the stuff you had to do ASAP as possible.
+4. The logic for the popup box has to do.
+5. Figure out how to pass the indexes from the "Review your order" div to the "popup" div.
