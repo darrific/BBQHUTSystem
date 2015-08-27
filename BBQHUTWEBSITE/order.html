@@ -7,6 +7,7 @@
 <link rel="stylesheet" type="text.css" href="fonts.css">
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="mustache.js"></script>
+<script type="text/javascript" src="velocity.js"></script>
 
 <title>BBQH | Make an Order</title>
 
@@ -57,7 +58,7 @@
 	<div id="order_container">
 		<div id="header"><h1>Make Your Order</h1></div>
 		<div id="main_box">
-			<div id="meat_container">
+			<div id="meat_container" >
 				<div id="subhead1" class="subhead">
 					Choose Your Meat
 				</div>
@@ -150,9 +151,9 @@
 					</ul>
 				</div>
 				
-				<div id="total">
+				<!-- <div id="total">
 					<h2>TOTAL: </h2>
-				</div>
+				</div> -->
 			</div>
 	</div>
 	<div id="edit_box">
@@ -206,6 +207,7 @@
 		var $mainZebra = $('#order_container'); 
 		var $optionsContainer = $mainZebra.find('#options_container'); //was container
 		var $reviewContainer = $mainZebra.find('#review_container'); 
+		var $leftContainer = $mainZebra.find('#meat_container');
 		var $ul = $reviewContainer.find('#order_result');
 		var $popup = $mainZebra.find('#edit_box');
 		var template = $reviewContainer.find('#order_template').html();
@@ -246,6 +248,7 @@
 			var $info = $optionsContainer.find(evenh.target).prev().prev().html();
 			arr_order_result.push($info); //pushing the info (eg "Chicken") to the array
 			render();
+			translateOrders();
 		}
 
 		function deleteMeat(even){
@@ -275,6 +278,11 @@
 			{
 				clicked_size = 45;
 			}
+		}
+
+		function translateOrders(){
+			$leftContainer.velocity({left:'75px'}, 500);
+			$reviewContainer.fadeIn(100).velocity({left: '275px'},400);
 		}
 	})();
 	</script>

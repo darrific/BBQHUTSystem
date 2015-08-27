@@ -65,19 +65,23 @@ margin-top: 16%;
 
 #meat_container
 {
+position: absolute;
 width: 45%;
-height: 90%;
-float: left;
+height: 75%;
+left: 30%;
 background-color: #E8A84C;
 border-radius: 15px;
 }
 
 #review_container
 {
+position: absolute;	
 width: 40%;
-height: 90%;
+height: 75%;
 float: right;
+margin-left: 30%;
 background-color: #E8A84C;
+display: none;
 border-radius: 15px;
 overflow-y: auto;
 }
