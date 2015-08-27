@@ -6,6 +6,8 @@
 <link rel="stylesheet" type="text.css" href="animate.css">
 <link rel="stylesheet" type="text.css" href="fonts.css">
 <script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="scroll.js"></script>
+<script type="text/javascript" src="jquery-2.1.1.min.js"></script>
 <script type="text/javascript" src="mustache.js"></script>
 <script type="text/javascript" src="velocity.js"></script>
 
@@ -27,7 +29,9 @@
 				<li><a href="order.html" id="place_order_button">PLACE AN ORDER</a></li>
 				<li><a href="index.html#about_us" id="about_us_button">ABOUT US</a></li>
 				<li><a href="index.html#contact_us" id="contact_us_button">CONTACT US</a></li>
-				<li class="cart_svg"><a href="#">
+				<li class="cart_svg">
+					<div id="cart_count"></div>
+					<a href="#">
 						<?xml version="1.0" encoding="iso-8859-1"?>
 						<!-- Generator: Adobe Illustrator 16.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
 						<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
@@ -157,36 +161,36 @@
 			</div>
 	</div>
 	<div id="edit_box">
-				<img src="images/bbq.jpg" alt=":/">
-				<div id="size">
-					<h2>SIZE</h2>
-					<ul id="sizes">
-						<li id="small">Small ($35)</li>
-						<li id="large">Large ($45)</li>
-					</ul>
-					</br>	
-					<h2>SIDES</h2>
-					<ul id="sides">
-						<li>Salad (Free) <input id="toggle" type="checkbox"><label for="toggle"></li>
-						<li>Fries (Free)<input id="toggle" type="checkbox"><label for="toggle"></li>
-						<li>Mashed Potato ($5)<input id="toggle" class="add_5" type="checkbox"><label for="toggle"></li>	
-						<li>Wedges ($5)<input id="toggle" class="add_5" type="checkbox"><label for="toggle"></li>
-						<li>Corn ($5)<input id="toggle" class="add_5" type="checkbox"><label for="toggle"></li>
-					</ul>
-					</br>
-					<h2>QUANTITY: </h2>
-					<div id="value_of_quantity"></div>
-					<ul id="quantity">
-						<li id="add">+</li>
-						<li id="remove">-</li>
-					</ul>
-					</div>
-					</br>
-					<div id="subtotal">
-						<h2>Subtotal: $ </h2>
-					</div>
+		<img src="images/bbq.jpg" alt=":/">
+		<div id="size">
+			<h2>SIZE</h2>
+			<ul id="sizes">
+				<li><input id="small35" name="sizes" value="small35" type="radio" checked><label for="small35">Small ($35)</label></li>
+				<li><input id="large45" name="sizes" value="large35" type="radio"><label for="large45">Large ($45)</label></li>
+			</ul>
+			</br>	
+			<h2>SIDES</h2>
+			<ul id="sides">
+				<li>Salad (Free) <input id="toggle" type="checkbox" checked><label for="toggle"></li>
+				<li>Fries (Free)<input id="toggle" type="checkbox" checked><label for="toggle"></li>
+				<li>Mashed Potato ($5)<input id="toggle" class="add_5" type="checkbox"><label for="toggle"></li>	
+				<li>Wedges ($5)<input id="toggle" class="add_5" type="checkbox"><label for="toggle"></li>
+				<li>Corn ($5)<input id="toggle" class="add_5" type="checkbox"><label for="toggle"></li>
+			</ul>
+			</br>
+			<h2>QUANTITY: </h2>
+				<div id="value_of_quantity"></div>
+				<ul id="quantity">
+					<li id="add">+</li>
+					<li id="remove">-</li>
+				</ul>
+				</div>
+				</br>
+				<div id="subtotal">
+					<h2>Subtotal: $ </h2>
 				</div>
 			</div>
+	</div>
 </body>
 
 <footer>
@@ -207,6 +211,7 @@
 		var clicked_size;
 		var v_sides_t; //SayaadIsYOUSayaadIsYOUSayaadIsYOUSayaadIsYOUSayaadIsYOU
 		var v_total = (v_sides_t + clicked_size)*count_total;
+		var cart_counter = 0;
 		//cache DOM
 		var $mainZebra = $('#order_container'); 
 		var $optionsContainer = $mainZebra.find('#options_container'); //was container
@@ -218,6 +223,7 @@
 		var $sides = $popup.find('#sides li');
 		var $add_5 = $popup.find('.add_5');
 		var $popup_total = $popup.find('#value_of_quantity');
+		var $cart_count = $('#cart_count');
 		//buttons
 		var b_add = $optionsContainer.find('.add'); //was $add
 		var b_edit = $mainZebra.find('.edit_');
@@ -245,7 +251,9 @@
 
 			var $info = $optionsContainer.find(evenh.target).prev().prev().html();
 			arr_order_result.push($info); //pushing the info (eg "Chicken") to the array
+			cart_counter++;
 			render();
+			cartCounter();
 			translateOrders();
 		}
 
@@ -255,7 +263,9 @@
 			i = $ul.find('li').index($remove);
 			arr_order_result.splice(i,1);
 			editMeatHide();
+			cart_counter--;
 			render();
+			cartCounter();
 		}
 
 		function editMeatShow(){
@@ -303,6 +313,20 @@
 		function outputTotal(){
 
 		}
+		function cartCounter(){
+			if (cart_counter >= 1)
+				{
+					$cart_count.fadeIn(10);
+					$cart_count.velocity({top:'12%'},200);
+				}
+				else
+				{
+					$cart_count.velocity({top:'-100%'},300);
+					$cart_count.fadeOut(500);
+				}
+			$cart_count.text(cart_counter);
+		}
+		
 	})();
 	</script>
 </footer>
