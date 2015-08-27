@@ -175,14 +175,15 @@
 					</ul>
 					</br>
 					<h2>QUANTITY: </h2>
+					<div id="value_of_quantity"></div>
 					<ul id="quantity">
-						<li>+</li>
-						<li>-</li>
+						<li id="add">+</li>
+						<li id="remove">-</li>
 					</ul>
 					</div>
 					</br>
 					<div id="subtotal">
-						<h2>Subtotal: </h2>
+						<h2>Subtotal: $ </h2>
 					</div>
 				</div>
 			</div>
@@ -202,7 +203,10 @@
 		//counters&indexes
 		var order_number= 0;
 		var count= 0;
-		var hi;
+		var count_total = 1;
+		var clicked_size;
+		var v_sides_t; //SayaadIsYOUSayaadIsYOUSayaadIsYOUSayaadIsYOUSayaadIsYOU
+		var v_total = (v_sides_t + clicked_size)*count_total;
 		//cache DOM
 		var $mainZebra = $('#order_container'); 
 		var $optionsContainer = $mainZebra.find('#options_container'); //was container
@@ -213,16 +217,14 @@
 		var template = $reviewContainer.find('#order_template').html();
 		var $sides = $popup.find('#sides li');
 		var $add_5 = $popup.find('.add_5');
+		var $popup_total = $popup.find('#value_of_quantity');
 		//buttons
 		var b_add = $optionsContainer.find('.add'); //was $add
 		var b_edit = $mainZebra.find('.edit_');
 		var b_small_size = $popup.find('#small');
 		var b_large_size = $popup.find('#large');
-
-		//==========JUSTIN WORK IN HERE PLS=============
-
-
-		//==========JUSTIN END WORK HERE PLS============
+		var b_add1 = $popup.find('#add');
+		var b_minus1 = $popup.find('#remove');
 
 		//bind events
 		b_add.on("click", addMeat);
@@ -230,19 +232,15 @@
 		$ul.delegate('j.edit_', 'click', editMeatShow);
 		b_small_size.on('click', getSize);
 		b_large_size.on('click', getSize);
+		b_add1.on('click', autoIncrement);
+		b_minus1.on('click', autoIncrement);
 
 		//
 		render();
 
 		function render(){
-			hi= $ul.html(Mustache.render(template, {order_result: arr_order_result}));
-			assignIndex(hi);
+			$ul.html(Mustache.render(template, {order_result: arr_order_result}));
 		}
-
-		function assignIndex(){
-			
-		}
-
 		function addMeat(evenh){
 
 			var $info = $optionsContainer.find(evenh.target).prev().prev().html();
@@ -269,7 +267,7 @@
 		}
 
 		function getSize(){
-			var clicked_size = (this.id);
+			clicked_size = (this.id);
 			if (clicked_size === "small")
 			{
 				clicked_size = 35;
@@ -283,6 +281,27 @@
 		function translateOrders(){
 			$leftContainer.velocity({left:'75px'}, 500);
 			$reviewContainer.fadeIn(100).velocity({left: '275px'},400);
+		}
+
+		function autoIncrement(e){
+			var thiss = $(e.target).html();
+			if (thiss === "+")
+			{
+				count_total++;
+				$popup_total.text(count_total);
+				b_minus1.css('background-color','#111');
+			}else if ((thiss === "-")&&(count_total ===1))
+			{
+				$popup_total.text(count_total);
+				b_minus1.css('background-color','#888');
+			}else
+			{
+				count_total--;
+				$popup_total.text(count_total);
+			}
+		}
+		function outputTotal(){
+
 		}
 	})();
 	</script>

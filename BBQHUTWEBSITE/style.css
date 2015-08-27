@@ -268,8 +268,8 @@ background-color: #C98001;
 position: absolute;
 width: 100%;
 height: 10%;
-margin-top: 120%;
-left: 8%;
+margin-top: 130%;
+left: 2%;
 }
 
 #quantity
@@ -336,6 +336,20 @@ background-color: white;
 margin-top: 5%;
 margin-left: 8%;
 color: red;
+}
+
+#value_of_quantity
+{
+position: absolute;
+font-size: 1.5vw;
+top: 69%;
+left: 42%;
+}
+
+#quantity
+{
+
+margin-top: -9%;
 }
 
 /*end of orders page*/
