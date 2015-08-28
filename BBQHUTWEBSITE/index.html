@@ -178,6 +178,15 @@
         			event.preventDefault();
         			$('html, body').animate({scrollTop: target.offset().top}, 1000);}
 				});
+
+		$("#map_overlay").click(function(){
+				$("#map_overlay").fadeOut(1);
+			});
+
+
+		$("#gmap_canvas").mouseleave(function(){								
+				$("#map_overlay").fadeIn(1);
+			});
 	</script>
 </footer>
 </html>
