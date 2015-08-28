@@ -143,52 +143,47 @@
 					<ul id="order_result">
 						<script id="order_template" type="text/template">
 							{{#order_result}}
-							<li>
+							<li class="helplol">
 								<span>{{.}}</span>
 								<div id="inner_buttons">
-									<j class= "edit_">EDIT</j>
-									<i class="del">X</i>
+									<div class="arrows_inner" id="arrow_down"><img src="images/arrow_down.png"></div>
+									<div class="arrows_inner" id="arrow_up"><img src="images/arrow_up.png"></div>
+									<i class="del">x</i>	
+								</div>
+								<div id="edit_content">
+									<ul id="sizes">
+										<h2>SIZE</h2>
+										<li><input id="small35" name="sizes" value="small35" type="radio" checked><label for="small35">Small ($35)</label></li>
+										<li><input id="large45" name="sizes" value="large35" type="radio"><label for="large45">Large ($45)</label></li>
+									</ul>
+
+									</br>	
+
+									<h2>SIDES</h2>
+									<ul id="sides">
+										<li>Salad (Free) <input id="toggle" type="checkbox" checked><label for="toggle"></li>
+										<li>Fries (Free)<input id="toggle" type="checkbox" checked><label for="toggle"></li>
+										<li>Mashed Potato ($5)<input id="toggle" class="add_5" type="checkbox"><label for="toggle"></li>	
+										<li>Wedges ($5)<input id="toggle" class="add_5" type="checkbox"><label for="toggle"></li>
+										<li>Corn ($5)<input id="toggle" class="add_5" type="checkbox"><label for="toggle"></li>
+									</ul>
+
+									</br>
+									<h2>QUANTITY: </h2>
+									<div id="value_of_quantity"></div>
+									<ul id="quantity">
+										<li id="add">+</li>
+										<li id="remove">-</li>
+									</ul>
+
+									</br>
 								</div>
 							</li>
 							{{/order_result}}
 						</script>
 					</ul>
 				</div>
-				
-				<!-- <div id="total">
-					<h2>TOTAL: </h2>
-				</div> -->
-			</div>
-	</div>
-	<div id="edit_box">
-		<img src="images/bbq.jpg" alt=":/">
-		<div id="size">
-			<h2>SIZE</h2>
-			<ul id="sizes">
-				<li><input id="small35" name="sizes" value="small35" type="radio" checked><label for="small35">Small ($35)</label></li>
-				<li><input id="large45" name="sizes" value="large35" type="radio"><label for="large45">Large ($45)</label></li>
-			</ul>
-			</br>	
-			<h2>SIDES</h2>
-			<ul id="sides">
-				<li>Salad (Free) <input id="toggle" type="checkbox" checked><label for="toggle"></li>
-				<li>Fries (Free)<input id="toggle" type="checkbox" checked><label for="toggle"></li>
-				<li>Mashed Potato ($5)<input id="toggle" class="add_5" type="checkbox"><label for="toggle"></li>	
-				<li>Wedges ($5)<input id="toggle" class="add_5" type="checkbox"><label for="toggle"></li>
-				<li>Corn ($5)<input id="toggle" class="add_5" type="checkbox"><label for="toggle"></li>
-			</ul>
-			</br>
-			<h2>QUANTITY: </h2>
-				<div id="value_of_quantity"></div>
-				<ul id="quantity">
-					<li id="add">+</li>
-					<li id="remove">-</li>
-				</ul>
-				</div>
-				</br>
-				<div id="subtotal">
-					<h2>Subtotal: $ </h2>
-				</div>
+				<div id="place_order_wrapper"><a href="cart.html"><div id="place_order">Finish Up!</div></a></div>
 			</div>
 	</div>
 </body>
@@ -206,47 +201,52 @@
 		var arr_sizes=[]
 		//counters&indexes
 		var order_number= 0;
+		var it = 0;
 		var count= 0;
 		var count_total = 1;
 		var clicked_size;
 		var v_sides_t; //SayaadIsYOUSayaadIsYOUSayaadIsYOUSayaadIsYOUSayaadIsYOU
 		var v_total = (v_sides_t + clicked_size)*count_total;
 		var cart_counter = 0;
+		var iq;
 		//cache DOM
 		var $mainZebra = $('#order_container'); 
 		var $optionsContainer = $mainZebra.find('#options_container'); //was container
 		var $reviewContainer = $mainZebra.find('#review_container'); 
 		var $leftContainer = $mainZebra.find('#meat_container');
 		var $ul = $reviewContainer.find('#order_result');
-		var $popup = $mainZebra.find('#edit_box');
+		var $popup = $mainZebra.find('#edit_content');
 		var template = $reviewContainer.find('#order_template').html();
 		var $sides = $popup.find('#sides li');
 		var $add_5 = $popup.find('.add_5');
 		var $popup_total = $popup.find('#value_of_quantity');
 		var $cart_count = $('#cart_count');
+		var $popupInner = $ul.find('#edit_content');
+		var $inner_buttons = $ul.find('#inner_buttons');
 		//buttons
 		var b_add = $optionsContainer.find('.add'); //was $add
-		var b_edit = $mainZebra.find('.edit_');
 		var b_small_size = $popup.find('#small');
 		var b_large_size = $popup.find('#large');
 		var b_add1 = $popup.find('#add');
 		var b_minus1 = $popup.find('#remove');
+		// var b_arrow_down = $inner_buttons.find('#arrow_down');
+		// var b_arrow_up = $inner_buttons.find('#arrow_up');
 
 		//bind events
 		b_add.on("click", addMeat);
 		$ul.delegate('i.del', 'click', deleteMeat);
-		$ul.delegate('j.edit_', 'click', editMeatShow);
 		b_small_size.on('click', getSize);
 		b_large_size.on('click', getSize);
 		b_add1.on('click', autoIncrement);
 		b_minus1.on('click', autoIncrement);
-
+		$ul.delegate('div.arrows_inner','click', figureOut);
 		//
 		render();
 
 		function render(){
 			$ul.html(Mustache.render(template, {order_result: arr_order_result}));
 		}
+
 		function addMeat(evenh){
 
 			var $info = $optionsContainer.find(evenh.target).prev().prev().html();
@@ -257,22 +257,38 @@
 			translateOrders();
 		}
 
-		function deleteMeat(even){
+		function deleteMeat(ed){
 			var i;
-			var $remove = $(even.target).closest('li');
-			i = $ul.find('li').index($remove);
+			var $remove = $(ed.target).closest('.helplol');
+			i = $remove.index();
 			arr_order_result.splice(i,1);
 			editMeatHide();
 			cart_counter--;
 			render();
 			cartCounter();
-			undotranslateOrders();
 		}
 
-		function editMeatShow(){
-			$popup.fadeIn(1000);
-		}	
+		function figureOut(){
+			iq = (this.id);
+			arrowToggle();
+		}
 
+		function arrowToggle(){
+			var popup = $('#edit_content')
+			var down = $("#arrow_down")
+			var up = $('#arrow_up')
+			if (iq === "arrow_down")
+			{
+				$(down).fadeOut(100);
+				$(up).fadeIn(100);
+				popup.fadeIn(1000);
+			}else
+			{
+				$(down).fadeIn(100);
+				$(up).fadeOut(100);
+				popup.fadeOut(10);
+			}
+		}
 		function editMeatHide(){		
 			$popup.fadeOut(1000);
 		}
@@ -290,19 +306,8 @@
 		}
 
 		function translateOrders(){
-			if (cart_counter <= 1)
-			{
-				$leftContainer.velocity({left:'7%'}, 500);
-				$reviewContainer.fadeIn(1).velocity({left: '25.5%'},400);
-			}
-		}
-
-		function undotranslateOrders(){
-			if (cart_counter === 0)
-			{
-				$leftContainer.velocity({left:'30%'}, 500);
-				$reviewContainer.delay(100).velocity({left: '0'},400).fadeOut(80);
-			}
+			$leftContainer.velocity({left:'75px'}, 500);
+			$reviewContainer.fadeIn(100).velocity({left: '275px'},400);
 		}
 
 		function autoIncrement(e){
@@ -337,6 +342,10 @@
 					$cart_count.fadeOut(500);
 				}
 			$cart_count.text(cart_counter);
+		}
+
+		function alertTest(){
+			alert("event fired");
 		}
 		
 	})();
