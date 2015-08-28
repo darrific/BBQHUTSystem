@@ -266,6 +266,7 @@
 			cart_counter--;
 			render();
 			cartCounter();
+			undotranslateOrders();
 		}
 
 		function editMeatShow(){
@@ -289,8 +290,19 @@
 		}
 
 		function translateOrders(){
-			$leftContainer.velocity({left:'75px'}, 500);
-			$reviewContainer.fadeIn(100).velocity({left: '275px'},400);
+			if (cart_counter <= 1)
+			{
+				$leftContainer.velocity({left:'7%'}, 500);
+				$reviewContainer.fadeIn(1).velocity({left: '25.5%'},400);
+			}
+		}
+
+		function undotranslateOrders(){
+			if (cart_counter === 0)
+			{
+				$leftContainer.velocity({left:'30%'}, 500);
+				$reviewContainer.delay(100).velocity({left: '0'},400).fadeOut(80);
+			}
 		}
 
 		function autoIncrement(e){
