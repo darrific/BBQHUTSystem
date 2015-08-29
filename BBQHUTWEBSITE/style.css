@@ -84,14 +84,6 @@ margin-left: 30%;
 background-color: #E8A84C;
 display: none;
 border-radius: 15px;
-}
-
-#the_order_output
-{
-position: absolute;
-width: 100%;
-height: 60%;
-margin-top: 11%;
 overflow-y: auto;
 }
 
@@ -176,7 +168,7 @@ padding-bottom: 0.9%;
 padding-left: 1.9%;
 padding-right: 2.1%;
 background-color: #999;
-border-radius: 1vw;
+border-radius: 50px;
 }
 
 .add:hover
@@ -187,79 +179,39 @@ cursor: pointer;
 
 #review_container ul
 {
+background-color: #777;
+margin-top: 8%;
 }
 
 #review_container li
 {
 list-style-type: none;
-background-color: #d09744;
-margin-bottom: 3%;
-width: 80%;
-height: 8%;
-overflow: hidden;
-padding: 2%;
-margin-left: 10%;
-color: white;
-font-size: 1vw;
-font-family: opensanslight;
+padding: 5%;
 }
 
 .del
 {
-position: absolute;
-margin-top: -6%;
-margin-left: 57%;
+float: right;
 color: white;
-font-style: normal;
 font-family: arial;
-background-color: red;
-padding-top: 0.5%;
-padding-bottom: 0.5%;
-padding-left: 1.5%;
-padding-right: 1.5%;
-border-radius: 1.5vw;
-font-size: 0.7vw;
 }
 
 .del:hover
 {
 cursor: pointer;
 color: red;
-background-color: white;
 }
 
-#place_order_wrapper
+#edit_box
 {
 position: absolute;
-background-color: #F7AC27;
-width: 100%;
-height: 15%;
-margin-top: 88.5%;
-border-bottom-left-radius: 1em;
-border-bottom-right-radius: 1em; 
-}
-
-#place_order
-{
-position: absolute;
-color: white;
-font-family: simplifica;
-font-size: 2em;
-left: 42%;
-top: 25%;
-background-color: #31AA2B;
-padding: 2%;
-cursor: pointer;
-border-radius: 0.2em;
-}
-
-#edit_content
-{
-margin-top: 15%;
-top: 20%;
-left: 10%;
-width: 100%;
+width: 35%;
+height: 75%;
+background-color: #B5A3A3;
+overflow: hidden;
 display: none;
+top: 26%;
+left: 98%;
 }
 
 #edit_box img
@@ -286,12 +238,11 @@ display: none;
 
 #sizes li label
 {
-position: absolute;
 cursor: pointer;
-font-size: 0.9em;
-width: 20%;
-padding: 3%;
-text-align: center;
+padding-top: 10%;
+padding-bottom: 10%;
+padding-left: 8%;
+padding-right: 8%;
 }
 
 #sizes li input[type=radio]:checked + label
@@ -302,15 +253,18 @@ background-color: #C98001;
 #sizes li
 {
 width: 30%;
+padding-top: 5%;
+padding-bottom: 5%;
 list-style-type: none;
 display: inline-block;
-margin-left: 10%;
 }
 
 #sides li
 {
 list-style-type: none;
 background-color: #999;
+padding-top: 2%;
+padding-bottom: 2%;
 }
 
 #toggle
@@ -360,32 +314,25 @@ cursor: pointer;
 background-color: #888;
 }
 
-.arrows_inner
+.edit_
 {
-width: 8%;
-left: 50%;
-margin-left: 70%;
-}
-
-.arrows_inner img
-{
-
-padding: 3%;
-margin-left: 72%;
-margin-top: 18%;
-width:100%;
+padding: 1%;
+background-color: #CF8F04;
+margin-top: -1%;
+margin-left: 80%;
 }
 
 .edit_:hover
 {
 cursor: pointer;
+background-color: white;
 color: red;
 }
 
 #inner_buttons
 {
 width: 80%;
-margin-top: -8%;
+margin-top: -4%;
 margin-left: 19%;
 }
 
@@ -416,16 +363,8 @@ left: 42%;
 
 #quantity
 {
-margin-top: -9%;
-}
 
-#arrow_up
-{
-position: absolute;
-width: 6%;
-left: 0.25%;
-top: 0%;
-display: none;
+margin-top: -9%;
 }
 
 /*end of orders page*/
@@ -1173,10 +1112,13 @@ height: 45%;
 {
 position: absolute;
 margin-top: -3%;
-width: 100%;
+width: 80%;
 height: 10%;
 padding-top: 0.8%;
 padding-bottom: 0.3%;
+padding-left: 10%;
+padding-right: 10%;
+-webkit-transition: text-align 0.2s ease-in;
 text-align: center;
 font-family: oranienbaum;
 font-size: 1.5vw;
@@ -1184,10 +1126,42 @@ background-color: #F7AC27;
 border-radius: 5em;
 }
 
+#contact_info_filled
+{
+position: absolute;
+margin-top: -4%;
+left: 35%;
+width: 50%;
+height: 60%;
+color: #7C7C7C;
+font-style: italic;
+font-size: 1vw;
+font-family: opensanslight;
+display: none;
+}
+
+#check_button
+{
+position: absolute;
+margin-top: -4.5%;
+left: 90%;
+width: 5%;
+display: none;
+}
+
+#check_button2
+{
+position: absolute;
+margin-top: -4.5%;
+left: 90%;
+width: 5%;
+display: none;
+}
+
 #contact_info_form
 {
 position: absolute;
-top: 6%;
+top: 5.8%;
 left: 3%;
 width: 94%;
 height: 94%;
@@ -1248,6 +1222,7 @@ width: 30%;
 height: 30%;
 color: #C20000;
 text-align: left;
+font-size: 0.9vw;
 }
 
 #pickup_time
@@ -1263,15 +1238,31 @@ height: 25%;
 {
 position: absolute;
 margin-top: -3%;
-width: 100%;
+width: 80%;
 height: 10%;
 padding-top: 0.8%;
 padding-bottom: 2%;
+padding-left: 10%;
+padding-right: 10%;
 text-align: center;
 font-family: oranienbaum;
 font-size: 1.5vw;
 background-color: #F7AC27;
 border-radius: 5em;
+}
+
+#pickup_filled
+{
+position: absolute;
+margin-top: -4%;
+left: 45%;
+width: 50%;
+height: 60%;
+color: #7C7C7C;
+font-style: italic;
+font-size: 1vw;
+font-family: opensanslight;
+display: none;
 }
 
 #time_selection
@@ -1295,22 +1286,42 @@ font-size: 2vw;
 #hour_time
 {
 position: absolute;
-top: 35%;
+top: 25%;
 left: 32.5%;
 }
 
 #minute_time
 {
 position: absolute;
-top: 35%;
+top: 25%;
 left: 42.5%;
 }
 
 #period_time
 {
 position: absolute;
-top: 35%;
+top: 25%;
 left: 52.5%;
+}
+
+#submit_pickup
+{
+position: absolute;
+display: none;
+top: 60%;
+left: 44%;
+height: 25%;
+font-size: 1vw;
+padding-top: 1.2%;
+padding-bottom: 1.5%;
+padding-left: 2%;
+padding-right: 2%;
+border-radius: 0.5em;
+}
+
+.pointer_cursor
+{
+cursor: pointer;
 }
 
 #order_details
@@ -1374,4 +1385,19 @@ width: 100%;
 height: 94%;
 border-top: none;
 background-color: #F7AC27;
+}
+
+#send_order
+{
+position: absolute;
+top: 95%;
+left: 20%;
+text-align: center;
+width: 60%;
+font-size: 1.5vw;
+font-family: oranienbaum;
+padding-top: 3%;
+padding-bottom: 3%;
+background-color: #9B6D1C;
+display: none;
 }
