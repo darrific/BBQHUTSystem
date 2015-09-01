@@ -171,43 +171,8 @@
 </body>
 
 <footer>
-	<script>
 
-		$(window).scroll(function(){
-		    var scrollTop = $(window).scrollTop();
-		    var height = $(window).height();
-		    $('#nav_bar_left, #nav_bar_right, #down_arrow, #logo_container, #slogan').css({'opacity': ((height - scrollTop) / height)});
-		});
+		<script type="text/javascript" src="index.js"></script>
 
-		var navOffset = $("#nav_bar_left").offset().top;
-
-			$(window).scroll(function(){
-				var scrollPos = $(window).scrollTop();
-
-				if (scrollPos >= navOffset) {					
-					$("#navigation_bar_index").fadeIn(500);					
-				} else {
-					$("#navigation_bar_index").fadeOut(500);					
-				}
-			});
-
-		$('a[href^="#"]').on('click', function(event) {
-
-    			var target = $( $(this).attr('href') );
-
-    			if( target.length ) {
-        			event.preventDefault();
-        			$('html, body').animate({scrollTop: target.offset().top}, 1000);}
-				});
-
-		$("#map_overlay").click(function(){
-				$("#map_overlay").fadeOut(1);
-			});
-
-
-		$("#gmap_canvas").mouseleave(function(){								
-				$("#map_overlay").fadeIn(1);
-			});
-	</script>
 </footer>
 </html>
