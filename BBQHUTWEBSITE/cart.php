@@ -55,6 +55,7 @@
 			</ul>
 		</nav>	
 	</div>
+	
 	<div id="cart_title">My Cart</div>
 	<div id="confirm_order_details">
 		<div id="contact_information">
