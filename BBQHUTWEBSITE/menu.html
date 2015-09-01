@@ -10,14 +10,13 @@
 <script type="text/javascript" src="jquery-2.1.1.min.js"></script>
 <script type="text/javascript" src="velocity.js"></script>
 
-<title>Our Menu - Original BBQ Hut</title>
+<title>Our Menu - The Original BBQ Hut</title>
 
 <body>
 	<div id="navigation_bar_menu">
 		<nav>
-		<a href="#index"><img id="logo_image" src="Resources/BBQH_Logo.svg" alt=""></a>	
 			<ul>
-				<li><a href="index.html" id="logo_image"></a></li>
+				<li><a href="index.html"><div id="logo_image"><img src="Resources\BBQH Logo.svg" alt="logo"></div></a></li>
 				<li class="menu_button"><a href="menu.html" id="see_menu_button">SEE THE MENU &#9663</a>
 					<ul class="dropdown">
 				        <li><a href="#regular_meals">Meats</a></li>
@@ -74,24 +73,24 @@
 		<div id="regular_meals_options">
 			<ul>
 				<li id="rm0">
-					<h1>Chicken</h1>
-					[text]
+					Chicken<br>
+					<p>[text]</p>
 				</li>
 				<li id="rm1">
-					<h1>Lamb</h1>
-					[text]
+					Lamb<br>
+					<p>[text]</p>
 				</li>
 				<li id="rm2">
-					<h1>Beef Steak</h1>
-					[text]
+					Beef Steak<br>
+					<p>[text]</p>
 				</li>
 				<li id="rm3">
-					<h1>Fish</h1>
-					[text]
+					Fish<br>
+					<p>[text]</p>
 				</li>
 				<li id="rm4">
-					<h1>Shrimp</h1>
-					[text]
+					Shrimp<br>
+					<p>[text]</p>
 				</li>
 			</ul>
 		</div>
@@ -112,24 +111,24 @@
 		<div id="combination_meals_options">
 			<ul>
 				<li id="cm0">
-					<h1>Lamb, Chicken, Fries & Green Salad</h1>
-					[text]
+					Lamb, Chicken, Fries & Green Salad<br/>
+					<p>[text]</p>
 				</li>
 				<li id="cm1">
-					<h1>Lamb, Steak, Fries & Green Salad</h1>
-					[text]
+					Lamb, Steak, Fries & Green Salad<br/>
+					<p>[text]</p>
 				</li>
 				<li id="cm2">
-					<h1>Steak, Chicken, Fries & Green Salad</h1>
-					[text]
+					Steak, Chicken, Fries & Green Salad<br/>
+					<p>[text]</p>
 				</li>
 				<li id="cm3">
-					<h1>Fish, Shrimp, Fries & Green Salad</h1>
-					[text]
+					Fish, Shrimp, Fries & Green Salad<br/>
+					<p>[text]</p>
 				</li>
 				<li id="cm4">
-					<h1>Shrimp, Fries & any one meat</h1>
-					[text]
+					Shrimp, Fries & any one meat<br/>
+					<p>[text]</p>
 				</li>
 			</ul>
 		</div>
@@ -138,7 +137,7 @@
 	<div id="sides_meals">
 		<div id="sides_meals_title">Add Some Sides to Your Meal</div>
 		<div id="sides_meals_lists">
-			<ul id="sm1">
+			<ul>
 				<li>Fries, Galric Bread & Green Salad</li>
 				<li>Fries Only</li>
 				<li>Baked Potato</li>
@@ -164,44 +163,25 @@
 
 			var width= $(window).width() * 0.4;
 			var animation_speed= 500;
-			var interval;
-			var counter= 0;
-			var arr = [];			
 
 		$("#regular_meals_options li").click(function(tag){
+				$("#regular_meals_options li").removeClass("selected_option");
 		        var clickt= tag.target;
-		        var current_id = clickt.id; //grab currentid eg. el0 - el7
-		        var ide = current_id.substring(2,3); //returns id number
-		        var pls = "#"+current_id;
-		        var who = counter-1;
-		        clearInterval(interval);
-		        if (counter === 0){
-		        	$("#regular_meals_images ul").animate({'margin-left': -(width*ide)}, animation_speed);
-		        	arr.push(current_id);
-		        	counter++;
-		        }else{
-		        	$("#regular_meals_images ul").animate({'margin-left': -(width*ide)}, animation_speed);
-		        	arr.push(current_id);
-		        	counter++;
-		        }
+		        var current_id = clickt.id; //grab currentid eg. rm0 - rm4
+		        var ide = current_id.substring(2); //returns id number
+	        	$("#regular_meals_images ul").animate({'margin-left': -(width*ide)}, animation_speed);
+	        	$("#"+current_id).addClass("selected_option");
+	        	var li_option = current_id;
 		    });
 
-		$("#combination_meals_options li").click(function(tag){
-		        var clickt= tag.target;
-		        var current_id = clickt.id; //grab currentid eg. el0 - el7
-		        var ide = current_id.substring(2,3); //returns id number
-		        var pls = "#"+current_id;
-		        var who = counter-1;
-		        clearInterval(interval);
-		        if (counter === 0){
-		        	$("#combination_meals_images ul").animate({'margin-left': -(width*ide)}, animation_speed);		        			        	
-		        	arr.push(current_id);
-		        	counter++;
-		        }else{
-		        	$("#combination_meals_images ul").animate({'margin-left': -(width*ide)}, animation_speed);		        			        	
-		        	arr.push(current_id);
-		        	counter++;
-		        }
+		$("#combination_meals_options li").click(function(tag2){
+				$("#combination_meals_options li").removeClass("selected_option");
+		        var clickt2= tag2.target;
+		        var current_id2 = clickt2.id; //grab currentid eg. rm0 - rm4
+		        var ide2 = current_id2.substring(2); //returns id number
+	        	$("#combination_meals_images ul").animate({'margin-left': -(width*ide2)}, animation_speed);
+	        	$("#"+current_id2).addClass("selected_option");
+	        	var li_option2 = current_id2;
 		    });
 
 		$('a[href^="#"]').on('click', function(event) {

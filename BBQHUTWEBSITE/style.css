@@ -21,7 +21,6 @@ text-align: center;
 body
 {
 background-color: #ECF4EB;
--webkit-user-select: none;
 }
 
 /*=================orders page=================*/
@@ -31,7 +30,7 @@ background-color: #ECF4EB;
 position: fixed;
 top: 0%;
 width: 100%;
-z-index: 5;
+z-index: 20;
 }
 
 
@@ -43,6 +42,7 @@ height: 80%;
 top: 55%;
 left: 50%;
 transform: translate(-50%,-50%);
+-webkit-user-select: none;
 }
 
 #header
@@ -423,6 +423,7 @@ position: absolute;
 top: 0%;
 width: 100%;
 height: 100%;
+z-index: 10;
 }
 
 #navigation_bar_index
@@ -430,14 +431,14 @@ height: 100%;
 position: fixed;
 top: 0%;
 width: 100%;
-z-index: 5;
+z-index: 20;
 display: none;
 }
 
 
 #background_image
 {
-position: absolute;
+position: fixed;
 width: 100%;
 height: 100%;
 overflow: hidden;
@@ -446,12 +447,13 @@ overflow: hidden;
 #middle_logo_container
 {
 position: absolute;
-font-size: 7vw;
-font-family: bebasbold;
-color: #3BAF4D;
-top: 50%;
+font-size: 3.5vw;
+font-family: opensanssemibold;
+color: #F7AC27;
+top: 47%;
 left: 50%;
 transform: translate(-50%,-50%);
+line-height: 150px;
 text-align: center;
 }
 
@@ -466,7 +468,7 @@ margin-top: -10%;
 position: absolute;
 width: 28%;
 height: 13%;
-top: 55%;
+top: 47%;
 transform: translate(16%,-50%);
 }
 
@@ -475,7 +477,7 @@ transform: translate(16%,-50%);
 position: absolute;
 width: 28%;
 height: 13%;
-top: 55%;
+top: 47%;
 left: 68%;
 transform: translate(0,-50%);
 }
@@ -574,11 +576,12 @@ cursor: pointer;
 position: absolute;
 width: 40%;
 height: 20%;
-top: 70%;
+top: 72%;
 left: 30%;
-font-family: arial;
-font-size: 2vw;
+font-family: anders;
+font-size: 2.5vw;
 text-align: center;
+font-weight: 600;
 color: white;
 }
 
@@ -612,18 +615,100 @@ width: 100%;
 height: 100%;
 }
 
+/*============ABOUT US PAGE==============*/
+
 #about_us
 {
 position: absolute;
 top: 125%;
 width: 100%;
 height: 100%;
-background-color: green;
+background-color: #ECF4EB;
+z-index: 10;
 }
 
-#logo_container
+#parallax_area
 {
-left: 50%;
+position: absolute;
+top: 12.5%;
+width: 35%;
+height: 87.5%;
+background-color: red;
+}
+
+#parallax_back
+{
+position: absolute;
+width: 100%;
+height: 100%;
+background-color: white;
+z-index: 1;
+}
+
+#parallax_front
+{
+position: absolute;
+top: 27.5%;
+left: 5%;
+width: 25%;
+height: 60%;
+z-index: 2;
+background-color: blue;
+}
+
+#aboutus_content
+{
+position: absolute;
+top: 12.5%;
+left: 35%;
+width: 65%;
+height: 87.5%;
+background-color: #ECF4EB;
+}
+
+#aboutus_title
+{
+position: absolute;
+top: 5%;
+width: 100%;
+font-size: 4vw;
+font-family: asgalt;
+text-align: center;
+}
+
+#aboutus_details
+{
+position: absolute;
+top: 20%;
+left: 5%;
+width: 90%;
+height: 100%;
+font-size: 1.5vw;
+font-family: opensansregular;
+}
+
+#aboutus_images
+{
+position: absolute;
+top: 65%;
+left: 10%;
+width: 80%;
+height: 30%;
+}
+
+#aboutus_images ul
+{
+width: 100%;
+height: 90%;
+}
+
+#aboutus_images li
+{
+width: 33%;
+height: 100%;
+list-style-type: none;
+display: inline-block;
+background-color: red;
 }
 
 /*+++++++About Us Mobile Page +++++++++*/
@@ -714,12 +799,14 @@ position: absolute;
 top: 250%;
 width: 100%;
 height: 100%;
+background-color: #ECF4EB;
+z-index: 10;
 }
 
 #contactus_title
 {
 position: absolute;
-top: 20%;
+top: 18%;
 width: 100%;
 height: 12%;
 font-size: 4vw;
@@ -799,8 +886,13 @@ height: 30%;
 #onlinecontact li
 {
 margin-top: 5%;
-width: 40%;
+width: 30%;
 display: inline-block;
+}
+
+.insta_svg
+{
+width: 80%;
 }
 
 #map_overlay
@@ -829,7 +921,7 @@ font-size: 3vw;
 position: fixed;
 top: 0%;
 width: 100%;
-z-index: 5;
+z-index: 20;
 }
 
 #menu_title
@@ -855,7 +947,7 @@ height: 100%;
 #regular_meals_title
 {
 position: absolute;
-top: 25%;
+top: 20%;
 left: 32%;
 font-size: 5vw;
 font-family: asgalt;
@@ -865,7 +957,7 @@ color: #444;
 #regular_meals_images
 {
 position: absolute;
-top: 35%;
+top: 30%;
 left: 5%;
 width: 40%;
 height: 40%;
@@ -895,7 +987,7 @@ width: 100%;
 #regular_meals_options
 {
 position: absolute;
-top: 25%;
+top: 20%;
 left: 55%;
 width: 40%;
 }
@@ -905,17 +997,19 @@ width: 40%;
 text-align: left;
 }
 
-#regular_meals_options h1
-{
-font-family: oranienbaum;
-}
-
 #regular_meals_options li
 {
-font-size: 1vw;
+font-family: oranienbaum;
+font-size: 2vw;
 list-style-type: none;
 margin-bottom: 10%;
 width: 90%;
+}
+
+#regular_meals_options p
+{
+font-family: opensanregular;
+font-size: 1vw;
 }
 
 #combination_meals
@@ -929,7 +1023,7 @@ height: 100%;
 #combination_meals_title
 {
 position: absolute;
-top: 25%;
+top: 20%;
 left: 55%;
 font-size: 5vw;
 font-family: asgalt;
@@ -939,7 +1033,7 @@ color: #444;
 #combination_meals_images
 {
 position: absolute;
-top: 35%;
+top: 30%;
 right: 5%;
 width: 40%;
 height: 40%;
@@ -969,8 +1063,9 @@ width: 100%;
 #combination_meals_options
 {
 position: absolute;
-top: 25%;
-left: 15%;
+top: 20%;
+left: 8%;
+width: 40%;
 }
 
 #combination_meals_options ul
@@ -978,21 +1073,30 @@ left: 15%;
 text-align: right;
 }
 
-#combination_meals_options h1
-{
-font-family: oranienbaum;
-}
-
 #combination_meals_options li
 {
-font-size: 1vw;
+font-family: oranienbaum;
+font-size: 2vw;
 list-style-type: none;
 margin-bottom: 10%;
+width: 90%;
+}
+
+#combination_meals_options p
+{
+font-family: opensanregular;
+font-size: 1vw;
 }
 
 .selected_option
 {
-background-color: #ECFFEF;
+background-color: #A8FFB6;
+}
+
+#meal_option
+{
+width: 100%;
+height: 100%;
 }
 
 #sides_meals
@@ -1006,7 +1110,7 @@ height: 100%;
 #sides_meals_title
 {
 position: absolute;
-top: 20%;
+top: 15%;
 left: 50%;
 transform:translate(-50%, 0);
 font-size: 5vw;
@@ -1017,7 +1121,7 @@ color: #444;
 #sides_meals_lists
 {
 position: absolute;
-top: 40%;
+top: 30%;
 left: 42%;
 width: 20%;
 height: auto;
@@ -1046,7 +1150,7 @@ z-index: 5;
 nav ul
 {
 width: 100%;
-height: 12%;
+height: 15%;
 }
 
 nav li
@@ -1061,11 +1165,11 @@ nav a
 text-align: center;
 display: block;
 text-decoration: none;
-font-size: 1.5vw;
+font-size: 2vw;
 font-family: bebasregular;
 color: #444;
-
-padding-bottom: 3%;
+padding-top: 9%;
+padding-bottom: 9%;
 }
 
 nav a:hover
@@ -1102,6 +1206,7 @@ background-color: #9B6D1C;
 
 nav ul li ul li a
 {
+font-size: 1.5vw;
 padding-top: 2%;
 padding-bottom: 2%;
 }
@@ -1109,9 +1214,9 @@ padding-bottom: 2%;
 #logo_image
 {
 position: absolute;
-width: 12%;
-top: 3%;
-left: 6%;
+width: 10%;
+margin-left: 6%;
+margin-top: -1.2%;
 }
 
 .cart_svg
@@ -1136,6 +1241,14 @@ background-color: #fff;
 }
 
 /*========= CART ================*/
+
+#navigation_bar_cart
+{
+position: fixed;
+top: 0%;
+width: 100%;
+z-index: 20;
+}
 
 #confirm_order_details
 {
@@ -1199,7 +1312,7 @@ display: none;
 #check_button
 {
 position: absolute;
-margin-top: -4.5%;
+margin-top: -4%;
 left: 90%;
 width: 5%;
 display: none;
@@ -1208,7 +1321,7 @@ display: none;
 #check_button2
 {
 position: absolute;
-margin-top: -4.5%;
+margin-top: -4%;
 left: 90%;
 width: 5%;
 display: none;

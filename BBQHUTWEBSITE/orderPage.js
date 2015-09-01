@@ -96,10 +96,10 @@
 				// var dd = arrow_down;
 				// arrow_down = arrow_up;
 				// arrow_up = dd;
-				// $(arrow_down).fadeIn(100);
-				// $(arrow_up).fadeOut(100);
-				il.fadeOut(10);
+				$(arrow_down).fadeIn(100);
+				$(arrow_up).fadeOut(100);
 				render();
+				il.fadeOut(10);
 			}
 		}
 		function editMeatHide(){		
