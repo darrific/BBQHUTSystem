@@ -18,7 +18,7 @@
 	<div id="navigation_bar_order">
 		<nav>	
 			<ul>
-				<li><a href="index.html" id="logo_image"></a></li>
+				<li><a href="index.html"><div id="logo_image"><img src="Resources\BBQH Logo.svg" alt="logo"></div></a></li>
 				<li><a href="menu.html" id="see_menu_button">SEE THE MENU &#9663</a>
 					<ul class="dropdown">
 				        <li><a href="menu.html#regular_meals">Meats</a></li>

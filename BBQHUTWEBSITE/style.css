@@ -855,7 +855,7 @@ height: 100%;
 #regular_meals_title
 {
 position: absolute;
-top: 25%;
+top: 20%;
 left: 32%;
 font-size: 5vw;
 font-family: asgalt;
@@ -865,7 +865,7 @@ color: #444;
 #regular_meals_images
 {
 position: absolute;
-top: 35%;
+top: 30%;
 left: 5%;
 width: 40%;
 height: 40%;
@@ -895,7 +895,7 @@ width: 100%;
 #regular_meals_options
 {
 position: absolute;
-top: 25%;
+top: 20%;
 left: 55%;
 width: 40%;
 }
@@ -905,17 +905,19 @@ width: 40%;
 text-align: left;
 }
 
-#regular_meals_options h1
-{
-font-family: oranienbaum;
-}
-
 #regular_meals_options li
 {
-font-size: 1vw;
+font-family: oranienbaum;
+font-size: 2vw;
 list-style-type: none;
 margin-bottom: 10%;
 width: 90%;
+}
+
+#regular_meals_options p
+{
+font-family: opensanregular;
+font-size: 1vw;
 }
 
 #combination_meals
@@ -929,7 +931,7 @@ height: 100%;
 #combination_meals_title
 {
 position: absolute;
-top: 25%;
+top: 20%;
 left: 55%;
 font-size: 5vw;
 font-family: asgalt;
@@ -939,7 +941,7 @@ color: #444;
 #combination_meals_images
 {
 position: absolute;
-top: 35%;
+top: 30%;
 right: 5%;
 width: 40%;
 height: 40%;
@@ -969,8 +971,9 @@ width: 100%;
 #combination_meals_options
 {
 position: absolute;
-top: 25%;
-left: 15%;
+top: 20%;
+left: 8%;
+width: 40%;
 }
 
 #combination_meals_options ul
@@ -978,21 +981,30 @@ left: 15%;
 text-align: right;
 }
 
-#combination_meals_options h1
-{
-font-family: oranienbaum;
-}
-
 #combination_meals_options li
 {
-font-size: 1vw;
+font-family: oranienbaum;
+font-size: 2vw;
 list-style-type: none;
 margin-bottom: 10%;
+width: 90%;
+}
+
+#combination_meals_options p
+{
+font-family: opensanregular;
+font-size: 1vw;
 }
 
 .selected_option
 {
-background-color: #ECFFEF;
+background-color: #A8FFB6;
+}
+
+#meal_option
+{
+width: 100%;
+height: 100%;
 }
 
 #sides_meals
@@ -1006,7 +1018,7 @@ height: 100%;
 #sides_meals_title
 {
 position: absolute;
-top: 20%;
+top: 15%;
 left: 50%;
 transform:translate(-50%, 0);
 font-size: 5vw;
@@ -1017,7 +1029,7 @@ color: #444;
 #sides_meals_lists
 {
 position: absolute;
-top: 40%;
+top: 30%;
 left: 42%;
 width: 20%;
 height: auto;
@@ -1046,7 +1058,7 @@ z-index: 5;
 nav ul
 {
 width: 100%;
-height: 12%;
+height: 15%;
 }
 
 nav li
@@ -1061,11 +1073,11 @@ nav a
 text-align: center;
 display: block;
 text-decoration: none;
-font-size: 1.5vw;
+font-size: 2vw;
 font-family: bebasregular;
 color: #444;
-padding-top: 7%;
-padding-bottom: 7%;
+padding-top: 9%;
+padding-bottom: 9%;
 }
 
 nav a:hover
@@ -1102,8 +1114,17 @@ background-color: #9B6D1C;
 
 nav ul li ul li a
 {
+font-size: 1.5vw;
 padding-top: 2%;
 padding-bottom: 2%;
+}
+
+#logo_image
+{
+position: absolute;
+width: 10%;
+margin-left: 6%;
+margin-top: -1.2%;
 }
 
 .cart_svg
@@ -1191,7 +1212,7 @@ display: none;
 #check_button
 {
 position: absolute;
-margin-top: -4.5%;
+margin-top: -4%;
 left: 90%;
 width: 5%;
 display: none;
@@ -1200,7 +1221,7 @@ display: none;
 #check_button2
 {
 position: absolute;
-margin-top: -4.5%;
+margin-top: -4%;
 left: 90%;
 width: 5%;
 display: none;

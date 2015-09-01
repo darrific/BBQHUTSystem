@@ -16,7 +16,7 @@
 	<div id="navigation_bar_index">
 		<nav>	
 			<ul>
-				<li><a href="#index" id="logo_image"></a></li>
+				<li><a href="#index"><div id="logo_image"><img src="Resources\BBQH Logo.svg" alt="logo"></div></a></li>
 				<li class="menu_button"><a href="menu.html" id="see_menu_button">SEE THE MENU &#9663</a>
 					<ul class="dropdown">
 				        <li><a href="menu.html#regular_meals">Meats</a></li>
@@ -145,7 +145,7 @@
 						</ul>
 					</td>
 				</tr>
-			</table>	
+			</table>
 		</div>
 		<div id="click_map_instruct">Click the map to use</div>
 	</div>
@@ -154,12 +154,10 @@
 <footer>
 	<script>
 
-		$(window).scroll(function () {
+		$(window).scroll(function(){
 		    var scrollTop = $(window).scrollTop();
 		    var height = $(window).height();
-		    $('#nav_bar_left, #nav_bar_right, #down_arrow, #logo_container, #slogan').css({
-		        'opacity': ((height - scrollTop) / height)
-		    });
+		    $('#nav_bar_left, #nav_bar_right, #down_arrow, #logo_container, #slogan').css({'opacity': ((height - scrollTop) / height)});
 		});
 
 		var navOffset = $("#nav_bar_left").offset().top;
