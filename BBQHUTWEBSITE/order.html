@@ -63,7 +63,7 @@
 		<div id="main_box">
 			<div id="meat_container" >
 				<div id="subhead1" class="subhead">
-					Choose Your Meat
+					Step 1: Choose.
 				</div>
 				<div id="options_container">
 					<ul>
@@ -122,7 +122,7 @@
 							<div class="meat_option" id="none_meat">
 								<ul>
 									<li id="image"><img src="images/food.jpeg" alt=""></li>
-									<li id="name">None</li>
+									<li id="name">Vegeterian</li>
 									<li id="price_">$25</li>
 									<li id="add6" class="add">+</li>
 								</ul>
@@ -136,18 +136,20 @@
 			</div>
 			<div id="review_container">
 				<div id="subhead1" class="subhead">
-					Review Your Order
+					Step 2: Edit.
 				</div>
 				<div id="the_order_output">
 					<ul id="order_result">
 						<script id="order_template" type="text/template">
 							{{#order_result}}
-							<li class="helplol">
-								<span>{{.}}</span>
+							<li class="helplol" id="">
+								<div id="word">{{.}}</div>
 								<div id="inner_buttons">
-									<div class="arrows_inner" id="arrow_down"><img src="images/arrow_down.png"></div>
-									<div class="arrows_inner" id="arrow_up"><img src="images/arrow_up.png"></div>
-									<i class="del">x</i>	
+									<div id="arrows">
+										<img class="innerArrow" id="down" src="images/arrow_down.png"/>
+										<img class="innerArrow" id="up" src="images/arrow_up.png"/>
+									</div>
+									<i class="del">x</i>
 								</div>
 								<div id="edit_content">
 									<ul id="sizes">
@@ -165,6 +167,7 @@
 										<li>Mashed Potato ($5)<input id="toggle" class="add_5" type="checkbox"><label for="toggle"></li>	
 										<li>Wedges ($5)<input id="toggle" class="add_5" type="checkbox"><label for="toggle"></li>
 										<li>Corn ($5)<input id="toggle" class="add_5" type="checkbox"><label for="toggle"></li>
+										<li>Potato Salad ($5)<input id="toggle" class="add_5" type="checkbox"><label for="toggle"></li>
 									</ul>
 
 									</br>
@@ -208,6 +211,7 @@
 		var v_total = (v_sides_t + clicked_size)*count_total;
 		var cart_counter = 0;
 		var iq;
+		var il;
 		//cache DOM
 		var $mainZebra = $('#order_container'); 
 		var $optionsContainer = $mainZebra.find('#options_container'); //was container
@@ -238,16 +242,16 @@
 		b_large_size.on('click', getSize);
 		b_add1.on('click', autoIncrement);
 		b_minus1.on('click', autoIncrement);
-		$ul.delegate('div.arrows_inner','click', figureOut);
+		$ul.delegate('img.innerArrow','click', figureOut);
 		//
-		render();
+		// render();
 
 		function render(){
 			$ul.html(Mustache.render(template, {order_result: arr_order_result}));
+
 		}
 
 		function addMeat(evenh){
-
 			var $info = $optionsContainer.find(evenh.target).prev().prev().html();
 			arr_order_result.push($info); //pushing the info (eg "Chicken") to the array
 			cart_counter++;
@@ -270,23 +274,28 @@
 
 		function figureOut(){
 			iq = (this.id);
+			il = $(this).parent().parent().next();
+			arrow_down = $(this);
+			arrow_up =$(this).next();
 			arrowToggle();
 		}
 
 		function arrowToggle(){
-			var popup = $('#edit_content')
-			var down = $("#arrow_down")
-			var up = $('#arrow_up')
-			if (iq === "arrow_down")
+			
+			if (iq === "down")
 			{
-				$(down).fadeOut(100);
-				$(up).fadeIn(100);
-				popup.fadeIn(1000);
+				$(arrow_down).fadeOut(100);
+				$(arrow_up).fadeIn(100);
+				il.fadeIn(1000);
 			}else
 			{
-				$(down).fadeIn(100);
-				$(up).fadeOut(100);
-				popup.fadeOut(10);
+				// var dd = arrow_down;
+				// arrow_down = arrow_up;
+				// arrow_up = dd;
+				// $(arrow_down).fadeIn(100);
+				// $(arrow_up).fadeOut(100);
+				il.fadeOut(10);
+				render();
 			}
 		}
 		function editMeatHide(){		

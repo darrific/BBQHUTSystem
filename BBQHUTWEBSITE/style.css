@@ -187,27 +187,28 @@ cursor: pointer;
 
 #review_container ul
 {
+padding: 5%;
 }
 
 #review_container li
 {
 list-style-type: none;
 background-color: #d09744;
-margin-bottom: 3%;
-width: 80%;
-height: 8%;
-overflow: hidden;
-padding: 2%;
+width: 77%;
+padding-top: 5%;
+padding-bottom: 5%;
+padding-left: 5%;
 margin-left: 10%;
 color: white;
 font-size: 1vw;
 font-family: opensanslight;
+margin-bottom: 1%;
 }
 
 .del
 {
 position: absolute;
-margin-top: -6%;
+margin-top: -5%;
 margin-left: 57%;
 color: white;
 font-style: normal;
@@ -360,33 +361,10 @@ cursor: pointer;
 background-color: #888;
 }
 
-.arrows_inner
-{
-width: 8%;
-left: 50%;
-margin-left: 70%;
-}
-
-.arrows_inner img
-{
-
-padding: 3%;
-margin-left: 72%;
-margin-top: 18%;
-width:100%;
-}
-
 .edit_:hover
 {
 cursor: pointer;
 color: red;
-}
-
-#inner_buttons
-{
-width: 80%;
-margin-top: -8%;
-margin-left: 19%;
 }
 
 #total
@@ -419,15 +397,22 @@ left: 42%;
 margin-top: -9%;
 }
 
-#arrow_up
+#arrows
 {
-position: absolute;
-width: 6%;
-left: 0.25%;
-top: 0%;
-display: none;
+margin-top: -8%;
+margin-left: 72%;
 }
 
+.innerArrow 
+{
+width: 25%;
+left: 83%;
+}
+
+#up
+{
+display: none;
+}
 /*end of orders page*/
 
 /*===================INDEX=================*/
