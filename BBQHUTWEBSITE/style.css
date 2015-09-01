@@ -1064,8 +1064,8 @@ text-decoration: none;
 font-size: 1.5vw;
 font-family: bebasregular;
 color: #444;
-padding-top: 7%;
-padding-bottom: 7%;
+
+padding-bottom: 3%;
 }
 
 nav a:hover
@@ -1104,6 +1104,14 @@ nav ul li ul li a
 {
 padding-top: 2%;
 padding-bottom: 2%;
+}
+
+#logo_image
+{
+position: absolute;
+width: 12%;
+top: 3%;
+left: 6%;
 }
 
 .cart_svg
