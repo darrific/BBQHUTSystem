@@ -1,5 +1,3 @@
-<!DOCTYPE html>
-
 <html>
 
 <link rel="stylesheet" type="text/css" href="style.css">
@@ -26,10 +24,10 @@
 				        <li class="sides_drop_option"><a href="#sides_meals">Sides</a></li>
 			      </ul>
 				</li>
-				<li><a href="order.html" id="place_order_button">PLACE AN ORDER</a></li>
+				<li><a href="order.php" id="place_order_button">PLACE AN ORDER</a></li>
 				<li><a href="index.html#about_us" id="about_us_button">ABOUT US</a></li>
 				<li><a href="index.html#contact_us" id="contact_us_button">CONTACT US</a></li>
-				<li class="cart_svg"><a href="cart.html">
+				<li class="cart_svg"><a href="cart.php">
 					<div id="cart_count"></div>
 						<?xml version="1.0" encoding="iso-8859-1"?>
 						<!-- Generator: Adobe Illustrator 16.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
@@ -60,19 +58,51 @@
 	<div id="cart_title">My Cart</div>
 	<div id="confirm_order_details">
 		<div id="contact_information">
-			<div id="contact_info_header">Contact Details</div>
+			<div id="contact_info_header" class="pointer_cursor">Contact Details
+				<div id="contact_info_filled"></div>
+				<div id="check_button">
+					<?xml version="1.0" encoding="iso-8859-1"?>
+					<!-- Generator: Adobe Illustrator 16.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+					<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+					<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+						 width="60%" viewBox="0 0 448.8 448.8" style="enable-background:new 0 0 448.8 448.8;" xml:space="preserve"
+						>
+						<g>
+							<g id="check">
+								<polygon points="142.8,323.85 35.7,216.75 0,252.45 142.8,395.25 448.8,89.25 413.1,53.55 		"/>
+							</g>
+						</g>
+					</svg>
+				</div>
+			</div>
 			<div id="contact_info_form">
 				<form id="contact_form" name="contact_form">
 					<input id="contact_fname" name="contact_fname" type="text" placeholder="First Name" autocomplete="on" autofocus required>
 					<input id="contact_lname" name="contact_lname" type="text" placeholder="Last Name" autocomplete="on" required>
-					<input id="contact_number" name="contact_number" type="text" pattern="[0-9]{7}" min="1000000" max="9999999" placeholder="Phone Number (1234560)" required>
-					<button id="submit_contact" onclick="return false">Next</button>
+					<input id="contact_number" name="contact_number" type="text" pattern="[0-9]{7}" min="1000000" max="9999999" placeholder="Phone Number (1234560)" autocomplete="on" required>
+					<button id="submit_contact" class="pointer_cursor" onclick="return false">Next</button>
 				</form>
 				<div id="error_message"></div>
 			</div>
 		</div>
 		<div id="pickup_time">
-			<div id="pickup_time_header">Choose a Pickup Time</div>
+			<div id="pickup_time_header" class="pointer_cursor">Choose a Pickup Time
+				<div id="pickup_filled"></div>
+				<div id="check_button2">
+					<?xml version="1.0" encoding="iso-8859-1"?>
+					<!-- Generator: Adobe Illustrator 16.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+					<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+					<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+						 width="60%" viewBox="0 0 448.8 448.8" style="enable-background:new 0 0 448.8 448.8;" xml:space="preserve"
+						>
+						<g>
+							<g id="check">
+								<polygon points="142.8,323.85 35.7,216.75 0,252.45 142.8,395.25 448.8,89.25 413.1,53.55 		"/>
+							</g>
+						</g>
+					</svg>
+				</div>
+			</div>
 			<div id="time_selection">
 				<select name="hour" id="hour_time">
 					<option value="1">1</option>
@@ -80,7 +110,7 @@
 					<option value="3">3</option>
 					<option value="4">4</option>
 					<option value="5">5</option>
-					<option value="6">6</option>
+					<option value="6" selected="selected">6</option>
 					<option value="7">7</option>
 					<option value="8">8</option>
 					<option value="9">9</option>
@@ -98,14 +128,15 @@
 					<option value="30">30</option>
 					<option value="35">35</option>
 					<option value="40">40</option>
-					<option value="45">45</option>
+					<option value="45" selected="selected">45</option>
 					<option value="50">50</option>
 					<option value="55">55</option>
 				</select>
-				<select name="period" id="period_time" value="pm">
+				<select name="period" id="period_time">
 					<option value="am">a.m.</option>
-					<option value="	pm">p.m.</option>
+					<option value="pm" selected="selected">p.m.</option>
 				</select>
+				<button id="submit_pickup" class="pointer_cursor" onclick="return false">Next</button>
 			</div>
 		</div>
 		<div id="order_details">
@@ -118,6 +149,7 @@
 			</div>
 			<div id="all_orders">
 				<!--JAVASCRIPT WORK FOR SAYAAD HERE -->
+				<button id="send_order" class="pointer_cursor">Send Order</button>
 			</div>
 		</div>
 	</div>
@@ -125,108 +157,7 @@
 </body>
 
 <footer>
-	<script>
-		
-
-		var contact_info_counter = 0;
-		var submitconfirmed = 0;
-		var pickup_time_counter = 0;
-		
-		var $confirm_order_details = $('#confirm_order_details');
-		var $contact_information = $confirm_order_details.find('#contact_information');
-		var $contact_info_header = $contact_information.find('#contact_info_header');
-		var $contact_info_form = $contact_information.find('#contact_info_form');
-		var $contact_form = $contact_information.find('#contact_info_form form');
-		var $contact_input1 = $contact_information.find('#contact_fname');
-		var $contact_input2 = $contact_information.find('#contact_lname');
-		var $contact_input3 = $contact_information.find('#contact_number');
-		var $error_message = $contact_information.find('#error_message');
-		var $contact_submit = $contact_information.find('#submit_contact');
-		var $pickup_time = $confirm_order_details.find('#pickup_time');
-		var $pickup_time_header = $pickup_time.find('#pickup_time_header');
-		var $time_selection = $pickup_time.find('#time_selection');
-		var $time_selector = $pickup_time.find('#time_selection select');
-
-		var contact_click = $contact_info_header;
-		var contact_submit = $contact_submit;
-		var pickup_click = $pickup_time_header;
-
-		contact_click.on('click', showhidecontact);
-		contact_submit.on('click', nextOption);
-		pickup_click.on('click', showhidepickup);
-
-
-			function closecontact(){
-				$contact_info_header.delay(200).velocity({top:'50%'},200);
-				$contact_info_form.velocity({height:'0%'},200);
-				$contact_form.fadeOut(25);
-				$error_message.fadeOut(25);
-				$contact_form.velocity({height:'0%'},200);
-				$pickup_time.velocity({top:'45%'},200);
-			}
-
-			function opencontact(){
-				$contact_info_form.delay(200).velocity({height:'94%'},200);
-				$contact_info_header.velocity({top:'0%'},200);
-				$contact_form.velocity({height:''},200);
-				$contact_form.fadeIn(25);
-				$pickup_time.delay(200).velocity({top:'65%'},200);
-			}
-
-			function showhidecontact(){
-				if (contact_info_counter === 0)
-				{
-					closecontact();
-					contact_info_counter++;
-				}
-				else
-				{
-					opencontact();
-					contact_info_counter--;
-				}
-			}
-
-			function openpickup(){
-				$time_selection.velocity({height:'90.5%'},200);
-				$time_selector.fadeIn(25);
-				$time_selector.velocity({height:'25%'},200);
-			}
-
-			function closepickup(){
-				$time_selection.velocity({height:'0%'},200);
-				$time_selector.fadeOut(25);
-				$time_selector.velocity({height:'0%'},200);
-			}
-
-			function showhidepickup(){
-				if (pickup_time_counter === 0)
-				{
-					openpickup();
-					pickup_time_counter++;
-				}
-				else
-				{
-					closepickup();
-					pickup_time_counter--;
-				}
-			}
-
-			function nextOption(){
-				if (($contact_input1.val() === "") || ($contact_input2.val() === "") || ($contact_input3.val() === ""))
-				{	
-					$error_message.fadeIn(1);
-					$error_message.text("Please fill in all the fields.")
-				}
-				else
-				{	
-					$error_message.fadeOut(1);
-					closecontact();
-					contact_info_counter++;
-					openpickup();
-					pickup_time_counter++;
-				}
-			};
-	</script>
+		<script type="text/javascript" src="cartPage.js"></script>
 </footer>
 
 </html>
