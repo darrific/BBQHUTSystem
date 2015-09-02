@@ -50,6 +50,6 @@ function enablemap(){
 	$map_overlay.fadeOut(1);
 };
 
-$("#gmap_canvas","#recenter_map","#contact_info").mouseleave(function(){								
+$gmap_canvas.mouseleave(function(){								
 	$map_overlay.fadeIn(1);
 });
