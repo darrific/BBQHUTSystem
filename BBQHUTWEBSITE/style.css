@@ -617,6 +617,12 @@ height: 100%;
 
 /*============ABOUT US PAGE==============*/
 
+#about_us_anchor
+{
+position: absolute;
+top: 87.5%;
+}
+
 #about_us
 {
 position: absolute;
@@ -821,6 +827,12 @@ width: 100%;
 
 /*=========================== CONTACT US PAGE ==============================*/
 
+#contact_us_anchor
+{
+position: absolute;
+top: 187.5%;
+}
+
 #contact_us
 {
 position: absolute;
@@ -935,11 +947,15 @@ z-index: 2;
 #click_map_instruct
 {
 position: absolute;
-top: 79%;
+top: 69%;
 width: 100%;
+padding-top: 1%;
 text-align: center;
 font-family: asgalt;
 font-size: 3vw;
+opacity: 0.8;
+color: #C5DDC3;
+background-color: #999;
 }
 
 /* ============================MENU================================== */

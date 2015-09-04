@@ -26,10 +26,10 @@
 				        <li class="sides_drop_option"><a href="#sides_meals">Sides</a></li>
 			      </ul>
 				</li>
-				<li><a href="order.php" id="place_order_button">PLACE AN ORDER</a></li>
-				<li><a href="index.html#about_us" id="about_us_button">ABOUT US</a></li>
-				<li><a href="index.html#contact_us" id="contact_us_button">CONTACT US</a></li>
-				<li class="cart_svg"><a href="cart.php">
+				<li><a href="order.html" id="place_order_button">PLACE AN ORDER</a></li>
+				<li><a href="index.html#about_us_anchor" id="about_us_button">ABOUT US</a></li>
+				<li><a href="index.html#contact_us_anchor" id="contact_us_button">CONTACT US</a></li>
+				<li class="cart_svg"><a href="cart.html">
 					<div id="cart_count"></div>
 						<?xml version="1.0" encoding="iso-8859-1"?>
 						<!-- Generator: Adobe Illustrator 16.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->

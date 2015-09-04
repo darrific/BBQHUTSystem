@@ -14,16 +14,19 @@ var $recenter_map = $contact_us.find('#recenter_map');
 var $map_overlay = $contact_us.find('#map_overlay');
 var $gmap_canvas = $contact_us.find('#gmap_canvas');
 var $contact_info = $contact_us.find('#contact_info');
+var $click_map_instruct = $contact_us.find('#click_map_instruct');
 
 var anyanchor = $anyanchor;
 var map_overlay = $map_overlay;
 var recenter_map = $recenter_map;
 var gmap_canvas = $gmap_canvas;
+var contact_info = $contact_info;
 
 anyanchor.on('click', smoothanchor);
 map_overlay.on('click', enablemap);
 recenter_map.on('click', enablemap);
-
+contact_info.on('click', enablemap);
+gmap_canvas.on('mouseleave', disablemap);
 
 $(window).scroll(function(){
     var scrollPos = $(window).scrollTop();
@@ -43,13 +46,15 @@ function smoothanchor(event){
 var target = $( $(this).attr('href') );
 if(target.length){
 	event.preventDefault();
-	$('html, body').animate({scrollTop: (target.offset().top)-123}, 1000);}
+	$('html, body').animate({scrollTop: (target.offset().top)}, 1000);}
 };
 
 function enablemap(){
 	$map_overlay.fadeOut(1);
+	$click_map_instruct.fadeOut(500);
 };
 
-$gmap_canvas.mouseleave(function(){								
+function disablemap(){								
 	$map_overlay.fadeIn(1);
-});
+	$click_map_instruct.fadeIn(500);
+};

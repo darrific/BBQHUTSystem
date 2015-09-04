@@ -25,8 +25,8 @@
 			      </ul>
 				</li>
 				<li><a href="order.php" id="place_order_button">PLACE AN ORDER</a></li>
-				<li><a href="index.html#about_us" id="about_us_button">ABOUT US</a></li>
-				<li><a href="index.html#contact_us" id="contact_us_button">CONTACT US</a></li>
+				<li><a href="index.html#about_us_anchor" id="about_us_button">ABOUT US</a></li>
+				<li><a href="index.html#contact_us_anchor" id="contact_us_button">CONTACT US</a></li>
 				<li class="cart_svg"><a href="cart.php">
 					<div id="cart_count"></div>
 						<?xml version="1.0" encoding="iso-8859-1"?>
