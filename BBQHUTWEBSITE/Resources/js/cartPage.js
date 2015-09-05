@@ -40,7 +40,7 @@ contact_header.on('click', showhidecontact);
 contact_submit.on('click', optionOne);
 pickup_header.on('click', showhidepickup);
 pickup_submit.on('click', optionTwo);
-
+ 
 
 	function closecontact(){
 		$contact_info_header.delay(200).velocity({top:'50%'},200);

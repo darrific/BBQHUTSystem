@@ -2,14 +2,14 @@
 
 <html>
 
-<link rel="stylesheet" type="text/css" href="style.css">
-<link rel="stylesheet" type="text.css" href="animate.css">
-<link rel="stylesheet" type="text.css" href="fonts.css">
-<script type="text/javascript" src="jquery.js"></script>
-<script type="text/javascript" src="scroll.js"></script>
-<script type="text/javascript" src="jquery-2.1.1.min.js"></script>
-<script type="text/javascript" src="mustache.js"></script>
-<script type="text/javascript" src="velocity.js"></script>
+<link rel="stylesheet" type="text/css" href="Resources/css/style.css">
+<link rel="stylesheet" type="text.css" href="Resources/css/animate.css">
+<link rel="stylesheet" type="text.css" href="Resources/css/fonts.css">
+<script type="text/javascript" src="Resources/js/jquery.js"></script>
+<script type="text/javascript" src="Resources/js/scroll.js"></script>
+<script type="text/javascript" src="Resources/js/jquery-2.1.1.min.js"></script>
+<script type="text/javascript" src="Resources/js/mustache.js"></script>
+<script type="text/javascript" src="Resources/js/velocity.js"></script>
 
 <title>BBQH | Make an Order</title>
 
@@ -18,7 +18,7 @@
 	<div id="navigation_bar_order">
 		<nav>	
 			<ul>
-				<li><a href="index.html"><div id="logo_image"><img src="Resources\BBQH Logo.svg" alt="logo"></div></a></li>
+				<li><a href="index.html"><div id="logo_image"><img src="Resources\logos\BBQH Logo.svg" alt="logo"></div></a></li>
 				<li><a href="menu.html" id="see_menu_button">SEE THE MENU &#9663</a>
 					<ul class="dropdown">
 				        <li><a href="menu.html#regular_meals">Meats</a></li>
@@ -29,7 +29,7 @@
 				<li><a href="order.html" id="place_order_button">PLACE AN ORDER</a></li>
 				<li><a href="index.html#about_us_anchor" id="about_us_button">ABOUT US</a></li>
 				<li><a href="index.html#contact_us_anchor" id="contact_us_button">CONTACT US</a></li>
-				<li class="cart_svg"><a href="cart.html">
+				<li class="cart_svg"><a href="cart.php">
 					<div id="cart_count"></div>
 						<?xml version="1.0" encoding="iso-8859-1"?>
 						<!-- Generator: Adobe Illustrator 16.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
@@ -70,7 +70,7 @@
 						<li>
 							<div class="meat_option" id="chicken">
 								<ul>
-									<li id="image"><img src="images/food.jpeg" alt=""></li>
+									<li id="image"><img src="Resources/images/food.jpeg" alt=""></li>
 									<li id="name">Chicken</li>
 									<li id="price_">$25</li>						
 									<li id="add1" class="add">+</li>
@@ -81,7 +81,7 @@
 						<li>
 							<div class="meat_option" id="lamb">
 								<ul>
-									<li id="image"><img src="images/food.jpeg" alt=""></li>
+									<li id="image"><img src="Resources/images/food.jpeg" alt=""></li>
 									<li id="name">Lamb</li>
 									<li id="price_">$25</li>
 									<li id="add2" class="add">+</li>
@@ -91,7 +91,7 @@
 						<li>
 							<div class="meat_option" id="beef">
 								<ul>
-									<li id="image"><img src="images/food.jpeg" alt=""></li>
+									<li id="image"><img src="Resources/images/food.jpeg" alt=""></li>
 									<li id="name">Beef</li>
 									<li id="price_">$25</li>
 									<li id="add3" class="add">+</li>
@@ -101,7 +101,7 @@
 						<li>
 							<div class="meat_option" id="fish">
 								<ul>
-									<li id="image"><img src="images/food.jpeg" alt=""></li>
+									<li id="image"><img src="Resources/images/food.jpeg" alt=""></li>
 									<li id="name">Fish</li>
 									<li id="price_">$25</li>
 									<li id="add4" class="add">+</li>
@@ -111,7 +111,7 @@
 						<li>
 							<div class="meat_option" id="shimp">
 								<ul>
-									<li id="image"><img src="images/food.jpeg" alt=""></li>
+									<li id="image"><img src="Resources/images/food.jpeg" alt=""></li>
 									<li id="name">Shrimp</li>
 									<li id="price_">$25</li>
 									<li id="add5" class="add">+</li>
@@ -121,7 +121,7 @@
 						<li>
 							<div class="meat_option" id="none_meat">
 								<ul>
-									<li id="image"><img src="images/food.jpeg" alt=""></li>
+									<li id="image"><img src="Resources/images/food.jpeg" alt=""></li>
 									<li id="name">Vegeterian</li>
 									<li id="price_">$25</li>
 									<li id="add6" class="add">+</li>
@@ -146,8 +146,8 @@
 								<div id="word">{{.}}</div>
 								<div id="inner_buttons">
 									<div id="arrows">
-										<img class="innerArrow" id="down" src="images/arrow_down.png"/>
-										<img class="innerArrow" id="up" src="images/arrow_up.png"/>
+										<img class="innerArrow" id="down" src="Resources/images/arrow_down.png"/>
+										<img class="innerArrow" id="up" src="Resources/images/arrow_up.png"/>
 									</div>
 									<i class="del">x</i>
 								</div>
@@ -191,9 +191,7 @@
 </body>
 
 <footer>
-
-	
-	<script type="text/javascript" src="orderPage.js"></script>
+	<script type="text/javascript" src="Resources/js/orderPage.js"></script>
 </footer>
 
 </html>

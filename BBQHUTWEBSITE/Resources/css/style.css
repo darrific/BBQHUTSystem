@@ -1175,7 +1175,7 @@ height: auto;
 font-family: bebasregular;
 font-size: 1.6vw;
 text-align: left;
-list-style-image: url('images/sides.png');
+list-style-image: url('../images/sides.png');
 padding-left: 5%;
 margin-bottom: 3%;
 }
