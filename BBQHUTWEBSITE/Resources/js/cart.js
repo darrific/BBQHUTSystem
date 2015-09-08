@@ -13,7 +13,6 @@ var $contact_input2 = $contact_form.find('#contact_lname');
 var $contact_input3 = $contact_form.find('#contact_number');
 var $check_svg = $contact_info_header.find('#check_button');
 var $error_message = $contact_info_form.find('#error_message');
-var $contact_submit = $contact_form.find('#submit_contact');
 var $contact_info_filled = $contact_info_header.find('#contact_info_filled');
 
 var $pickup_time = $confirm_order_details.find('#pickup_time');
@@ -32,12 +31,10 @@ var $all_orders = $order_details.find('#all_orders');
 var $send_order = $all_orders.find('#send_order');
 
 var contact_header = $contact_info_header;
-var contact_submit = $contact_submit;
 var pickup_header = $pickup_time_header;
 var pickup_submit = $submit_pickup;
 
 contact_header.on('click', showhidecontact);
-contact_submit.on('click', optionOne);
 pickup_header.on('click', showhidepickup);
 pickup_submit.on('click', optionTwo);
  

@@ -77,11 +77,11 @@
 				</div>
 			</div>
 			<div id="contact_info_form">
-				<form id="contact_form" name="contact_form">
+				<form id="contact_form" name="contact_form" onsubmit="optionOne(); return false;">
 					<input id="contact_fname" name="contact_fname" type="text" placeholder="First Name" autocomplete="on" autofocus required>
 					<input id="contact_lname" name="contact_lname" type="text" placeholder="Last Name" autocomplete="on" required>
 					<input id="contact_number" name="contact_number" type="text" pattern="[0-9]{7}" min="1000000" max="9999999" placeholder="Phone Number (1234560)" autocomplete="on" required>
-					<button id="submit_contact" class="pointer_cursor" onclick="return false">Next</button>
+					<input id="submit_contact" class="pointer_cursor" type="submit" value="Next">
 				</form>
 				<div id="error_message"></div>
 			</div>
