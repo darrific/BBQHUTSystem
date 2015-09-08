@@ -134,7 +134,7 @@
 					
 				</ul> 
 			</div>
-			<div id="review_container">
+			<form id="review_container" action="php/ProcessOrder.php">
 				<div id="subhead1" class="subhead">
 					Step 2: Edit.
 				</div>
@@ -142,8 +142,9 @@
 					<ul id="order_result">
 						<script id="order_template" type="text/template">
 							{{#order_result}}
-							<li class="helplol" id="">
-								<div id="word">{{.}}</div>
+							<li class="helplol" id="FoodEntry{{eyedee}}">
+								<div id="id" class="hidden">{{eyedee}}</div>
+								<div id="word">{{meat}}</div>
 								<div id="inner_buttons">
 									<div id="arrows">
 										<img class="innerArrow" id="down" src="Resources/images/arrow_down.png"/>
@@ -152,33 +153,34 @@
 									<i class="del">x</i>
 								</div>
 								<div id="edit_content">
-									<ul id="sizes">
-										<h2>SIZE</h2>
-										<li><input id="small35" name="sizes" value="small35" type="radio" checked><label for="small35">Small ($35)</label></li>
-										<li><input id="large45" name="sizes" value="large35" type="radio"><label for="large45">Large ($45)</label></li>
-									</ul>
-
+									{{#size}}
+										<ul id="sizes"> 
+											<h2>SIZE</h2> 
+											<li><input name="size{{eyedee}}" id="small{{eyedee}}" value="small{{eyedee}}" type="radio" {{size.small}}><label id="smallLabel" for="small{{eyedee}}">Small ($35)</label></li> 
+											<li><input name="size{{eyedee}}" id="large{{eyedee}}" value="large{{eyedee}}" type="radio" {{size.large}}><label id="largeLabel" for="large{{eyedee}}">Large ($45)</label></li> 
+										</ul>
+									{{/size}}
 									</br>	
 
 									<h2>SIDES</h2>
 									<ul id="sides">
-										<li>Salad (Free) <input id="toggle" type="checkbox" checked><label for="toggle"></li>
-										<li>Fries (Free)<input id="toggle" type="checkbox" checked><label for="toggle"></li>
-										<li>Mashed Potato ($5)<input id="toggle" class="add_5" type="checkbox"><label for="toggle"></li>	
-										<li>Wedges ($5)<input id="toggle" class="add_5" type="checkbox"><label for="toggle"></li>
-										<li>Corn ($5)<input id="toggle" class="add_5" type="checkbox"><label for="toggle"></li>
-										<li>Potato Salad ($5)<input id="toggle" class="add_5" type="checkbox"><label for="toggle"></li>
+										<li><label for="siideSalad{{eyedee}}">Salad (Free)</label><input class="toggle" name="siideSalad{{eyedee}}" id="siideSalad{{eyedee}}" type="checkbox" {{sides.Salad}}></li>
+										<li><label for="siideFries{{eyedee}}">Fries (Free)</label><input class="toggle" name="siideFries{{eyedee}}" id="siideFries{{eyedee}}" type="checkbox"  {{sides.Fries}}></li>
+										<li><label for="siidePotato{{eyedee}}">Potato ($5.00)</label><input class="toggle" name="siidePotato{{eyedee}}" id="siidePotato{{eyedee}}" class="add_5" type="checkbox" {{sides.Potato}}></li>	
+										<li><label for="siideWedges{{eyedee}}">Wedges ($5.00)</label><input class="toggle" name="siideWedges{{eyedee}}" id="siideWedges{{eyedee}}" class="add_5" type="checkbox" {{sides.Wedges}}></li>
+										<li><label for="siideCorn{{eyedee}}">Corn ($5.00)</label><input class="toggle" name="siideCorn{{eyedee}}" id="siideCorn{{eyedee}}" class="add_5" type="checkbox" {{sides.Corn}}></li>
 									</ul>
 
 									</br>
-									<h2>QUANTITY: </h2>
-									<div id="value_of_quantity"></div>
-									<ul id="quantity">
-										<li id="add">+</li>
-										<li id="remove">-</li>
+
+									<h2>QUANTITY: <span class="quantityHeading" id="quantityValue{{eyedee}}">{{quantity}}</span></h2>
+									<ul id="quantityButtons">
+										<li><span id="incrementQuantity{{eyedee}}">+</span></li>
+										<li><span id="decreaseQuantity{{eyedee}}">-</span></li>
 									</ul>
 
 									</br>
+
 								</div>
 							</li>
 							{{/order_result}}
@@ -186,12 +188,12 @@
 					</ul>
 				</div>
 				<div id="place_order_wrapper"><a href="cart.php"><div id="place_order">Finish Up!</div></a></div>
-			</div>
+			</form>
 	</div>
 </body>
 
 <footer>
-	<script type="text/javascript" src="Resources/js/orderPage.js"></script>
+	<script type="text/javascript" src="Resources/js/order.js"></script>
 </footer>
 
 </html>

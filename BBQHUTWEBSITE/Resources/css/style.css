@@ -56,6 +56,11 @@ font-family: opensansregular;
 text-align: center;
 }
 
+.quantityHeading
+{
+	color: #31AA2B;
+}
+
 #main_box
 {
 height: 79%;
@@ -280,6 +285,7 @@ top: 23%;
 padding: 2%;
 }
 
+
 #sizes li input[type=radio]
 {
 display: none;
@@ -314,7 +320,22 @@ list-style-type: none;
 background-color: #999;
 }
 
-#toggle
+.small
+{
+/* Darrien's dick's css apparence goes here*/
+}
+
+.large
+{
+
+}
+
+.hidden
+{
+display: none;
+}
+
+.toggle
 {
 float: right;
 }
@@ -339,7 +360,7 @@ margin-top: 130%;
 left: 2%;
 }
 
-#quantity li
+#quantityButtons li
 {
 list-style-type: none;
 display: inline-block;
@@ -355,7 +376,7 @@ border-radius: 10px;
 text-align: center;
 }
 
-#quantity li:hover
+#quantityButtons li:hover
 {
 cursor: pointer;
 background-color: #888;
@@ -392,7 +413,7 @@ top: 69%;
 left: 42%;
 }
 
-#quantity
+#quantityButtons
 {
 margin-top: -9%;
 }

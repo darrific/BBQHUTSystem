@@ -158,7 +158,7 @@
 </body>
 
 <footer>
-		<script type="text/javascript" src="Resources/js/cartPage.js"></script>
+		<script type="text/javascript" src="Resources/js/cart.js"></script>
 </footer>
 
 </html>
