@@ -8,6 +8,7 @@
 <script type="text/javascript" src="Resources/js/jquery.js"></script>
 <script type="text/javascript" src="Resources/js/scroll.js"></script>
 <script type="text/javascript" src="Resources/js/jquery-2.1.1.min.js"></script>
+<script type="text/javascript" src="Resources/js/jquery.maskedinput.js"></script>
 <script type="text/javascript" src="Resources/js/mustache.js"></script>
 <script type="text/javascript" src="Resources/js/velocity.js"></script>
 

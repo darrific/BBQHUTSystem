@@ -31,13 +31,15 @@ var $all_orders = $order_details.find('#all_orders');
 var $send_order = $all_orders.find('#send_order');
 
 var contact_header = $contact_info_header;
+var number_field = $contact_input3;
 var pickup_header = $pickup_time_header;
 var pickup_submit = $submit_pickup;
 
 contact_header.on('click', showhidecontact);
 pickup_header.on('click', showhidepickup);
 pickup_submit.on('click', optionTwo);
- 
+
+$contact_input3.mask("999-9999");
 
 	function closecontact(){
 		$contact_info_header.delay(200).velocity({top:'50%'},200);
