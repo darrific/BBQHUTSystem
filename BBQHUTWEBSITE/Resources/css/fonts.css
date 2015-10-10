@@ -368,3 +368,9 @@
 
 }
 
+@font-face {
+    font-family: 'aressence';
+    src: url('../fonts/aressence/ARESSENCE.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}

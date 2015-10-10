@@ -20,7 +20,7 @@ text-align: center;
 
 body
 {
-background-color: white;
+background-color: #E2FFE2;
 }
 
 /*=================orders page=================*/
@@ -51,14 +51,14 @@ position: absolute;
 width: 100%;
 top: 2.5%;
 font-size: 3vw;
-color: #31AA2B;
+color: #33A415;
 font-family: opensansregular;
 text-align: center;
 }
 
 .quantityHeading
 {
-	color: #31AA2B;
+color: #36AD16;
 }
 
 #main_box
@@ -74,7 +74,7 @@ position: absolute;
 width: 45%;
 height: 75%;
 left: 30%;
-background-color: #E8A84C;
+background-color: #00A413;
 border-radius: 15px;
 z-index: 1;
 }
@@ -86,7 +86,7 @@ width: 40%;
 height: 75%;
 float: right;
 margin-left: 30%;
-background-color: #E8A84C;
+background-color: #00A413;
 display: none;
 border-radius: 15px;
 }
@@ -94,10 +94,11 @@ border-radius: 15px;
 #the_order_output
 {
 position: absolute;
-width: 100%;
-height: 60%;
+width: 103.7%;
+height: 61%;
 margin-top: 11%;
 overflow-y: auto;
+overflow-x: none;
 }
 
 #options_container
@@ -127,11 +128,18 @@ list-style-type: none;
 .meat_option
 {
 position: relative;
-background-color: #E69D36;
+background-color: #008810;
 width: 86%;
 left: 7%;
 margin-bottom: 1%;
 list-style-type: none;
+color: #BDBDBD;
+}
+
+.meat_option:hover
+{
+color: #E3E3E3;
+background-color: #36AD16;
 }
 
 #image
@@ -192,37 +200,61 @@ cursor: pointer;
 
 #review_container ul
 {
+margin-top: -3.5%;
 padding: 5%;
 }
 
 #review_container li
 {
-list-style-type: none;
-background-color: #d09744;
-width: 77%;
-padding-top: 5%;
-padding-bottom: 5%;
+padding-top: 1.5%;
+padding-bottom: 1.5%;
 padding-left: 5%;
-margin-left: 10%;
-color: white;
+background-color: #008810;
+width: 86%;
+left: 7%;
+margin-bottom: 1%;
+list-style-type: none;
+color: #BDBDBD;
 font-size: 1vw;
 font-family: opensanslight;
 margin-bottom: 1%;
 }
 
+#review_container li:hover
+{
+color: #E3E3E3;
+}
+
+#the_order_output ul
+{
+width: 87%;
+}
+
+#the_order_output li
+{
+width: 375px;
+margin-left: 2%;
+}
+
+#word
+{
+font-size: 1.5vw;
+font-family: opensanslight;
+}
+
 .del
 {
 position: absolute;
-margin-top: -5%;
-margin-left: 57%;
-color: white;
+margin-top: -6.5%;
+margin-left: 320px;
+color: #999;
 font-style: normal;
 font-family: arial;
-background-color: red;
-padding-top: 0.5%;
-padding-bottom: 0.5%;
-padding-left: 1.5%;
-padding-right: 1.5%;
+background-color: #B20000;
+padding-top: 3px;
+padding-bottom: 2px;
+padding-left: 5px;
+padding-right: 5px;
 border-radius: 1.5vw;
 font-size: 0.7vw;
 }
@@ -230,14 +262,14 @@ font-size: 0.7vw;
 .del:hover
 {
 cursor: pointer;
-color: red;
-background-color: white;
+color: #fff;
+background-color: #E40000;
 }
 
 #place_order_wrapper
 {
 position: absolute;
-background-color: #F7AC27;
+background-color: #2A8811;
 width: 100%;
 height: 15%;
 margin-top: 88.5%;
@@ -261,7 +293,7 @@ border-radius: 0.2em;
 
 #edit_content
 {
-margin-top: 4%;
+margin-top: 1%;
 top: 20%;
 left: 10%;
 width: 100%;
@@ -282,9 +314,13 @@ position: absolute;
 width: 96%;
 height: 75%;
 top: 23%;
-padding: 2%;
+padding: 0%;
 }
 
+#sizes
+{
+margin-left: -5%;
+}
 
 #sizes li input[type=radio]
 {
@@ -296,6 +332,7 @@ display: none;
 position: absolute;
 cursor: pointer;
 font-size: 0.9em;
+background-color: #0B7300;
 width: 20%;
 padding: 3%;
 text-align: center;
@@ -303,7 +340,8 @@ text-align: center;
 
 #sizes li input[type=radio]:checked + label
 {
-background-color: #C98001;
+color: #E3E3E3;
+background-color: #36AD16;
 }
 
 #sizes li
@@ -311,18 +349,55 @@ background-color: #C98001;
 width: 30%;
 list-style-type: none;
 display: inline-block;
-margin-left: 10%;
+margin-left: 8%;
+}
+
+#sizes li:hover
+{
+cursor: pointer;
 }
 
 #sides li
 {
 list-style-type: none;
-background-color: #999;
+display: inline-block;
+width: 40%;
+height: 40px;
+}
+
+#sides li:hover
+{
+cursor: pointer;
+}
+
+#sides li input[type=checkbox]
+{
+display: none;
+}
+
+#sides li label
+{
+cursor: pointer;
+text-align: center;
+background-color: #0B7300;
+float: left;
+font-size: 0.9vw;
+margin-right: 1%;
+margin-bottom: 3%;
+padding-top: 6px;
+padding-bottom: 10px;
+padding-left: 10px;
+padding-right: 10px;
+}
+
+#sides li input[type=checkbox]:checked + label
+{
+background-color: #36AD16;
 }
 
 .small
 {
-/* Darrien's dick's css apparence goes here*/
+
 }
 
 .large
@@ -340,17 +415,6 @@ display: none;
 float: right;
 }
 
-#sizes li:hover
-{
-cursor: pointer;
-}
-
-#sides li:hover
-{
-cursor: pointer;
-background-color: #C98001;
-}
-
 #subtotal
 {
 position: absolute;
@@ -364,22 +428,27 @@ left: 2%;
 {
 list-style-type: none;
 display: inline-block;
-float: right;
-width: 20px;
-height: 20px;
-padding: 2%;
-margin-left: 1%;
-background-color: #111;
-color: white;
-text-transform: bold;
-border-radius: 10px;
 text-align: center;
+margin-top: 2.5%;
+font-size: 1vw;
+padding-top: 1%;
+padding-bottom: 0.9%;
+padding-left: 1.9%;
+padding-right: 2.1%;
+background-color: #999;
+border-radius: 1vw;
+width: 5%;
+}
+
+hr
+{
+margin-left: -5.5%;
 }
 
 #quantityButtons li:hover
 {
 cursor: pointer;
-background-color: #888;
+background-color: #36AD16;
 }
 
 .edit_:hover
@@ -468,9 +537,9 @@ overflow: hidden;
 #middle_logo_container
 {
 position: absolute;
-font-size: 3.5vw;
-font-family: opensanssemibold;
-color: #F5CE8A;
+font-size: 4.5vw;
+font-family: aressence;
+color: #33A415;
 top: 47%;
 left: 50%;
 transform: translate(-50%,-50%);
@@ -515,16 +584,16 @@ display: inline-block;
 padding-top: 9%;
 padding-bottom: 9%;
 width: 49%;
-background-color: #F7AC27;
+background-color: #2A8811;
 text-align: center;
-color: #444;
+color: #BDBDBD;
 font-size: 1.5vw;
 font-family: bebasregular;
 }
 
 #nav_bar_left li:hover
 {
-background-color: #999;
+background-color: #34A217;
 }
 
 #nav_bar_right ul
@@ -539,17 +608,16 @@ display: inline-block;
 padding-top: 9%;
 padding-bottom: 9%;
 width: 49%;
-background-color: #F7AC27;
+background-color: #2A8811;
 text-align: center;
-color: #444;
+color: #BDBDBD;
 font-size: 1.5vw;
 font-family: bebasregular;
 }
 
 #nav_bar_right li:hover
 {
-cursor: pointer;
-background-color: #999;
+background-color: #34A217;
 }
 
 #left_menu
@@ -650,7 +718,6 @@ position: absolute;
 top: 100%;
 width: 100%;
 height: 100%;
-background-color: #ECF4EB;
 z-index: 10;
 }
 
@@ -696,7 +763,6 @@ top: 5%;
 left: 40%;
 width: 60%;
 height: 87.5%;
-background-color: #ECF4EB;
 }
 
 #aboutus_title
@@ -860,7 +926,6 @@ position: absolute;
 top: 200%;
 width: 100%;
 height: 100%;
-background-color: #ECF4EB;
 z-index: 10;
 }
 
@@ -1206,7 +1271,7 @@ margin-bottom: 3%;
 nav 
 {
 text-align: center;
-background-color: #F7AC27;
+background-color: #2A8811;
 width: 100%;
 z-index: 5;
 }
@@ -1231,7 +1296,7 @@ display: block;
 text-decoration: none;
 font-size: 2vw;
 font-family: bebasregular;
-color: #444;
+color: #BDBDBD;
 padding-top: 9%;
 padding-bottom: 9%;
 }
@@ -1239,13 +1304,13 @@ padding-bottom: 9%;
 nav a:hover
 {
 -webkit-transition: color 0.1s ease-in;
-color: #999;
+color: #E3E3E3;
 }
 
 nav ul li ul
 {
 position: absolute;
-background-color: #F7AC27;
+background-color: #2A8811;
 visibility: hidden;
 width: 14%;
 height: auto;
@@ -1265,7 +1330,7 @@ width: 100%;
 
 nav ul li ul li:hover
 {
-background-color: #9B6D1C;
+background-color: #36AD16;
 }
 
 nav ul li ul li a
@@ -1278,9 +1343,9 @@ padding-bottom: 2%;
 #logo_image
 {
 position: absolute;
-width: 10%;
+width: 12%;
 margin-left: 6%;
-margin-top: -1.2%;
+margin-top: -1.5%;
 }
 
 .cart_svg
@@ -1355,7 +1420,7 @@ padding-right: 10%;
 text-align: center;
 font-family: oranienbaum;
 font-size: 1.5vw;
-background-color: #F7AC27;
+background-color: #2A8811;
 border-radius: 5em;
 }
 
@@ -1475,7 +1540,7 @@ padding-right: 10%;
 text-align: center;
 font-family: oranienbaum;
 font-size: 1.5vw;
-background-color: #F7AC27;
+background-color: #2A8811;
 border-radius: 5em;
 }
 
@@ -1507,7 +1572,7 @@ background-color: #9B6D1C;
 {
 display: none;
 height: 0%;
-background-color: #F7AC27;
+background-color: #2A8811;
 font-size: 2vw;
 }
 
@@ -1582,7 +1647,7 @@ font-family: oranienbaum;
 #order_header li
 {
 height: 50%;
-background-color: #F7AC27;
+background-color: #2A8811;
 margin-top: 0.9%;
 padding-top: 1.2%;
 padding-bottom: 0.8%;
@@ -1612,7 +1677,7 @@ top: 6%;
 width: 100%;
 height: 94%;
 border-top: none;
-background-color: #F7AC27;
+background-color: #2A8811;
 }
 
 #send_order
