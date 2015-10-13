@@ -3,8 +3,8 @@
 <html>
 
 <link rel="stylesheet" type="text/css" href="Resources/css/style.css">
-<link rel="stylesheet" type="text.css" href="Resources/css/animate.css">
-<link rel="stylesheet" type="text.css" href="Resources/css/fonts.css">
+<link rel="stylesheet" type="text/css" href="Resources/css/animate.css">
+<link rel="stylesheet" type="text/css" href="Resources/css/fonts.css">
 <script type="text/javascript" src="Resources/js/jquery.js"></script>
 <script type="text/javascript" src="Resources/js/scroll.js"></script>
 <script type="text/javascript" src="Resources/js/jquery-2.1.1.min.js"></script>
@@ -12,7 +12,7 @@
 <script type="text/javascript" src="Resources/js/mustache.js"></script>
 <script type="text/javascript" src="Resources/js/velocity.js"></script>
 
-<title>BBQH | Make an Order</title>
+<title>Make An Order - The Original BBQ Hut</title>
 
 <body>
 
@@ -22,9 +22,9 @@
 				<li><a href="index.html"><div id="logo_image"><img src="Resources\logos\BBQH Logo.svg" alt="logo"></div></a></li>
 				<li><a href="menu.html" id="see_menu_button">SEE THE MENU &#9663</a>
 					<ul class="dropdown">
-				        <li><a href="menu.html#regular_meals">Meats</a></li>
-				        <li><a href="menu.html#combination_meals">Combinations Meals</a></li>
-				        <li class="sides_drop_option"><a href="#sides_meals">Sides</a></li>
+				        <li><a href="menu.html#regularanchor">Meats</a></li>
+				        <li><a href="menu.html#combinationsanchor">Combinations Meals</a></li>
+				        <li class="sides_drop_option"><a href="menu.html#sidesanchor">Sides</a></li>
 			      </ul>
 				</li>
 				<li><a href="order.html" id="place_order_button">PLACE AN ORDER</a></li>
@@ -123,7 +123,7 @@
 							<div class="meat_option" id="none_meat">
 								<ul>
 									<li id="image"><img src="Resources/images/food.jpeg" alt=""></li>
-									<li id="name">Vegeterian</li>
+									<li id="name">Vegetarian</li>
 									<li id="price_">$25</li>
 									<li id="add6" class="add">+</li>
 								</ul>
@@ -151,9 +151,10 @@
 										<img class="innerArrow" id="down" src="Resources/images/arrow_down.png"/>
 										<img class="innerArrow" id="up" src="Resources/images/arrow_up.png"/>
 									</div>
-									<i class="del">x</i>
+									<i class="del">X</i>
 								</div>
 								<div id="edit_content">
+								<hr>
 									{{#size}}
 										<ul id="sizes"> 
 											<h2>SIZE</h2> 
@@ -161,23 +162,33 @@
 											<li><input name="size{{eyedee}}" id="large{{eyedee}}" value="large{{eyedee}}" type="radio" {{size.large}}><label id="largeLabel" for="large{{eyedee}}">Large ($45)</label></li> 
 										</ul>
 									{{/size}}
-									</br>	
+									</br>
+									</br>
 
 									<h2>SIDES</h2>
 									<ul id="sides">
-										<li><label for="siideSalad{{eyedee}}">Salad (Free)</label><input class="toggle" name="siideSalad{{eyedee}}" id="siideSalad{{eyedee}}" type="checkbox" {{sides.Salad}}></li>
-										<li><label for="siideFries{{eyedee}}">Fries (Free)</label><input class="toggle" name="siideFries{{eyedee}}" id="siideFries{{eyedee}}" type="checkbox"  {{sides.Fries}}></li>
-										<li><label for="siidePotato{{eyedee}}">Potato ($5.00)</label><input class="toggle" name="siidePotato{{eyedee}}" id="siidePotato{{eyedee}}" class="add_5" type="checkbox" {{sides.Potato}}></li>	
-										<li><label for="siideWedges{{eyedee}}">Wedges ($5.00)</label><input class="toggle" name="siideWedges{{eyedee}}" id="siideWedges{{eyedee}}" class="add_5" type="checkbox" {{sides.Wedges}}></li>
-										<li><label for="siideCorn{{eyedee}}">Corn ($5.00)</label><input class="toggle" name="siideCorn{{eyedee}}" id="siideCorn{{eyedee}}" class="add_5" type="checkbox" {{sides.Corn}}></li>
+										<li><input class="toggle" name="siideSalad{{eyedee}}" id="siideSalad{{eyedee}}" type="checkbox" {{sides.Salad}}><label for="siideSalad{{eyedee}}">Salad<br/>(Free)</label></li>
+										<li><input class="toggle" name="siideFries{{eyedee}}" id="siideFries{{eyedee}}" type="checkbox"  {{sides.Fries}}><label for="siideFries{{eyedee}}">Fries<br/>(Free)</label></li>
+										<li><input class="toggle" name="siideExtraSalad{{eyedee}}" id="siideExtraSalad{{eyedee}}" type="checkbox" {{sides.ExtraSalad}}/><label for="siideExtraSalad{{eyedee}}"> Extra Salad ($10.00)</label></li>
+										<li><input class="toggle" name="siideExtraFries{{eyedee}}" id="siideExtraFries{{eyedee}}" type="checkbox" {{sides.ExtraFries}}><label for="siideExtraFries{{eyedee}}">Extra Fries ($15.00)</label></li>
+										<li><input class="toggle" name="siidePotatoSalad{{eyedee}}" id="siidePotatoSalad{{eyedee}}" class="add_5" type="checkbox" {{sides.PotatoSalad}}><label for="siidePotatoSalad{{eyedee}}">Potato Salad ($15.00)</label></li>	
+										<li><input class="toggle" name="siideWedges{{eyedee}}" id="siideWedges{{eyedee}}" class="add_5" type="checkbox" {{sides.Wedges}}><label for="siideWedges{{eyedee}}">Wedges<br/>($25.00)</label></li>
+										<li><input class="toggle" name="siideBakedPotato{{eyedee}}" id="siideBakedPotato{{eyedee}}" class="add_5" type="checkbox" {{sides.BakedPotato}}><label for="siideBakedPotato{{eyedee}}">Baked Potato ($10.00)</label></li>
+										<li><input class="toggle" name="siideGarlicBread{{eyedee}}" id="siideGarlicBread{{eyedee}}" class="add_5" type="checkbox" {{sides.GarlicBread}}><label for="siideGarlicBread{{eyedee}}">Garlic Bread ($4.00)</label></li>
+										<li><input class="toggle" name="siideMacaroniPie{{eyedee}}" id="siideMacaroniPie{{eyedee}}" class="add_5" type="checkbox" {{sides.MacaroniPie}}><label for="siideMacaroniPie{{eyedee}}">Macaroni Pie ($15.00)</label></li>
+										<li><input class="toggle" name="siideMacaroniSalad{{eyedee}}" id="siideMacaroniSalad{{eyedee}}" class="add_5" type="checkbox" {{sides.MacaroniSalad}}><label for="siideMacaroniSalad{{eyedee}}">Macaroni Salad ($15.00)</label></li>
+										<li><input class="toggle" name="siideColeSlaw{{eyedee}}" id="siideColeSlaw{{eyedee}}" class="add_5" type="checkbox" {{sides.ColeSlaw}}><label for="siideColeSlaw{{eyedee}}">Cole Slaw ($10.00)</label></li>
+										<li><input class="toggle" name="siideChickenKebabs{{eyedee}}" id="siideChickenKebabs{{eyedee}}" class="add_5" type="checkbox" {{sides.ChickenKebabs}}><label for="siideChickenKebabs{{eyedee}}">Chicken Kebabs ($20.00)</label></li>
+										<li><input class="toggle" name="siideShrimpKebabs{{eyedee}}" id="siideShrimpKebabs{{eyedee}}" class="add_5" type="checkbox" {{sides.ShrimpKebabs}}><label for="siideShrimpKebabs{{eyedee}}">Shrimp Kebabs ($30.00)</label></li>
+										<li><input class="toggle" name="siideFriedRice{{eyedee}}" id="siideFriedRice{{eyedee}}" class="add_5" type="checkbox" {{sides.FriedRice}}><label for="siideFriedRice{{eyedee}}">Fried Rice ($15.00)</label></li>
+										<li><input class="toggle" name="siideNoodles{{eyedee}}" id="siideNoodles{{eyedee}}" class="add_5" type="checkbox" {{sides.Noodles}}><label for="siideNoodles{{eyedee}}">Noodles ($15.00)</label></li>
 									</ul>
-
 									</br>
 
 									<h2>QUANTITY: <span class="quantityHeading" id="quantityValue{{eyedee}}">{{quantity}}</span></h2>
 									<ul id="quantityButtons">
-										<li><span id="incrementQuantity{{eyedee}}">+</span></li>
 										<li><span id="decreaseQuantity{{eyedee}}">-</span></li>
+										<li><span id="incrementQuantity{{eyedee}}">+</span></li>
 									</ul>
 
 									</br>

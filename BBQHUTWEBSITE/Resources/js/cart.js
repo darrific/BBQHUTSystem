@@ -34,20 +34,22 @@ var contact_header = $contact_info_header;
 var number_field = $contact_input3;
 var pickup_header = $pickup_time_header;
 var pickup_submit = $submit_pickup;
+var push_order = $send_order;
 
 contact_header.on('click', showhidecontact);
 pickup_header.on('click', showhidepickup);
 pickup_submit.on('click', optionTwo);
+push_order.on('click', SendOrder)
 
 $contact_input3.mask("999-9999");
 
 	function closecontact(){
-		$contact_info_header.delay(200).velocity({top:'50%'},200);
+		$contact_info_header.delay(200).velocity({top:'60%'},200);
 		$contact_info_form.velocity({height:'0%'},200);
 		$contact_form.fadeOut(25);
 		$error_message.fadeOut(25);
 		$contact_form.velocity({height:'0%'},200);
-		$pickup_time.velocity({top:'45%'},200);
+		$pickup_time.velocity({top:'50%'},200);
 		contact_info_counter = 0;
 		contact_info_counter++;
 	}
@@ -122,6 +124,7 @@ $contact_input3.mask("999-9999");
 	function optionOne(){
 		if (($contact_input1.val() === "") || ($contact_input2.val() === "") || ($contact_input3.val() === ""))
 		{	
+			alert("boobob0");
 			$error_message.fadeIn(1);
 			$error_message.text("Please fill in all the fields.");
 			$check_svg.fadeOut(1);
@@ -182,4 +185,9 @@ $contact_input3.mask("999-9999");
 			$send_order.fadeOut(25);
 			$send_order.velocity({top:'95%'},200);
 		}
+	}
+
+	function SendOrder(){
+		$send_order.text('Processing Order...');
+		$send_order.text('Order Sent!');
 	};

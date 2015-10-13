@@ -3,21 +3,25 @@
 
 		$("#regular_meals_options li").click(function(tag){
 				$("#regular_meals_options li").removeClass("selected_option");
+				$("div",clickt).removeClass("listimageleft");
 		        var clickt= tag.target;
 		        var current_id = clickt.id; //grab currentid eg. rm0 - rm4
 		        var ide = current_id.substring(2); //returns id number
 	        	$("#regular_meals_images ul").animate({'margin-left': -(width*ide)}, animation_speed);
 	        	$("#"+current_id).addClass("selected_option");
+	        	$("div",clickt).addClass("listimageleft");
 	        	var li_option = current_id;
 		    });
 
 		$("#combination_meals_options li").click(function(tag2){
 				$("#combination_meals_options li").removeClass("selected_option");
+				$("div",clickt2).removeClass("listimageright");
 		        var clickt2= tag2.target;
-		        var current_id2 = clickt2.id; //grab currentid eg. rm0 - rm4
+		        var current_id2 = clickt2.id; //grab currentid eg. cm0 - cm4
 		        var ide2 = current_id2.substring(2); //returns id number
 	        	$("#combination_meals_images ul").animate({'margin-left': -(width*ide2)}, animation_speed);
 	        	$("#"+current_id2).addClass("selected_option");
+	        	$("div",clickt2).addClass("listimageright");
 	        	var li_option2 = current_id2;
 		    });
 

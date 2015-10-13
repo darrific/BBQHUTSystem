@@ -1,8 +1,8 @@
 <html>
 
 <link rel="stylesheet" type="text/css" href="Resources/css/style.css">
-<link rel="stylesheet" type="text.css" href="Resources/css/animate.css">
-<link rel="stylesheet" type="text.css" href="Resources/css/fonts.css">
+<link rel="stylesheet" type="text/css" href="Resources/css/animate.css">
+<link rel="stylesheet" type="text/css" href="Resources/css/fonts.css">
 <script type="text/javascript" src="Resources/js/jquery.js"></script>
 <script type="text/javascript" src="Resources/js/scroll.js"></script>
 <script type="text/javascript" src="Resources/js/jquery-2.1.1.min.js"></script>
@@ -10,7 +10,7 @@
 <script type="text/javascript" src="Resources/js/mustache.js"></script>
 <script type="text/javascript" src="Resources/js/velocity.js"></script>
 
-<title>Order Cart - Original BBQ Hut</title>
+<title>Your Cart - The Original BBQ Hut</title>
 
 <body>
 
@@ -20,9 +20,9 @@
 				<li><a href="index.html"><div id="logo_image"><img src="Resources\logos\BBQH Logo.svg" alt="logo"></div></a></li>
 				<li><a href="menu.html" id="see_menu_button">SEE THE MENU &#9663</a>
 					<ul class="dropdown">
-				        <li><a href="menu.html#regular_meals">Meats</a></li>
-				        <li><a href="menu.html#combination_meals">Combinations Meals</a></li>
-				        <li class="sides_drop_option"><a href="#sides_meals">Sides</a></li>
+				        <li><a href="menu.html#regularanchor">Meats</a></li>
+				        <li><a href="menu.html#combinationsanchor">Combinations Meals</a></li>
+				        <li class="sides_drop_option"><a href="menu.html#sidesanchor">Sides</a></li>
 			      </ul>
 				</li>
 				<li><a href="order.php" id="place_order_button">PLACE AN ORDER</a></li>

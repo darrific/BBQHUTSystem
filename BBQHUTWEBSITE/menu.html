@@ -3,8 +3,8 @@
 <html>
 
 <link rel="stylesheet" type="text/css" href="Resources/css/style.css">
-<link rel="stylesheet" type="text.css" href="Resources/css/animate.css">
-<link rel="stylesheet" type="text.css" href="Resources/css/fonts.css">
+<link rel="stylesheet" type="text/css" href="Resources/css/animate.css">
+<link rel="stylesheet" type="text/css" href="Resources/css/fonts.css">
 <script type="text/javascript" src="Resources/js/jquery.js"></script>
 <script type="text/javascript" src="Resources/js/scroll.js"></script>
 <script type="text/javascript" src="Resources/js/jquery-2.1.1.min.js"></script>
@@ -20,9 +20,9 @@
 				<li><a href="index.html"><div id="logo_image"><img src="Resources\logos\BBQH Logo.svg" alt="logo"></div></a></li>
 				<li class="menu_button"><a href="menu.html" id="see_menu_button">SEE THE MENU &#9663</a>
 					<ul class="dropdown">
-				        <li><a href="#regular_meals">Meats</a></li>
-				        <li><a href="#combination_meals">Combinations Meals</a></li>
-				        <li class="sides_drop_option"><a href="#sides_meals">Sides</a></li>
+				        <li><a href="#regularanchor">Meats</a></li>
+				        <li><a href="#combinationsanchor">Combinations Meals</a></li>
+				        <li class="sides_drop_option"><a href="#sidesanchor">Sides</a></li>
 			      </ul>
 				</li>
 				<li><a href="order.php" id="place_order_button">PLACE AN ORDER</a></li>
@@ -58,7 +58,7 @@
 	</div>
 
 	<div id="menu_title">Our Menu</div>
-
+	<div id="regularanchor"></div>
 	<div id="regular_meals">
 		<div id="regular_meals_title">Our Meats</div>
 
@@ -73,30 +73,35 @@
 		</div>
 		<div id="regular_meals_options">
 			<ul>
-				<li id="rm0">
+				<li id="rm0" class="selected_option">
+					<div class="listimageleft"></div>
 					Chicken<br>
 					<p>[text]</p>
 				</li>
 				<li id="rm1">
+					<div></div>
 					Lamb<br>
 					<p>[text]</p>
 				</li>
 				<li id="rm2">
+					<div></div>
 					Beef Steak<br>
 					<p>[text]</p>
 				</li>
 				<li id="rm3">
+					<div></div>
 					Fish<br>
 					<p>[text]</p>
 				</li>
 				<li id="rm4">
+					<div></div>
 					Shrimp<br>
 					<p>[text]</p>
 				</li>
 			</ul>
 		</div>
 	</div>
-
+	<div id="combinationsanchor"></div>
 	<div id="combination_meals">
 		<div id="combination_meals_title">Our Special Combinations</div>
 
@@ -111,30 +116,35 @@
 		</div>
 		<div id="combination_meals_options">
 			<ul>
-				<li id="cm0">
+				<li id="cm0" class="selected_option">
+					<div class="listimageright"></div>
 					Lamb, Chicken, Fries & Green Salad<br/>
 					<p>[text]</p>
 				</li>
 				<li id="cm1">
+					<div></div>
 					Lamb, Steak, Fries & Green Salad<br/>
 					<p>[text]</p>
 				</li>
 				<li id="cm2">
+					<div></div>
 					Steak, Chicken, Fries & Green Salad<br/>
 					<p>[text]</p>
 				</li>
 				<li id="cm3">
+					<div></div>
 					Fish, Shrimp, Fries & Green Salad<br/>
 					<p>[text]</p>
 				</li>
 				<li id="cm4">
+					<div></div>
 					Shrimp, Fries & any one meat<br/>
 					<p>[text]</p>
 				</li>
 			</ul>
 		</div>
 	</div>
-
+	<div id="sidesanchor"></div>
 	<div id="sides_meals">
 		<div id="sides_meals_title">Add Some Sides to Your Meal</div>
 		<div id="sides_meals_lists">

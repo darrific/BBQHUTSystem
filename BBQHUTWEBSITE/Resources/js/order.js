@@ -148,6 +148,7 @@
 			idCounter++;
 			render();
 			cartCounter();
+			positionCounter();
 			translateOrders();
 		}
 
@@ -160,6 +161,7 @@
 			cart_counter--;
 			render();
 			cartCounter();
+			positionCounter();
 			undotranslateOrders();
 		}
 
@@ -180,14 +182,14 @@
 
 		function arrowToggle(iq, il, arrow_down, arrow_up){
 			if (iq == "down"){
-				$(arrow_down).fadeOut(100);
-				$(arrow_up).fadeIn(100);
-				il.fadeIn(1000);
+				$(arrow_down).fadeOut(200);
+				$(arrow_up).delay(300).fadeIn(200);
+				il.fadeIn(500);
 				iq = "up";
 			}else{
 				$(arrow_up).fadeOut(100);
-				$(arrow_down).fadeIn(100);
-				il.fadeOut(10);
+				$(arrow_down).delay(200).fadeIn(100);
+				il.fadeOut(200);
 				iq = "down";
 			}
 		}
@@ -223,6 +225,17 @@
 					$cart_count.fadeOut(500);
 				}
 			$cart_count.text(cart_counter);
+		}
+
+		function positionCounter(){
+			if (cart_counter >= 10)
+			{
+				$cart_count.css('right','0.9%');
+			}
+			else
+			{
+				$cart_count.css('right','1.18%');
+			}
 		}
 
 		function getOrderValue(type, id){
