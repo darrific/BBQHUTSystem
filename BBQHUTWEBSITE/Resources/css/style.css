@@ -382,6 +382,7 @@ cursor: pointer;
 }
 
 #sides li input[type=checkbox]
+<<<<<<< HEAD
 {
 display: none;
 }
@@ -406,6 +407,26 @@ padding-right: 5px;
 #sides li input[type=checkbox]:checked + label
 {
 color: #E3E3E3;
+background-color: #36AD16;
+}
+
+#sides li label
+{
+cursor: pointer;
+text-align: center;
+background-color: #0B7300;
+float: left;
+font-size: 0.9vw;
+margin-right: 1%;
+margin-bottom: 3%;
+padding-top: 6px;
+padding-bottom: 10px;
+padding-left: 10px;
+padding-right: 10px;
+}
+
+#sides li input[type=checkbox]:checked + label
+{
 background-color: #36AD16;
 }
 

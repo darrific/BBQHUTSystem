@@ -167,6 +167,7 @@
 
 									<h2>SIDES</h2>
 									<ul id="sides">
+<<<<<<< HEAD
 										<li><input class="toggle" name="siideSalad{{eyedee}}" id="siideSalad{{eyedee}}" type="checkbox" {{sides.Salad}}><label for="siideSalad{{eyedee}}">Salad<br/>(Free)</label></li>
 										<li><input class="toggle" name="siideFries{{eyedee}}" id="siideFries{{eyedee}}" type="checkbox"  {{sides.Fries}}><label for="siideFries{{eyedee}}">Fries<br/>(Free)</label></li>
 										<li><input class="toggle" name="siideExtraSalad{{eyedee}}" id="siideExtraSalad{{eyedee}}" type="checkbox" {{sides.ExtraSalad}}/><label for="siideExtraSalad{{eyedee}}"> Extra Salad ($10.00)</label></li>
@@ -183,6 +184,28 @@
 										<li><input class="toggle" name="siideFriedRice{{eyedee}}" id="siideFriedRice{{eyedee}}" class="add_5" type="checkbox" {{sides.FriedRice}}><label for="siideFriedRice{{eyedee}}">Fried Rice ($15.00)</label></li>
 										<li><input class="toggle" name="siideNoodles{{eyedee}}" id="siideNoodles{{eyedee}}" class="add_5" type="checkbox" {{sides.Noodles}}><label for="siideNoodles{{eyedee}}">Noodles ($15.00)</label></li>
 									</ul>
+=======
+										<li><input class="toggle" name="siideSalad{{eyedee}}" id="siideSalad{{eyedee}}" type="checkbox" {{sides.Salad}}><label for="siideSalad{{eyedee}}">Salad (Free)</label></li>
+										<li><label for="siideFries{{eyedee}}">Fries (Free)</label><input class="toggle" name="siideFries{{eyedee}}" id="siideFries{{eyedee}}" type="checkbox"  {{sides.Fries}}></li>
+										<li><label for="siideExtraSalad{{eyedee}}"> Extra Salad ($10.00)</label><input class="toggle" name="siideExtraSalad{{eyedee}}" id="siideExtraSalad{{eyedee}}" type="checkbox" {{sides.ExtraSalad}}/></li>
+										<li><label for="siideExtraFries{{eyedee}}"> Extra Fries ($15.00)</label><input class="toggle" name="siideExtraFries{{eyedee}}" id="siideExtraFries{{eyedee}}" type="checkbox" {{sides.ExtraFries}}></li>
+										<li><label for="siidePotatoSalad{{eyedee}}">Potato Salad ($15.00)</label><input class="toggle" name="siidePotatoSalad{{eyedee}}" id="siidePotatoSalad{{eyedee}}" class="add_5" type="checkbox" {{sides.PotatoSalad}}></li>	
+										<li><label for="siideWedges{{eyedee}}">Wedges ($25.00)</label><input class="toggle" name="siideWedges{{eyedee}}" id="siideWedges{{eyedee}}" class="add_5" type="checkbox" {{sides.Wedges}}></li>
+										<li><label for="siideBakedPotato{{eyedee}}">Baked Potato ($10.00)</label><input class="toggle" name="siideBakedPotato{{eyedee}}" id="siideBakedPotato{{eyedee}}" class="add_5" type="checkbox" {{sides.BakedPotato}}></li>
+										<li><label for="siideGarlicBread{{eyedee}}">Garlic Bread ($4.00)</label><input class="toggle" name="siideGarlicBread{{eyedee}}" id="siideGarlicBread{{eyedee}}" class="add_5" type="checkbox" {{sides.GarlicBread}}></li>
+										<li><label for="siideMacaroniPie{{eyedee}}">Macaroni Pie ($15.00)</label><input class="toggle" name="siideMacaroniPie{{eyedee}}" id="siideMacaroniPie{{eyedee}}" class="add_5" type="checkbox" {{sides.MacaroniPie}}></li>
+										<li><label for="siideMacaroniSalad{{eyedee}}">Macaroni Salad ($15.00)</label><input class="toggle" name="siideMacaroniSalad{{eyedee}}" id="siideMacaroniSalad{{eyedee}}" class="add_5" type="checkbox" {{sides.MacaroniSalad}}></li>
+										<li><label for="siideColeSlaw{{eyedee}}">Cole Slaw ($10.00)</label><input class="toggle" name="siideColeSlaw{{eyedee}}" id="siideColeSlaw{{eyedee}}" class="add_5" type="checkbox" {{sides.ColeSlaw}}></li>
+										<li><label for="siideChickenKebabs{{eyedee}}">Chicken Kebabs ($20.00)</label><input class="toggle" name="siideChickenKebabs{{eyedee}}" id="siideChickenKebabs{{eyedee}}" class="add_5" type="checkbox" {{sides.ChickenKebabs}}></li>
+										<li><label for="siideShrimpKebabs{{eyedee}}">Shrimp Kebabs ($30.00)</label><input class="toggle" name="siideShrimpKebabs{{eyedee}}" id="siideShrimpKebabs{{eyedee}}" class="add_5" type="checkbox" {{sides.ShrimpKebabs}}></li>
+										<li><label for="siideFriedRice{{eyedee}}">Fried Rice ($15.00)</label><input class="toggle" name="siideFriedRice{{eyedee}}" id="siideFriedRice{{eyedee}}" class="add_5" type="checkbox" {{sides.FriedRice}}></li>
+										<li><label for="siideNoodles{{eyedee}}">Noodles ($15.00)</label><input class="toggle" name="siideNoodles{{eyedee}}" id="siideNoodles{{eyedee}}" class="add_5" type="checkbox" {{sides.Noodles}}></li>
+									</ul>
+									</br>
+									</br>
+									</br>
+									</br>
+>>>>>>> 9cb3357b897260527eccc6e2682d62cfe3b4bce7
 									</br>
 
 									<h2>QUANTITY: <span class="quantityHeading" id="quantityValue{{eyedee}}">{{quantity}}</span></h2>
