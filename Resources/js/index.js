@@ -1,4 +1,3 @@
-var $parallax = $('#parallax');
 var $navigation_bar_index = $('#navigation_bar_index');
 var $index = $('#index');
 var $nav_bar_left = $index.find('#nav_bar_left');
@@ -29,16 +28,13 @@ recenter_map.on('click', enablemap);
 contact_info.on('click', enablemap);
 gmap_canvas.on('mouseleave', disablemap);
 
-$('body').css('overflow','hidden');
-
-$parallax.scroll(function(){
-    var scrollPos = $parallax.scrollTop();
-    var height = $parallax.height();
+$(window).scroll(function(){
+    var scrollPos = $(window).scrollTop();
+    var height = $(window).height();
     var navOffset = $nav_bar_left.offset().top;
-    
     $([nav_bar_left, nav_bar_right, slogan, down_arrow, middle_logo_container, media]).css({'opacity': ((height - scrollPos) / height)});
     
-    if (scrollPos >= navOffset+500) {					
+    if (scrollPos >= navOffset) {					
 		$navigation_bar_index.fadeIn(500);					
 	} else {
 		$navigation_bar_index.fadeOut(500);					
@@ -46,10 +42,10 @@ $parallax.scroll(function(){
 });
 
 function smoothanchor(event){
-var target = $( $(this).attr('href') );
+var target = $($(this).attr('href'));
 if(target.length){
 	event.preventDefault();
-	$parallax.animate({scrollTop: (target.offset().top)}, 1000);}
+	$('body').animate({scrollTop: (target.offset().top)}, 1000);}
 };
 
 function enablemap(){
