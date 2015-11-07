@@ -5,21 +5,22 @@
 <link rel="stylesheet" type="text/css" href="Resources/css/style.css">
 <link rel="stylesheet" type="text/css" href="Resources/css/animate.css">
 <link rel="stylesheet" type="text/css" href="Resources/css/fonts.css">
-<script type="text/javascript" src="js/jquery.js"></script>
-<script type="text/javascript" src="js/scroll.js"></script>
-<script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
-<script type="text/javascript" src="js/jquery.maskedinput.js"></script>
-<script type="text/javascript" src="js/velocity.js"></script>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=o">
-<title>Order | oBBQh</title>
+<script type="text/javascript" src="Resources/js/jquery.js"></script>
+<script type="text/javascript" src="Resources/js/scroll.js"></script>
+<script type="text/javascript" src="Resources/js/jquery-2.1.1.min.js"></script>
+<script type="text/javascript" src="Resources/js/jquery.maskedinput.js"></script>
+<script type="text/javascript" src="Resources/js/mustache.js"></script>
+<script type="text/javascript" src="Resources/js/velocity.js"></script>
+
+<title>Make An Order - The Original BBQ Hut</title>
 
 <body>
-	<div id="navigation_bar_index">
-		<nav>
+
+	<div id="navigation_bar_order">
+		<nav>	
 			<ul>
-				<li><a href="#index"><div id="logo_image"><img src="Resources\images/darrlogo.svg" alt="logo"></div></a></li>
-				<li class="menu_button"><a href="menu.html" id="see_menu_button">SEE THE MENU &#9663</a>
+				<li><a href="index.html"><div id="logo_image"><img src="Resources\logos\BBQH Logo.svg" alt="logo"></div></a></li>
+				<li><a href="menu.html" id="see_menu_button">SEE THE MENU &#9663</a>
 					<ul class="dropdown">
 				        <li><a href="menu.html#regularanchor">Meats</a></li>
 				        <li><a href="menu.html#combinationsanchor">Combinations Meals</a></li>
