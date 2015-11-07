@@ -555,13 +555,18 @@ z-index: 20;
 display: none;
 }
 
-
 #background_image
 {
 position: absolute;
 width: 100%;
 height: 100%;
 overflow: hidden;
+}
+
+#halalimg img
+{
+position: absolute;
+width: 15%;
 }
 
 #middle_logo_container
@@ -758,88 +763,155 @@ top: 90%;
 z-index: -1;
 }
 
-#about_us
+#about_us_title
 {
 position: absolute;
 top: 100%;
 width: 100%;
-height: 100%;
-}
-
-#aboutus_content
-{
-position: absolute;
-top: 5%;
-left: 40%;
-width: 60%;
-height: 87.5%;
-}
-
-#aboutus_title
-{
-position: absolute;
-top: 4%;
-width: 100%;
-font-size: 4vw;
-font-family: caviardreamsregular;
+height: 40%;
+font-size: 7vw;
+font-family: michroma;
 text-align: center;
-color: #35A928;
 }
 
-#aboutus_details
+#about_us
 {
 position: absolute;
-top: 20%;
-left: 5%;
-width: 90%;
+top: 145%;
+width: 100%;
 height: 100%;
-font-size: 1vw;
-font-family: opensansregular;
 }
 
-#aboutus_details p
-{
-width: 73%;
-margin-left: 15%;
-}
-
-#aboutus_images
+#about_sec_1
 {
 position: absolute;
-top: 42%;
-left: 10%;
+left: 4.75%;
+top: 5%;
+width: 27%;
+height: 80%;
+}
+
+#about_sec_2
+{
+position: absolute;
+left: 36.5%;
+top: 5%;
+width: 27%;
+height: 80%;
+border: 5px solid #187938;
+}
+
+#about_sec_3
+{
+position: absolute;
+left: 68.25%;
+top: 5%;
+width: 27%;
+height: 80%;
+}
+
+#sec1_title
+{
+position: absolute;
+top: 10%;
+left: 50%;
+transform: translate(-50%, -50%);
+text-align: center;
+width: 100%;
+font-family: porterbold;
+font-size: 3vw;
+}
+
+#sec2_title
+{
+position: absolute;
+top: 65%;
+left: 50%;
+transform: translate(-50%, -50%);
+text-align: center;
+width: 100%;
+font-family: porterbold;
+font-size: 3vw;
+}
+
+#sec3_title
+{
+position: absolute;
+top: 10%;
+left: 50%;
+transform: translate(-50%, -50%);
+text-align: center;
+width: 100%;
+font-family: porterbold;
+font-size: 3vw;
+}
+
+#sec1_text
+{
+position: absolute;
+top: 40%;
+left: 50%;
 width: 80%;
-height: 30%;
-}
-
-#aboutus_images img
-{
-width: 40%;
-margin-left: 50%;
-transform: translate(-50%,0);
-}
-
-#aboutus_images ul
-{
-width: 70%;
-margin-left: 16%;
-}
-
-#aboutus_images li
-{
-width: 48%;
-height: 100%;
-list-style-type: none;
-display: inline-block;
-}
-
-.icons_subtext
-{
-color: black;
-font-family: opensanslight;
-margin-left: 41%;
-margin-top: 10%;
+transform: translate(-50%, -50%);
+text-align: center;
+font-family: opensansregular;
 font-size: 1vw;
+}
+
+#sec2_subtext
+{
+position: absolute;
+top: 75%;
+left: 50%;
+width: 100%;
+transform: translate(-50%, -50%);
+text-align: center;
+font-family: opensansregular;
+font-size: 1.5vw;
+}
+
+#sec3_text
+{
+position: absolute;
+top: 75%;
+left: 50%;
+width: 80%;
+transform: translate(-50%, -50%);
+text-align: center;
+font-family: opensansregular;
+font-size: 1vw;
+}
+
+#sec1_images
+{
+position: absolute;
+top: 80%;
+left: 50%;
+width: 90%;
+height: 30%;
+transform: translate(-50%, -50%);
+background-color: orange;
+}
+
+#crewentryimg
+{
+position: absolute;
+top: 50%;
+left: 50%;
+width: 100%;
+height: 100%;
+transform: translate(-50%, -50%);
+}
+
+#sec3_images
+{
+position: absolute;
+top: 35%;
+left: 50%;
+width: 90%;
+height: 35%;
+transform: translate(-50%, -50%);
+background-color: orange;
 }
 
 /*+++++++About Us Mobile Page +++++++++*/
@@ -927,13 +999,13 @@ width: 100%;
 #contact_us_anchor
 {
 position: absolute;
-top: 190%;
+top: 240%;
 }
 
 #contact_us
 {
 position: absolute;
-top: 200%;
+top: 250%;
 width: 100%;
 height: 100%;
 }
@@ -1043,7 +1115,7 @@ z-index: 2;
 #click_map_instruct
 {
 position: absolute;
-top: 67%;
+top: 67.5%;
 width: 100%;
 padding-top: 1%;
 text-align: center;
@@ -1779,3 +1851,272 @@ background-color: #36AD16;
 color: #E3E3E3;
 display: none;
 }
+
+
+#order {
+  position: absolute;
+  width: 100%;
+  height: 300%;
+  background-color: #420411; }
+
+#header_wrapper {
+  position: absolute;
+  top: 1em;
+  z-index: 100;
+  background-color: #420411; }
+
+#order_intro {
+  position: absolute;
+  width: 100%;
+  height: 31em;
+  top: 5em;
+  overflow: hidden; }
+
+#order_text_header {
+  position: absolute;
+  width: 100%;
+  background-color: #420411; }
+
+#order_text_body {
+  position: absolute;
+  width: 20em;
+  height: 22.5em;
+  top: 3.5em;
+  text-align: left;
+  overflow: hidden; }
+
+#order_text_body ul {
+  position: absolute;
+  width: 90%;
+  height: 19em;
+  padding: 1em;
+  border-radius: 1em;
+  background-color: #fff; }
+
+#order_text_body li {
+  width: 100%;
+  height: 4em;
+  margin-top: 0.1em;
+  padding: 0.1em;
+  list-style-type: none; }
+
+#get_started {
+  position: absolute;
+  width: 100%;
+  height: 7em;
+  top: 70%; }
+
+.img_placeholder {
+  position: absolute;
+  background-color: blue;
+  width: 3.5em;
+  height: 3.5em;
+  left: 1em;
+  border-radius: 3em; }
+
+.order_text_body_option_text {
+  position: relative;
+  width: 13.5em;
+  top: 1em;
+  left: 6.5em; }
+
+#down_arrow {
+  position: absolute;
+  width: 2em;
+  top: 50%; }
+
+@-webkit-keyframes animates {
+  0% {
+    margin-top: 50px; }
+  20% {
+    margin-top: 50px; }
+  40% {
+    margin-top: 20px; }
+  50% {
+    margin-top: 50px; }
+  60% {
+    margin-top: 20px; }
+  80% {
+    margin-top: 50px; }
+  100% {
+    margin-top: 50px; } }
+#order_line_1 {
+  position: absolute;
+  width: 20em;
+  height: 0.05em;
+  top: 12em;
+  background-color: black;
+  border: 0em; }
+
+#order_subcontainer {
+  position: absolute;
+  width: 100%;
+  min-height: 20em;
+  top: 35em;
+  z-index: 100; }
+
+#instructions {
+  position: absolute;
+  width: 95%; }
+
+#order_subcontainer ul {
+  position: absolute;
+  width: 100%;
+  top: 2.5em; }
+
+#order_subcontainer ul li {
+  width: 100%;
+  height: 5em;
+  list-style-type: none;
+  margin-top: 0.5em; }
+
+.order_list_item {
+  position: absolute;
+  width: 100%;
+  height: 5.1em;
+  background-color: #888; }
+
+.order_list_item img {
+  position: absolute;
+  width: 4em;
+  height: 4em;
+  top: 0.5em;
+  left: 0.5em;
+  overflow: hidden; }
+
+#order_item_text {
+  position: absolute;
+  width: 12em;
+  height: 4em;
+  top: 0.5em;
+  left: 5.5em;
+  overflow: hidden; }
+
+#order_item_title {
+  position: absolute;
+  width: 12em;
+  height: 1em;
+  text-align: left; }
+
+#order_item_details {
+  position: absolute;
+  width: 12em;
+  height: 1em;
+  top: 2.5em;
+  text-align: left; }
+
+.center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); }
+
+.centerx {
+  left: 50%;
+  transform: translate(-50%, 0);
+  text-align: center; }
+
+.centery {
+  top: 50%; }
+
+.centerright {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(0%, -50%); }
+
+.font_style_h1_b {
+  color: black;
+  font-family: simplifica;
+  font-size: 15vw; }
+
+.font_style_h1_w {
+  color: white;
+  font-family: westernbangbang;
+  font-size: 15vw; }
+
+.font_style_h2_w {
+  color: white;
+  font-family: opensansregular;
+  font-size: 6vw; }
+
+.font_style_h2_b {
+  color: black;
+  font-family: opensansregular;
+  font-size: 6vw; }
+
+.font_style_h3_w {
+  color: white;
+  font-family: opensansregular;
+  font-size: 4vw;
+  text-transform: bold; }
+
+.font_style_h3_b {
+  color: black;
+  font-family: opensansregular;
+  font-size: 4vw;
+  text-transform: bold; }
+
+.font_style_h4_w {
+  color: white;
+  font-family: opensansregular;
+  font-size: 3vw;
+  text-transform: bold; }
+
+.font_style_h4_b {
+  color: black;
+  font-family: opensansregular;
+  font-size: 4.5vw;
+  text-transform: bold; }
+
+.font_style_reg_b {
+  color: black;
+  font-family: opensansregular;
+  font-size: 4.5vw; }
+
+.font_style_reg_w {
+  color: white;
+  font-family: opensansregular;
+  font-size: 4.5vw; }
+
+.font_style_small_b {
+  color: black;
+  font-family: opensanslight;
+  font-size: 3.5vw; }
+
+.font_style_small_w {
+  color: white;
+  font-family: opensanslight;
+  font-size: 3.5vw; }
+
+.font_style_smallest_b {
+  color: black;
+  font-family: opensanslight;
+  font-size: 0.8em; }
+
+.font_style_smallest_w {
+  color: white;
+  font-family: opensanslight;
+  font-size: 0.8em; }
+
+.font_style_fixed_b {
+  color: black;
+  font-family: opensanslight;
+  font-size: 1em; }
+
+.font_style_fixed_w {
+  color: white;
+  font-family: opensanslight;
+  font-size: 1em; }
+
+.heading_transform_down {
+  margin-top: 1.5em; }
+
+.escape {
+  color: black;
+  font-family: none;
+  font-size: default;
+  text-transform: none;
+  top: 0em;
+  left: 0em;
+  transform: translate(0em, 0em); }
