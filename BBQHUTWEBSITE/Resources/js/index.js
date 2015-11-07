@@ -1,4 +1,3 @@
-var $parallax = $('#parallax');
 var $navigation_bar_index = $('#navigation_bar_index');
 var $index = $('#index');
 var $nav_bar_left = $index.find('#nav_bar_left');
@@ -29,19 +28,16 @@ recenter_map.on('click', enablemap);
 contact_info.on('click', enablemap);
 gmap_canvas.on('mouseleave', disablemap);
 
-$('body').css('overflow','hidden');
-
-$parallax.scroll(function(){
-    var scrollPos = $parallax.scrollTop();
-    var height = $parallax.height();
+$(window).scroll(function(){
+    var scrollPos = $(window).scrollTop();
+    var height = $(window).height();
     var navOffset = $nav_bar_left.offset().top;
-    
     $([nav_bar_left, nav_bar_right, slogan, down_arrow, middle_logo_container, media]).css({'opacity': ((height - scrollPos) / height)});
     
-    if (scrollPos >= navOffset+500) {					
-		$navigation_bar_index.fadeIn(500);					
+    if (scrollPos >= navOffset) {					
+		$navigation_bar_index.fadeIn(1);					
 	} else {
-		$navigation_bar_index.fadeOut(500);					
+		$navigation_bar_index.fadeOut(1);					
 	}
 });
 
