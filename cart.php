@@ -3,13 +3,14 @@
 <link rel="stylesheet" type="text/css" href="Resources/css/style.css">
 <link rel="stylesheet" type="text/css" href="Resources/css/animate.css">
 <link rel="stylesheet" type="text/css" href="Resources/css/fonts.css">
+<link rel="stylesheet" type="text/css" href="Resources/css/jquery-clockpicker.css">
 <script type="text/javascript" src="Resources/js/jquery.js"></script>
 <script type="text/javascript" src="Resources/js/scroll.js"></script>
 <script type="text/javascript" src="Resources/js/jquery-2.1.1.min.js"></script>
 <script type="text/javascript" src="Resources/js/jquery.maskedinput.js"></script>
+<script type="text/javascript" src="Resources/js/jquery-clockpicker.js"></script>
 <script type="text/javascript" src="Resources/js/mustache.js"></script>
 <script type="text/javascript" src="Resources/js/velocity.js"></script>
-<script type="text/javascript" src="Resources/js/stupidtable.min.js"></script>
 
 <title>Your Cart - The Original BBQ Hut</title>
 
@@ -62,21 +63,13 @@
 		<center>Review your order</center>
 	</div>
 	<div id="mainElephant">
-		<div id="AddSideContainer">
-			<div id="AddSide" align="center">
-				<div id="AddSideText"><a href="order.php">Add Side</a></div>
-			</div>
-			<div id="EditOrder">
-				<div id="EditOrderText"><a href="order.php">Edit Order</a></div>
-			</div>
-		</div>
 		<div class="scrolltable">
 			<div id="OrderTableHeader" class="header">
 			  <table cellspacing='0'>
 			    <thead>
 			      <tr>
-			      	<th></th>
-			        <th style="width: 75%">Orders</th>
+			      	<th style=""></th>
+			        <th style="width: 70%">Orders</th>
 			        <th style="width: 5%">Amount</th>
 				    <th style="width: 10%">Price</th>
 			      </tr>
@@ -84,6 +77,45 @@
 			  </table>
 			</div>
 			<hr>
+			<div id="AddSideContainer">
+				<div id="AddSide" align="center">
+					<div id="AddSideText"><a href="order.php">Add Side</a></div>
+				</div>
+				<div id="EditOrder">
+					<div id="EditOrderText"><a href="order.php">Edit Order</a></div>
+				</div>
+				<div id="NextButton">
+					<div id="NextText">Next</div>
+				</div>
+			</div>
+			<div id="OrderInformationContainer">
+				<div id="OrderInformationHeader">
+					<div id="OrderInformationHeaderText">Order Information</div>
+				</div>
+				<div id="OrderInformationFormContainer">
+					<form action="action_page.php" method="post">
+						<table>
+							<tr>
+								<td align="left"><label for="time">Pickup time:</label></td>
+								<td align="right"><input type="text" id="time"/></td>
+							</tr>
+							<tr>
+								<td align="left"><label for="firstName">First name:</label></td>
+								<td align="right"><input type="text" id="firstName"/></td>
+							</tr>
+							<tr>
+								<td align="left"><label for="lastName">Last name:</label></td>
+								<td align="right"><input type="text" id="lastName"/></td>
+							</tr>
+							<tr>
+								<td align="left"><label for="cell">Cell number:</label></td>
+								<td align="right"><input type="text" id="cell"/></td>
+							</tr>
+						</table>
+						<td align="right"><input id="sendOrderButton" type="submit" value="Send Order"></td>
+					</form>
+				</div>
+			</div>
 			<br>
 			<div id="OrderTableBody" class="body">
 			  <table cellspacing='0'>
@@ -97,7 +129,6 @@
 			</div>
 		</div>
 	</div>
-	
 </body>
 
 <footer>

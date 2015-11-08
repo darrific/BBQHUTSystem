@@ -1379,13 +1379,13 @@ font-size: 1vw;
 position:absolute;
 left: 110%;
 width: 47.5%;
-height: 90%;
+height: 100%;
 }
 
 #AddSide{
 position: absolute;
 width:100%;
-height:50%;
+height:40%;
 background-color: blue;
 font-family: opensansregular;
 font-size: 2vw;
@@ -1413,13 +1413,96 @@ transform: translate(-50%, -50%);
 
 #EditOrder{
 position: absolute;
-top:50%;
+top:40%;
 width:100%;
-height:50%;
+height:40%;
 background-color: black;
 font-family: opensansregular;
 font-size: 2vw;
 color:#FFF;
+}
+
+#NextButton{
+top:80%;
+position: absolute;
+width: 50%;
+height:10%;
+border:1px solid black;
+border-radius: 1.5em;
+cursor:pointer;
+transform: translate(50%, 25%);
+}
+
+#NextText{
+position:absolute;
+top:50%;
+left:50%;
+color: black;
+font-family: opensansregular;
+font-size: 1.66vw;
+transform: translate(-50%, -50%);  
+}
+
+#OrderInformationContainer{
+display:none;
+position:absolute;
+left: 110%;
+width: 45%;
+height: 80%;
+border:1px solid black;
+border-radius: 1em;
+}
+
+#OrderInformationHeader{
+position: absolute;
+width: 100%;
+height: 20%;
+}
+
+#OrderInformationHeaderText{
+font-family: opensansregular;
+font-size: 2vw;
+color:#000;
+transform: translate(12.5%, 50%);
+}
+
+#OrderInformationFormContainer{
+position:absolute;
+top:20%;
+width: 100%;
+height:72.5%;
+}
+
+#OrderInformationFormContainer form label{
+font-family: opensanslight;
+font-size: 1.25vw;
+color:#000;
+text-align: right;
+display: inline-block;
+transform: translate(20%, 12.5%);
+}
+
+#OrderInformationFormContainer form table input{
+margin-top:5%;
+font-family: opensanslight;
+font-size: 1.25vw;
+color:#000;
+width:75%;
+}
+
+#SendOrderButton{
+font-family: opensansregular;
+font-size: 1vw;
+margin-top: 5%;
+border-radius: 5px;
+border: 0;
+width: 50%;
+height:15%;
+background: none;
+border:1px solid black;
+border-radius: 1em;
+filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#f4f4f4', endColorstr='#ededed', GradientType=0);
+transform: translate(50%, 50%);
 }
 
 .scrolltable {
