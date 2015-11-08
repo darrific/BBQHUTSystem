@@ -9,6 +9,7 @@
 <script type="text/javascript" src="Resources/js/jquery.maskedinput.js"></script>
 <script type="text/javascript" src="Resources/js/mustache.js"></script>
 <script type="text/javascript" src="Resources/js/velocity.js"></script>
+<script type="text/javascript" src="Resources/js/stupidtable.min.js"></script>
 
 <title>Your Cart - The Original BBQ Hut</title>
 
@@ -56,102 +57,43 @@
 			</ul>
 		</nav>	
 	</div>
-	
 	<div id="cart_title">My Cart</div>
-	<div id="confirm_order_details">
-		<div id="contact_information">
-			<div id="contact_info_header" class="pointer_cursor">Contact Details
-				<div id="contact_info_filled"></div>
-				<div id="check_button">
-					<?xml version="1.0" encoding="iso-8859-1"?>
-					<!-- Generator: Adobe Illustrator 16.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
-					<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
-					<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-						 width="60%" viewBox="0 0 448.8 448.8" style="enable-background:new 0 0 448.8 448.8;" xml:space="preserve"
-						>
-						<g>
-							<g id="check">
-								<polygon points="142.8,323.85 35.7,216.75 0,252.45 142.8,395.25 448.8,89.25 413.1,53.55 		"/>
-							</g>
-						</g>
-					</svg>
-				</div>
+	<div id="cartsubtitle" class="cooltext">
+		<center>Review your order</center>
+	</div>
+	<div id="mainElephant">
+		<div id="AddSideContainer">
+			<div id="AddSide" align="center">
+				<div id="AddSideText"><a href="order.php">Add Side</a></div>
 			</div>
-			<div id="contact_info_form">
-				<form id="contact_form" name="contact_form" onsubmit="optionOne(); return false;">
-					<input id="contact_fname" name="contact_fname" type="text" placeholder="First Name" autocomplete="on" autofocus required>
-					<input id="contact_lname" name="contact_lname" type="text" placeholder="Last Name" autocomplete="on" required>
-					<input id="contact_number" name="contact_number" type="text" placeholder="Cell Number (123-4560)" autocomplete="on" required>
-					<input id="submit_contact" class="pointer_cursor" type="submit" value="Next" required>
-				</form>
-				<div id="error_message"></div>
+			<div id="EditOrder">
+				<div id="EditOrderText"><a href="order.php">Edit Order</a></div>
 			</div>
 		</div>
-		<div id="pickup_time">
-			<div id="pickup_time_header" class="pointer_cursor">Choose a Pickup Time
-				<div id="pickup_filled"></div>
-				<div id="check_button2">
-					<?xml version="1.0" encoding="iso-8859-1"?>
-					<!-- Generator: Adobe Illustrator 16.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
-					<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
-					<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-						 width="60%" viewBox="0 0 448.8 448.8" style="enable-background:new 0 0 448.8 448.8;" xml:space="preserve"
-						>
-						<g>
-							<g id="check">
-								<polygon points="142.8,323.85 35.7,216.75 0,252.45 142.8,395.25 448.8,89.25 413.1,53.55 		"/>
-							</g>
-						</g>
-					</svg>
-				</div>
+		<div class="scrolltable">
+			<div id="OrderTableHeader" class="header">
+			  <table cellspacing='0'>
+			    <thead>
+			      <tr>
+			      	<th></th>
+			        <th style="width: 75%">Orders</th>
+			        <th style="width: 5%">Amount</th>
+				    <th style="width: 10%">Price</th>
+			      </tr>
+				</thead>
+			  </table>
 			</div>
-			<div id="time_selection">
-				<select name="hour" id="hour_time">
-					<option value="1">1</option>
-					<option value="2">2</option>
-					<option value="3">3</option>
-					<option value="4">4</option>
-					<option value="5">5</option>
-					<option value="6" selected="selected">6</option>
-					<option value="7">7</option>
-					<option value="8">8</option>
-					<option value="9">9</option>
-					<option value="10">10</option>
-					<option value="11">11</option>
-					<option value="12">12</option>
-				</select>
-				<select name"minute" id="minute_time">
-					<option value="00">00</option>
-					<option value="05">05</option>
-					<option value="10">10</option>
-					<option value="15">15</option>
-					<option value="20">20</option>
-					<option value="25">25</option>
-					<option value="30">30</option>
-					<option value="35">35</option>
-					<option value="40">40</option>
-					<option value="45" selected="selected">45</option>
-					<option value="50">50</option>
-					<option value="55">55</option>
-				</select>
-				<select name="period" id="period_time">
-					<option value="am">a.m.</option>
-					<option value="pm" selected="selected">p.m.</option>
-				</select>
-				<button id="submit_pickup" class="pointer_cursor" onclick="return false">Next</button>
-			</div>
-		</div>
-		<div id="order_details">
-			<div id="order_header">
-				<ul>
-					<li class="cartorder_qty">QTY</li>
-					<li class="cartorder_name">Items</li>
-					<li class="cartorder_price">Price</li>
-				</ul>
-			</div>
-			<div id="all_orders">
-				<!--JAVASCRIPT WORK FOR SAYAAD HERE -->
-				<button id="send_order" class="pointer_cursor">Send Order</button>
+			<hr>
+			<br>
+			<div id="OrderTableBody" class="body">
+			  <table cellspacing='0'>
+				<tr class="OrderRow">
+					<td class="tableOrderPicture" align="left"><img width="60" height="60" src="Resources/images/food.jpeg"></td>	
+					<td class="tableOrder" align="center">1/2 Chicken, Fries and Salad</td>
+					<td class="tableAmount" align="center">1</td>
+					<td class="tablePrice" align="center">$40.00</td>
+				</tr>
+			  </table>
 			</div>
 		</div>
 	</div>
