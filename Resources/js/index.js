@@ -4,6 +4,7 @@ var $nav_bar_left = $index.find('#nav_bar_left');
 var $nav_bar_right = $index.find('#nav_bar_right');
 var $down_arrow = $index.find('#down_arrow');
 var $middle_logo_container = $index.find('#middle_logo_container');
+var $bbqtitle = $index.find('#bbqtitle');
 var $slogan = $index.find('#slogan');
 var $media = $index.find('#media');
 
@@ -32,7 +33,7 @@ $(window).scroll(function(){
     var scrollPos = $(window).scrollTop();
     var height = $(window).height();
     var navOffset = $nav_bar_left.offset().top;
-    $([nav_bar_left, nav_bar_right, slogan, down_arrow, middle_logo_container, media]).css({'opacity': ((height - scrollPos) / height)});
+    $([nav_bar_left, nav_bar_right, slogan, down_arrow, middle_logo_container, media, bbqtitle]).css({'opacity': ((height - scrollPos) / height)});
     
     if (scrollPos >= navOffset) {					
 		$navigation_bar_index.fadeIn(500);					
