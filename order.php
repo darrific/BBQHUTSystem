@@ -62,34 +62,11 @@
 		<div id="order">
 			<div id="order_intro">
 				<div id="order_text_header" class="centerx">
-					<span class="font_style_h2_w">Why wait in line?</span>
+					<span class="font_style_h2_b">Why wait in line?</span>
 					<br>
-					<span class="font_style_reg_w">
+					<span class="font_style_reg_b">
 						<i>Introducing our online pickup service!<br></i>	
 					</span>
-				</div>
-				<div id="order_text_body" class="centerx">
-
-					<br>
-					<ul>
-						<li>
-							<div class="img_placeholder"></div>
-							<div class="order_text_body_option_text , font_style_small_b">Click one or more of our options listed below.</div>
-						</li>
-						<li>
-							<div class="img_placeholder"></div>
-							<div class="order_text_body_option_text , font_style_small_b">Modify your order, and add sides, set pickup time.</div>
-						</li>
-						<li>
-							<div class="img_placeholder"></div>
-							<div class="order_text_body_option_text , font_style_small_b">Skip the lines and grab your order!</div>
-						</li>
-					</ul>
-				</div>
-				<div id="get_started" class="centerx , font_style_reg_b">
-					
-					<span id="font_style_small_b"><b>Scroll down to get started.</b></span>
-					<!-- <div id="down_arrow" class="centerx"><img src="images/down_arrow.svg" alt=""></div> -->
 				</div>
 			</div>
 			<!-- <hr id="order_line_1" class="centerx"> -->
@@ -97,122 +74,70 @@
 				<!-- <div id="header" class="font_style_h3_b">
 					Our Popular Orders
 				</div> -->
-				<div id="instructions" class="font_style_reg_w">Double tap any option below to add to your cart.</div>
+				<div id="instructions" class="font_style_reg_b">Select any option below to add it to your cart.</div>
 				<ul class="centerx">
 					<li>
 						<div class="order_list_item">
-							<img src="images/food.jpeg" alt="">
+							<img src="Resources/images/food.jpeg" alt="">
 							<div id="order_item_text">
 								<div id="order_item_title" class="font_style_fixed_b">Chicken</div>
 								<div id="order_item_details" class="font_style_smallest_b">
 									1/4 or 1/2 Portion Chicken with Fries, Salad, Garlic Bread
 								</div>
 							</div>
-							<div id="order_item_price">
+							<div id="order_item_price">($25.00)
 							</div>
 						</div>
 					</li>
 					<li>
 						<div class="order_list_item">
-							<img src="images/food.jpeg" alt="">
+							<img src="Resources/images/food.jpeg" alt="">
 							<div id="order_item_text">
 								<div id="order_item_title" class="font_style_fixed_b">Lamb</div>
 								<div id="order_item_details" class="font_style_smallest_b">
 									1/4 Portion Lamb with Fries, Salad, Garlic Bread
 								</div>
 							</div>
-							<div id="order_item_price">
+							<div id="order_item_price">($25.00)
 							</div>
 						</div>
 					</li>
 					<li>
 						<div class="order_list_item">
-							<img src="images/food.jpeg" alt="">
+							<img src="Resources/images/food.jpeg" alt="">
 							<div id="order_item_text">
 								<div id="order_item_title" class="font_style_fixed_b">Beef</div>
 								<div id="order_item_details" class="font_style_smallest_b">
 									1/4 Portion Beef with Fries, Salad, Garlic Bread
 								</div>
 							</div>
-							<div id="order_item_price">
+							<div id="order_item_price">($25.00)
 							</div>
 						</div>
 					</li>
 					<li>
 						<div class="order_list_item">
-							<img src="images/food.jpeg" alt="">
+							<img src="Resources/images/food.jpeg" alt="">
 							<div id="order_item_text">
 								<div id="order_item_title" class="font_style_fixed_b">Shrimp</div>
 								<div id="order_item_details" class="font_style_smallest_b">
 									1/4 Portion Shrimp with Fries, Salad, Garlic Bread
 								</div>
 							</div>
-							<div id="order_item_price">
+							<div id="order_item_price">($25.00)
 							</div>
 						</div>
 					</li>
 					<li>
 						<div class="order_list_item">
-							<img src="images/food.jpeg" alt="">
+							<img src="Resources/images/food.jpeg" alt="">
 							<div id="order_item_text">
 								<div id="order_item_title" class="font_style_fixed_b">Veggie</div>
 								<div id="order_item_details" class="font_style_smallest_b">
 									Fries, Salad, Garlic Bread
 								</div>
 							</div>
-							<div id="order_item_price">
-							</div>
-						</div>
-					</li>
-					<li>
-						<div class="order_list_item">
-							<img src="images/food.jpeg" alt="">
-							<div id="order_item_text">
-								<div id="order_item_title" class="font_style_fixed_b">Veggie</div>
-								<div id="order_item_details" class="font_style_smallest_b">
-									Fries, Salad, Garlic Bread
-								</div>
-							</div>
-							<div id="order_item_price">
-							</div>
-						</div>
-					</li>
-					<li>
-						<div class="order_list_item">
-							<img src="images/food.jpeg" alt="">
-							<div id="order_item_text">
-								<div id="order_item_title" class="font_style_fixed_b">Veggie</div>
-								<div id="order_item_details" class="font_style_smallest_b">
-									Fries, Salad, Garlic Bread
-								</div>
-							</div>
-							<div id="order_item_price">
-							</div>
-						</div>
-					</li>
-					<li>
-						<div class="order_list_item">
-							<img src="images/food.jpeg" alt="">
-							<div id="order_item_text">
-								<div id="order_item_title" class="font_style_fixed_b">Veggie</div>
-								<div id="order_item_details" class="font_style_smallest_b">
-									Fries, Salad, Garlic Bread
-								</div>
-							</div>
-							<div id="order_item_price">
-							</div>
-						</div>
-					</li>
-					<li>
-						<div class="order_list_item">
-							<img src="images/food.jpeg" alt="">
-							<div id="order_item_text">
-								<div id="order_item_title" class="font_style_fixed_b">Veggie</div>
-								<div id="order_item_details" class="font_style_smallest_b">
-									Fries, Salad, Garlic Bread
-								</div>
-							</div>
-							<div id="order_item_price">
+							<div id="order_item_price">($25.00)
 							</div>
 						</div>
 					</li>
@@ -225,27 +150,7 @@
 
 <footer>
 	<script>
-		var counter = 0;
-			$("#menu_icon").click(function(){
-				if (counter === 0){
-					// $("#navbar").velocity({left: "185px"});
-					$("#social_media_bar").velocity({left: "18.45em"});
-					$("#main_menu").velocity({left: "0px"});
-					// $("#logo_icon").fadeOut(500);
-					// $("#cart_icon").fadeOut(500);
-					$("#homepage").css('-webkit-filter','blur(5px)');
-					counter++;
-				}else{
-					// $("#navbar").velocity({left: "0"});
-					$("#social_media_bar").velocity({left: "30em"});
-					$("#main_menu").velocity({left: "-190px"});
-					// $("#logo_icon").fadeIn(500);
-					// $("#cart_icon").fadeIn(500);
-					$("#homepage").css('-webkit-filter','blur(0px)');
-					counter--;
-				}
-			});
-		</script>
+	</script>
 </footer>
 
 </html>

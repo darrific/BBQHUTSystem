@@ -42,14 +42,11 @@ z-index: 20;
 #order {
   position: absolute;
   width: 100%;
-  height: 300%;
-  background-color: #420411; }
+  height: 100%; }
 
 #header_wrapper {
   position: absolute;
-  top: 1em;
-  z-index: 100;
-  background-color: #420411; }
+  top: 1em; }
 
 #order_intro {
   position: absolute;
@@ -61,30 +58,7 @@ z-index: 20;
 #order_text_header {
   position: absolute;
   width: 100%;
-  background-color: #420411; }
-
-#order_text_body {
-  position: absolute;
-  width: 20em;
-  height: 22.5em;
-  top: 3.5em;
-  text-align: left;
-  overflow: hidden; }
-
-#order_text_body ul {
-  position: absolute;
-  width: 90%;
-  height: 19em;
-  padding: 1em;
-  border-radius: 1em;
-  background-color: #fff; }
-
-#order_text_body li {
-  width: 100%;
-  height: 4em;
-  margin-top: 0.1em;
-  padding: 0.1em;
-  list-style-type: none; }
+  top: 10%; }
 
 #get_started {
   position: absolute;
@@ -138,29 +112,36 @@ z-index: 20;
   position: absolute;
   width: 100%;
   min-height: 20em;
-  top: 35em;
-  z-index: 100; }
+  top: 15em; }
 
 #instructions {
   position: absolute;
-  width: 95%; }
+  width: 100%;
+  top: 55%; }
 
 #order_subcontainer ul {
   position: absolute;
-  width: 100%;
-  top: 2.5em; }
+  width: 60%;
+  top: 15em;
+  margin-left: 0.5em; }
 
 #order_subcontainer ul li {
-  width: 100%;
+  width: 50%;
+  float: left;
   height: 5em;
   list-style-type: none;
-  margin-top: 0.5em; }
+  margin-top: 0.5em;
+  cursor: pointer; }
+
+.order_list_item:hover {
+  background-color: #36AD16;
+}
 
 .order_list_item {
   position: absolute;
-  width: 100%;
+  width: 49.4%;
   height: 5.1em;
-  background-color: #888; }
+  background-color: #2A8811; }
 
 .order_list_item img {
   position: absolute;
@@ -172,7 +153,7 @@ z-index: 20;
 
 #order_item_text {
   position: absolute;
-  width: 12em;
+  width: 30em;
   height: 4em;
   top: 0.5em;
   left: 5.5em;
@@ -186,10 +167,21 @@ z-index: 20;
 
 #order_item_details {
   position: absolute;
-  width: 12em;
+  width: 40em;
   height: 1em;
   top: 2.5em;
   text-align: left; }
+
+#order_item_price {
+  position: absolute;
+  width: 2.1em;
+  height: 0.8em;
+  top: 0.3em;
+  left: 12.5em;
+  font-size: 2vw;
+  font-family: asgalt;
+  text-align: right;
+}
 
 .center {
   position: absolute;
@@ -224,11 +216,11 @@ z-index: 20;
 .font_style_h2_w {
   color: white;
   font-family: opensansregular;
-  font-size: 6vw; }
+  font-size: 4vw; }
 
 .font_style_h2_b {
   color: black;
-  font-family: opensansregular;
+  font-family: sanchezregular;
   font-size: 6vw; }
 
 .font_style_h3_w {
@@ -258,7 +250,7 @@ z-index: 20;
 .font_style_reg_b {
   color: black;
   font-family: opensansregular;
-  font-size: 4.5vw; }
+  font-size: 2vw; }
 
 .font_style_reg_w {
   color: white;
@@ -278,7 +270,7 @@ z-index: 20;
 .font_style_smallest_b {
   color: black;
   font-family: opensanslight;
-  font-size: 0.8em; }
+  font-size: 1em; }
 
 .font_style_smallest_w {
   color: white;
@@ -287,8 +279,8 @@ z-index: 20;
 
 .font_style_fixed_b {
   color: black;
-  font-family: opensanslight;
-  font-size: 1em; }
+  font-family: westernbangbang;
+  font-size: 2.4em; }
 
 .font_style_fixed_w {
   color: white;
@@ -984,7 +976,7 @@ width: 100%;
 #regular_meals_options
 {
 position: absolute;
-top: 0;
+top: 9%;
 left: 55%;
 width: 40%;
 }
@@ -997,16 +989,17 @@ text-align: left;
 #regular_meals_options li
 {
 font-family: oranienbaum;
-font-size: 2vw;
+font-size: 1.7vw;
 list-style-type: none;
-margin-bottom: 8%;
-width: 70%;
+margin-bottom: 4%;
+width: 65%;
+cursor: pointer;
 }
 
 #regular_meals_options p
 {
 font-family: opensanregular;
-font-size: 1vw;
+font-size: 0.95vw;
 font-style: italic;
 }
 
@@ -1062,8 +1055,8 @@ width: 100%;
 #combination_meals_options
 {
 position: absolute;
-top: 0;
-left: 18%;
+top: 9%;
+left: 13%;
 width: 40%;
 }
 
@@ -1075,16 +1068,17 @@ text-align: right;
 #combination_meals_options li
 {
 font-family: oranienbaum;
-font-size: 2vw;
+font-size: 1.7vw;
 list-style-type: none;
 margin-bottom: 8%;
 width: 70%;
+cursor: pointer;
 }
 
 #combination_meals_options p
 {
 font-family: opensansregular;
-font-size: 1vw;
+font-size: 0.95vw;
 font-style: italic;
 }
 
@@ -1179,7 +1173,7 @@ top: 90%;
 #sidesanchor
 {
 position: absolute;
-top: 170%;
+top: 175%;
 }
 
 /*======================= NAV BAR ========================*/
