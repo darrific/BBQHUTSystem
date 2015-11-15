@@ -28,8 +28,8 @@
 			      </ul>
 				</li>
 				<li><a href="order.php" id="place_order_button">PLACE AN ORDER</a></li>
-				<li><a href="#about_us" id="about_us_button">ABOUT US</a></li>
-				<li><a href="#contact_us" id="contact_us_button">CONTACT US</a></li>
+				<li><a href="index.html#about_us" id="about_us_button">ABOUT US</a></li>
+				<li><a href="index.html#contact_us" id="contact_us_button">CONTACT US</a></li>
 				<li class="cart_svg"><a href="cart.php">
 					<div id="cart_count"></div>
 						<?xml version="1.0" encoding="iso-8859-1"?>
@@ -58,92 +58,236 @@
 			</ul>
 		</nav>
 	</div>
-	<div id="mainTiger">
-		<div id="order">
-			<div id="order_intro">
-				<div id="order_text_header" class="centerx">
-					<span class="font_style_h2_b">Why wait in line?</span>
-					<br>
-					<span class="font_style_reg_b">
-						<i>Introducing our online pickup service!<br></i>	
-					</span>
-				</div>
-			</div>
-			<!-- <hr id="order_line_1" class="centerx"> -->
-			<div id="order_subcontainer" class="centerx">
-				<!-- <div id="header" class="font_style_h3_b">
-					Our Popular Orders
-				</div> -->
-				<div id="instructions" class="font_style_reg_b">Select any option below to add it to your cart.</div>
-				<ul class="centerx">
-					<li>
-						<div class="order_list_item">
-							<img src="Resources/images/food.jpeg" alt="">
-							<div id="order_item_text">
-								<div id="order_item_title" class="font_style_fixed_b">Chicken</div>
-								<div id="order_item_details" class="font_style_smallest_b">
-									1/4 or 1/2 Portion Chicken with Fries, Salad, Garlic Bread
-								</div>
-							</div>
-							<div id="order_item_price">($25.00)
-							</div>
-						</div>
-					</li>
-					<li>
-						<div class="order_list_item">
-							<img src="Resources/images/food.jpeg" alt="">
-							<div id="order_item_text">
-								<div id="order_item_title" class="font_style_fixed_b">Lamb</div>
-								<div id="order_item_details" class="font_style_smallest_b">
-									1/4 Portion Lamb with Fries, Salad, Garlic Bread
-								</div>
-							</div>
-							<div id="order_item_price">($25.00)
-							</div>
-						</div>
-					</li>
-					<li>
-						<div class="order_list_item">
-							<img src="Resources/images/food.jpeg" alt="">
-							<div id="order_item_text">
-								<div id="order_item_title" class="font_style_fixed_b">Beef</div>
-								<div id="order_item_details" class="font_style_smallest_b">
-									1/4 Portion Beef with Fries, Salad, Garlic Bread
-								</div>
-							</div>
-							<div id="order_item_price">($25.00)
-							</div>
-						</div>
-					</li>
-					<li>
-						<div class="order_list_item">
-							<img src="Resources/images/food.jpeg" alt="">
-							<div id="order_item_text">
-								<div id="order_item_title" class="font_style_fixed_b">Shrimp</div>
-								<div id="order_item_details" class="font_style_smallest_b">
-									1/4 Portion Shrimp with Fries, Salad, Garlic Bread
-								</div>
-							</div>
-							<div id="order_item_price">($25.00)
-							</div>
-						</div>
-					</li>
-					<li>
-						<div class="order_list_item">
-							<img src="Resources/images/food.jpeg" alt="">
-							<div id="order_item_text">
-								<div id="order_item_title" class="font_style_fixed_b">Veggie</div>
-								<div id="order_item_details" class="font_style_smallest_b">
-									Fries, Salad, Garlic Bread
-								</div>
-							</div>
-							<div id="order_item_price">($25.00)
-							</div>
-						</div>
-					</li>
-				</ul>
-			</div>
 
+	<div id="order_top">
+		<div id="order_heading">Place Your Order</div>
+		<div id="order_subheading">Why wait in line? Use our online ordering system below!</div>
+	</div>
+
+	<div id="meatbox_heading">Select Your Meal</div>
+	<div id="meatbox">
+		<ul>
+			<li>
+				<div id="meatitem">
+					<img src="Resources/images/food.jpeg" alt="">
+					<div id="meat_item_text">
+						<div id="meat_item_title">1/4 Chicken</div>
+						<div id="meat_item_details">
+							1/4 Portion Chicken with Fries, Salad, Garlic Bread
+						</div>
+					</div>
+					<div id="meat_item_price">($25.00)
+					</div>
+				</div>
+			</li>
+			<li>
+				<div id="meatitem">
+					<img src="Resources/images/food.jpeg" alt="">
+					<div id="meat_item_text">
+						<div id="meat_item_title">1/2 Chicken</div>
+						<div id="meat_item_details">
+							1/2 Portion Chicken with Fries, Salad, Garlic Bread
+						</div>
+					</div>
+					<div id="meat_item_price">($25.00)
+					</div>
+				</div>
+			</li>
+			<li>
+				<div id="meatitem">
+					<img src="Resources/images/food.jpeg" alt="">
+					<div id="meat_item_text">
+						<div id="meat_item_title">Lamb</div>
+						<div id="meat_item_details">
+							Lamb with Fries, Salad, Garlic Bread
+						</div>
+					</div>
+					<div id="meat_item_price">($25.00)
+					</div>
+				</div>
+			</li>
+			<li>
+				<div id="meatitem">
+					<img src="Resources/images/food.jpeg" alt="">
+					<div id="meat_item_text">
+						<div id="meat_item_title">Beef</div>
+						<div id="meat_item_details">
+							Beef with Fries, Salad, Garlic Bread
+						</div>
+					</div>
+					<div id="meat_item_price">($25.00)
+					</div>
+				</div>
+			</li>
+			<li>
+				<div id="meatitem">
+					<img src="Resources/images/food.jpeg" alt="">
+					<div id="meat_item_text">
+						<div id="meat_item_title">Shrimp</div>
+						<div id="meat_item_details">
+							Shrimp with Fries, Salad, Garlic Bread
+						</div>
+					</div>
+					<div id="meat_item_price">($25.00)
+					</div>
+				</div>
+			</li>
+			<li>
+				<div id="meatitem">
+					<img src="Resources/images/food.jpeg" alt="">
+					<div id="meat_item_text">
+						<div id="meat_item_title">Veggie</div>
+						<div id="meat_item_details">
+							Fries, Salad, Garlic Bread
+						</div>
+					</div>
+					<div id="meat_item_price">($25.00)
+					</div>
+				</div>
+			</li>
+		</ul>
+	</div>
+
+	<div id="sidesbox_heading">Select Your Side</div>
+	<div id="sidesbox">
+		<ul>
+			<li>
+				<div id="sides_item">
+					<img src="Resources/images/food.jpeg" alt="">
+					<div id="sides_title" class="long_sides">Fries, Garlic Bread & Green Salad</div>
+					<div id="sides_price">($25.00)</div>
+				</div>
+			</li>
+			<li>
+				<div id="sides_item">
+					<img src="Resources/images/food.jpeg" alt="">
+					<div id="sides_title" class="center_sides">Fries</div>
+					<div id="sides_price">($15.00)</div>
+				</div>
+			</li>
+			<li>
+				<div id="sides_item">
+					<img src="Resources/images/food.jpeg" alt="">
+					<div id="sides_title" class="center_sides">Baked Potato</div>
+					<div id="sides_price">($10.00)</div>
+				</div>
+			</li>
+			<li>
+				<div id="sides_item">
+					<img src="Resources/images/food.jpeg" alt="">
+					<div id="sides_title" class="center_sides">Garlic Bread</div>
+					<div id="sides_price">($4.00)</div>
+				</div>
+			</li>
+			<li>
+				<div id="sides_item">
+					<img src="Resources/images/food.jpeg" alt="">
+					<div id="sides_title" class="center_sides">Macaroni Pie</div>
+					<div id="sides_price">($15.00)</div>
+				</div>
+			</li>
+			<li>
+				<div id="sides_item">
+					<img src="Resources/images/food.jpeg" alt="">
+					<div id="sides_title" class="center_sides">Macaroni Salad</div>
+					<div id="sides_price">($15.00)</div>
+				</div>
+			</li>
+			<li>
+				<div id="sides_item">
+					<img src="Resources/images/food.jpeg" alt="">
+					<div id="sides_title" class="center_sides">Potato Salad</div>
+					<div id="sides_price">($15.00)</div>
+				</div>
+			</li>
+			<li>
+				<div id="sides_item">
+					<img src="Resources/images/food.jpeg" alt="">
+					<div id="sides_title" class="center_sides">Cole Slaw</div>
+					<div id="sides_price">($10.00)</div>
+				</div>
+			</li>
+			<li>
+				<div id="sides_item">
+					<img src="Resources/images/food.jpeg" alt="">
+					<div id="sides_title" class="center_sides">Green Salad</div>
+					<div id="sides_price">($10.00)</div>
+				</div>
+			</li>
+			<li>
+				<div id="sides_item">
+					<img src="Resources/images/food.jpeg" alt="">
+					<div id="sides_title" class="long_sides">Wedges, Garlic Bread & Green Salad</div>
+					<div id="sides_price">($35.00)</div>
+				</div>
+			</li>
+			<li>
+				<div id="sides_item">
+					<img src="Resources/images/food.jpeg" alt="">
+					<div id="sides_title" class="center_sides">Wedges</div>
+					<div id="sides_price">($25.00)</div>
+				</div>
+			</li>
+			<li>
+				<div id="sides_item">
+					<img src="Resources/images/food.jpeg" alt="">
+					<div id="sides_title" class="long_sides">Fried Rice</div>
+					<div id="sides_note">(Fridays & Saturdays Only)</div>
+					<div id="sides_price">($15.00)</div>
+				</div>
+			</li>
+			<li>
+				<div id="sides_item">
+					<img src="Resources/images/food.jpeg" alt="">
+					<div id="sides_title" class="long_sides">Noodles</div>
+					<div id="sides_note">(Fridays & Saturdays Only)</div>
+					<div id="sides_price">($15.00)</div>
+				</div>
+			</li>
+			<li>
+				<div id="sides_item">
+					<img src="Resources/images/food.jpeg" alt="">
+					<div id="sides_title" class="center_sides">Chicken Kebabs</div>
+					<div id="sides_price">($20.00)</div>
+				</div>
+			</li>
+			<li>
+				<div id="sides_item">
+					<img src="Resources/images/food.jpeg" alt="">
+					<div id="sides_title" class="center_sides">Shrimp Kebabs</div>
+					<div id="sides_price">($30.00)</div>
+				</div>
+			</li>
+			<li>
+				<div id="sides_item">
+					<img src="Resources/images/food.jpeg" alt="">
+					<div id="sides_title" class="center_sides">*COMING SOON*</div>
+					<div id="sides_price"></div>
+				</div>
+			</li>
+		</ul>
+	</div>
+
+	<div id="cart_divider"></div>
+
+	<div id="cartbox">
+		<div id="cartbox_heading">Your Cart</div>
+		<div id="cartorders">
+		<ul>
+			<li>
+				<div id="cart_item">
+					<img src="Resources/images/food.jpeg" alt="">
+					<div id="cartorder_title">Noodles</div>
+					<div id="cartorder_note">(Fridays & Saturdays Only)</div>
+					<div id="cartorder_price">($15.00)</div>
+					<div id="delete_cartorder">x</div>
+				</div>
+			</li>
+		</ul>	
+		</div>
+
+		<div id="order_checkout">
+			<button>Checkout!</button>
 		</div>
 	</div>
 </body>	
