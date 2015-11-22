@@ -28,8 +28,8 @@
 			      </ul>
 				</li>
 				<li><a href="order.php" id="place_order_button">PLACE AN ORDER</a></li>
-				<li><a href="index.html#about_us_anchor" id="about_us_button">ABOUT US</a></li>
-				<li><a href="index.html#contact_us_anchor" id="contact_us_button">CONTACT US</a></li>
+				<li><a href="index.html#about_us" id="about_us_button">ABOUT US</a></li>
+				<li><a href="index.html#contact_us" id="contact_us_button">CONTACT US</a></li>
 				<li class="cart_svg"><a href="cart.php">
 					<div id="cart_count"></div>
 						<?xml version="1.0" encoding="iso-8859-1"?>
@@ -67,7 +67,7 @@
 	<div id="meatbox_heading">Select Your Meal</div>
 	<div id="meatbox">
 		<ul>
-			<li>
+			<li id="meat_item1">
 				<div id="meatitem">
 					<img src="Resources/images/food.jpeg" alt="">
 					<div id="meat_item_text">
@@ -76,11 +76,12 @@
 							1/4 Portion Chicken with Fries, Salad, Garlic Bread
 						</div>
 					</div>
-					<div id="meat_item_price">($25.00)
+					<div id="meat_item_price">$25.00
 					</div>
 				</div>
+				<div id="hiddenOverlay" style="position:relative; width:100%; height:100%;"></div>
 			</li>
-			<li>
+			<li id="meat_item2">
 				<div id="meatitem">
 					<img src="Resources/images/food.jpeg" alt="">
 					<div id="meat_item_text">
@@ -89,11 +90,12 @@
 							1/2 Portion Chicken with Fries, Salad, Garlic Bread
 						</div>
 					</div>
-					<div id="meat_item_price">($25.00)
+					<div id="meat_item_price">$25.00
 					</div>
 				</div>
+				<div id="hiddenOverlay" style="position:relative; width:100%; height:100%;"></div>
 			</li>
-			<li>
+			<li id="meat_item3">
 				<div id="meatitem">
 					<img src="Resources/images/food.jpeg" alt="">
 					<div id="meat_item_text">
@@ -102,11 +104,12 @@
 							Lamb with Fries, Salad, Garlic Bread
 						</div>
 					</div>
-					<div id="meat_item_price">($25.00)
+					<div id="meat_item_price">$25.00
 					</div>
 				</div>
+				<div id="hiddenOverlay" style="position:relative; width:100%; height:100%;"></div>
 			</li>
-			<li>
+			<li id="meat_item4">
 				<div id="meatitem">
 					<img src="Resources/images/food.jpeg" alt="">
 					<div id="meat_item_text">
@@ -115,11 +118,12 @@
 							Beef with Fries, Salad, Garlic Bread
 						</div>
 					</div>
-					<div id="meat_item_price">($25.00)
+					<div id="meat_item_price">$25.00
 					</div>
 				</div>
+				<div id="hiddenOverlay" style="position:relative; width:100%; height:100%;"></div>
 			</li>
-			<li>
+			<li id="meat_item5">
 				<div id="meatitem">
 					<img src="Resources/images/food.jpeg" alt="">
 					<div id="meat_item_text">
@@ -128,11 +132,12 @@
 							Shrimp with Fries, Salad, Garlic Bread
 						</div>
 					</div>
-					<div id="meat_item_price">($25.00)
+					<div id="meat_item_price">$25.00
 					</div>
 				</div>
+				<div id="hiddenOverlay" style="position:relative; width:100%; height:100%;"></div>
 			</li>
-			<li>
+			<li id="meat_item6">
 				<div id="meatitem">
 					<img src="Resources/images/food.jpeg" alt="">
 					<div id="meat_item_text">
@@ -141,128 +146,145 @@
 							Fries, Salad, Garlic Bread
 						</div>
 					</div>
-					<div id="meat_item_price">($25.00)
+					<div id="meat_item_price">$25.00
 					</div>
 				</div>
+				<div id="hiddenOverlay" style="position:relative; width:100%; height:100%;"></div>
 			</li>
 		</ul>
 	</div>
 
 	<div id="sidesbox_heading">Select Your Side</div>
 	<div id="sidesbox">
-		<ul>
-			<li>
-				<div id="sides_item">
+		<ul id="sideslist">
+			<li id="side_item1">
+				<div class="sides_item" id="sides_item1">
 					<img src="Resources/images/food.jpeg" alt="">
-					<div id="sides_title" class="long_sides">Fries, Garlic Bread & Green Salad</div>
-					<div id="sides_price">($25.00)</div>
+					<div id="sides_title" class="long_sides">Fries, Garlic Bread and Green Salad</div>
+					<div id="sides_price">$25.00</div>
+					<div id="hiddenOverlay" style="position:relative; width:100%; height:100%;"></div>
 				</div>
 			</li>
-			<li>
-				<div id="sides_item">
+			<li id="side_item2">
+				<div class="sides_item" id="sides_item2">
 					<img src="Resources/images/food.jpeg" alt="">
 					<div id="sides_title" class="center_sides">Fries</div>
-					<div id="sides_price">($15.00)</div>
+					<div id="sides_price">$15.00</div>
+					<div id="hiddenOverlay" style="position:relative; width:100%; height:100%;"></div>
 				</div>
 			</li>
-			<li>
-				<div id="sides_item">
+			<li id="side_item3">
+				<div class="sides_item" id="sides_item3">
 					<img src="Resources/images/food.jpeg" alt="">
 					<div id="sides_title" class="center_sides">Baked Potato</div>
-					<div id="sides_price">($10.00)</div>
+					<div id="sides_price">$10.00</div>
+					<div id="hiddenOverlay" style="position:relative; width:100%; height:100%;"></div>
 				</div>
 			</li>
-			<li>
-				<div id="sides_item">
+			<li id="side_item4">
+				<div class="sides_item" id="sides_item4">
 					<img src="Resources/images/food.jpeg" alt="">
 					<div id="sides_title" class="center_sides">Garlic Bread</div>
-					<div id="sides_price">($4.00)</div>
+					<div id="sides_price">$4.00</div>
+					<div id="hiddenOverlay" style="position:relative; width:100%; height:100%;"></div>
 				</div>
 			</li>
-			<li>
-				<div id="sides_item">
+			<li id="side_item5">
+				<div class="sides_item" id="sides_item5">
 					<img src="Resources/images/food.jpeg" alt="">
 					<div id="sides_title" class="center_sides">Macaroni Pie</div>
-					<div id="sides_price">($15.00)</div>
+					<div id="sides_price">$15.00</div>
+					<div id="hiddenOverlay" style="position:relative; width:100%; height:100%;"></div>
 				</div>
 			</li>
-			<li>
-				<div id="sides_item">
+			<li id="side_item6">
+				<div class="sides_item" id="sides_item6">
 					<img src="Resources/images/food.jpeg" alt="">
 					<div id="sides_title" class="center_sides">Macaroni Salad</div>
-					<div id="sides_price">($15.00)</div>
+					<div id="sides_price">$15.00</div>
+					<div id="hiddenOverlay" style="position:relative; width:100%; height:100%;"></div>
 				</div>
 			</li>
-			<li>
-				<div id="sides_item">
+			<li id="side_item7">
+				<div class="sides_item" id="sides_item7">
 					<img src="Resources/images/food.jpeg" alt="">
 					<div id="sides_title" class="center_sides">Potato Salad</div>
-					<div id="sides_price">($15.00)</div>
+					<div id="sides_price">$15.00</div>
+					<div id="hiddenOverlay" style="position:relative; width:100%; height:100%;"></div>
 				</div>
 			</li>
-			<li>
-				<div id="sides_item">
+			<li id="side_item8">
+				<div class="sides_item" id="sides_item8">
 					<img src="Resources/images/food.jpeg" alt="">
 					<div id="sides_title" class="center_sides">Cole Slaw</div>
-					<div id="sides_price">($10.00)</div>
+					<div id="sides_price">$10.00</div>
+					<div id="hiddenOverlay" style="position:relative; width:100%; height:100%;"></div>
 				</div>
 			</li>
-			<li>
-				<div id="sides_item">
+			<li id="side_item9">
+				<div class="sides_item" id="sides_item9">
 					<img src="Resources/images/food.jpeg" alt="">
 					<div id="sides_title" class="center_sides">Green Salad</div>
-					<div id="sides_price">($10.00)</div>
+					<div id="sides_price">$10.00</div>
+					<div id="hiddenOverlay" style="position:relative; width:100%; height:100%;"></div>
 				</div>
 			</li>
-			<li>
-				<div id="sides_item">
+			<li id="side_item10">
+				<div class="sides_item" id="sides_item10">
 					<img src="Resources/images/food.jpeg" alt="">
-					<div id="sides_title" class="long_sides">Wedges, Garlic Bread & Green Salad</div>
-					<div id="sides_price">($35.00)</div>
+					<div id="sides_title" class="long_sides">Wedges, Garlic Bread and Green Salad</div>
+					<div id="sides_price">$35.00</div>
+					<div id="hiddenOverlay" style="position:relative; width:100%; height:100%;"></div>
 				</div>
 			</li>
-			<li>
-				<div id="sides_item">
+			<li id="side_item11">
+				<div class="sides_item" id="sides_item11">
 					<img src="Resources/images/food.jpeg" alt="">
 					<div id="sides_title" class="center_sides">Wedges</div>
-					<div id="sides_price">($25.00)</div>
+					<div id="sides_price">$25.00</div>
+					<div id="hiddenOverlay" style="position:relative; width:100%; height:100%;"></div>
 				</div>
 			</li>
-			<li>
-				<div id="sides_item">
+			<li id="side_item12">
+				<div class="sides_item" id="sides_item12">
 					<img src="Resources/images/food.jpeg" alt="">
 					<div id="sides_title" class="long_sides">Fried Rice</div>
-					<div id="sides_note">(Fridays & Saturdays Only)</div>
-					<div id="sides_price">($15.00)</div>
+					<div id="sides_price">$15.00</div>
+					<div id="sides_note">(Fridays and Saturdays Only)</div>
+					<div id="hiddenOverlay" style="position:relative; width:100%; height:100%;"></div>
 				</div>
 			</li>
-			<li>
-				<div id="sides_item">
+			<li id="side_item13">
+				<div class="sides_item" id="sides_item13">
 					<img src="Resources/images/food.jpeg" alt="">
 					<div id="sides_title" class="long_sides">Noodles</div>
-					<div id="sides_note">(Fridays & Saturdays Only)</div>
-					<div id="sides_price">($15.00)</div>
+					<div id="sides_price">$15.00</div>
+					<div id="sides_note">(Fridays and Saturdays Only)</div>
+					<div id="hiddenOverlay" style="position:relative; width:100%; height:100%;"></div>
 				</div>
 			</li>
-			<li>
-				<div id="sides_item">
+			<li id="side_item14">
+				<div class="sides_item" id="sides_item14">
 					<img src="Resources/images/food.jpeg" alt="">
 					<div id="sides_title" class="center_sides">Chicken Kebabs</div>
-					<div id="sides_price">($20.00)</div>
+					<div id="sides_price">$20.00</div>
+					<div id="hiddenOverlay" style="position:relative; width:100%; height:100%;"></div>
 				</div>
 			</li>
-			<li>
-				<div id="sides_item">
+			<li id="side_item15">
+				<div class="sides_item" id="sides_item15">
 					<img src="Resources/images/food.jpeg" alt="">
 					<div id="sides_title" class="center_sides">Shrimp Kebabs</div>
-					<div id="sides_price">($30.00)</div>
+					<div id="sides_price">$30.00</div>
+					<div id="hiddenOverlay" style="position:relative; width:100%; height:100%;"></div>
 				</div>
 			</li>
 			<li>
-				<div id="sides_item">
+				<div class="sides_item" class="sides_item" id="sides_item16">
 					<img src="Resources/images/food.jpeg" alt="">
 					<div id="sides_title" class="center_sides">*COMING SOON*</div>
 					<div id="sides_price"></div>
+					<div id="hiddenOverlay" style="position:relative; width:100%; height:100%;"></div>
 				</div>
 			</li>
 		</ul>
@@ -273,19 +295,11 @@
 	<div id="cartbox">
 		<div id="cartbox_heading">Your Cart</div>
 		<div id="cartorders">
-		<ul>
-			<li>
-				<div id="cart_item">
-					<img src="Resources/images/food.jpeg" alt="">
-					<div id="cartorder_title">Noodles</div>
-					<div id="cartorder_note">(Fridays & Saturdays Only)</div>
-					<div id="cartorder_price">($15.00)</div>
-					<div id="delete_cartorder">x</div>
-				</div>
-			</li>
-		</ul>	
+			<ul id="cartordersul"></ul>
 		</div>
-
+		<div id="total">
+			Total: <span id="totalText">0.00</span>
+		</div>
 		<div id="order_checkout">
 			<button>Checkout!</button>
 		</div>
@@ -293,7 +307,8 @@
 </body>	
 
 <footer>
-	<script>
+
+	<script type="text/javascript" src="Resources/js/order.js">
 	</script>
 </footer>
 

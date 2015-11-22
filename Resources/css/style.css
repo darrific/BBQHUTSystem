@@ -153,6 +153,7 @@ font-family: opensansregular;
 font-size: 1vw;
 margin-top: 0.8%;
 margin-left: 86%;
+height:100%;
 }
 
 #sidesbox_heading
@@ -202,7 +203,12 @@ color: #E3E3E3;
 cursor: pointer;
 }
 
-#sides_item img
+.sides_item{
+width:100%;
+height:100%;
+}
+
+.sides_item img
 {
 position: absolute;
 margin-top: 1.6%;
@@ -220,65 +226,6 @@ margin-left: 10%;
 font-family: opensanssemibold;
 font-size: 0.7vw;
 text-align: center;
-}
-
-.long_sides
-{
-margin-top: 2%;
-}
-
-.center_sides
-{
-margin-top: 3.5%;
-}
-
-#sides_note
-{
-position: absolute;
-margin-left: 10%;
-margin-top: 6%;
-font-size: 0.7vw;
-font-family: opensansregular;
-}
-
-#sides_price
-{
-position: absolute;
-margin-top: 1.5%;
-margin-left: 38%;
-font-family: opensansregular;
-font-size: 0.7vw;
-}
-
-#cart_divider
-{
-position: absolute;
-top: 15.7%;
-left: 73.37%;
-width: 1px;
-height: 82.3%;
-opacity: 0.4;
-background-color: #B4CCB4;
-}
-
-#cartbox
-{
-position: absolute;
-top: 12.7%;
-left: 75%;
-width: 25%;
-height: 87.3%;
-}
-
-#cartbox_heading
-{
-position: absolute;
-top: 5%;
-width: 100%;
-height: 5%;
-text-align: center;
-font-family: porterbold;
-font-size: 1.5vw;
 }
 
 #cartorders
@@ -318,7 +265,7 @@ background-color: #B4CCB4;
 cursor: pointer;
 }
 
-#cart_item img
+.cart_item img
 {
 position: absolute;
 margin-top: 1.2%;
@@ -326,18 +273,18 @@ margin-left: 1%;
 width: 12%;
 }
 
-#cartorder_title
+.cartorder_title
 {
 position: absolute;
-width: 60%;
+width: 62%;
 height: 4%;
 margin-top: 2%;
 margin-left: 15%;
 font-family: opensanssemibold;
-font-size: 0.82vw;
+font-size: 0.8vw;
 }
 
-#cartorder_note
+.cartorder_note
 {
 position: absolute;
 margin-left: 15%;
@@ -346,7 +293,7 @@ font-size: 0.7vw;
 font-family: opensansregular;
 }
 
-#cartorder_price
+.cartorder_price
 {
 position: absolute;
 margin-top: 2%;
@@ -355,7 +302,7 @@ font-family: opensansregular;
 font-size: 0.7vw;
 }
 
-#delete_cartorder
+.delete_cartorder
 {
 position: absolute;
 margin-top: 7%;
@@ -372,10 +319,70 @@ color: #E3E3E3;
 background-color: #D80000;
 }
 
-#delete_cartorder:hover
+.delete_cartorder:hover
 {
 color: white;
 background-color: red;
+}
+
+.long_sides
+{
+margin-top: 2%;
+}
+
+.center_sides
+{
+margin-top: 3.5%;
+}
+
+#sides_note
+{
+position: absolute;
+margin-left: 10%;
+margin-top: 6%;
+font-size: 0.7vw;
+font-family: opensansregular;
+}
+
+#sides_price
+{
+position: absolute;
+margin-top: 1.5%;
+margin-left: 38%;
+font-family: opensansregular;
+font-size: 0.7vw;
+width:100%;
+}
+
+#cart_divider
+{
+position: absolute;
+top: 15.7%;
+left: 73.37%;
+width: 1px;
+height: 82.3%;
+opacity: 0.4;
+background-color: #B4CCB4;
+}
+
+#cartbox
+{
+position: absolute;
+top: 12.7%;
+left: 75%;
+width: 25%;
+height: 87.3%;
+}
+
+#cartbox_heading
+{
+position: absolute;
+top: 5%;
+width: 100%;
+height: 5%;
+text-align: center;
+font-family: porterbold;
+font-size: 1.5vw;
 }
 
 #order_checkout
@@ -399,6 +406,12 @@ text-align: center;
 cursor: pointer;
 }
 
+#total{
+position: absolute;
+font-family: opensanslight;
+font-size: 1vw;
+top:87%;
+}
 
 /*end of orders page*/
 
