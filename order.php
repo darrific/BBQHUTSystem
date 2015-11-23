@@ -73,10 +73,10 @@
 					<div id="meat_item_text">
 						<div id="meat_item_title">1/4 Chicken</div>
 						<div id="meat_item_details">
-							1/4 Portion Chicken with Fries, Salad, Garlic Bread
+							1/4 Portion Chicken with Fries and Green Salad
 						</div>
 					</div>
-					<div id="meat_item_price">$25.00
+					<div id="meat_item_price">$45.00
 					</div>
 				</div>
 				<div id="hiddenOverlay" style="position:relative; width:100%; height:100%;"></div>
@@ -87,10 +87,10 @@
 					<div id="meat_item_text">
 						<div id="meat_item_title">1/2 Chicken</div>
 						<div id="meat_item_details">
-							1/2 Portion Chicken with Fries, Salad, Garlic Bread
+							1/2 Portion Chicken with Fries and Green Salad
 						</div>
 					</div>
-					<div id="meat_item_price">$25.00
+					<div id="meat_item_price">$55.00
 					</div>
 				</div>
 				<div id="hiddenOverlay" style="position:relative; width:100%; height:100%;"></div>
@@ -101,10 +101,10 @@
 					<div id="meat_item_text">
 						<div id="meat_item_title">Lamb</div>
 						<div id="meat_item_details">
-							Lamb with Fries, Salad, Garlic Bread
+							Lamb Chops with Fries and Green Salad
 						</div>
 					</div>
-					<div id="meat_item_price">$25.00
+					<div id="meat_item_price">$55.00
 					</div>
 				</div>
 				<div id="hiddenOverlay" style="position:relative; width:100%; height:100%;"></div>
@@ -115,10 +115,10 @@
 					<div id="meat_item_text">
 						<div id="meat_item_title">Beef</div>
 						<div id="meat_item_details">
-							Beef with Fries, Salad, Garlic Bread
+							Beef Steak with Fries and Green Salad
 						</div>
 					</div>
-					<div id="meat_item_price">$25.00
+					<div id="meat_item_price">$55.00
 					</div>
 				</div>
 				<div id="hiddenOverlay" style="position:relative; width:100%; height:100%;"></div>
@@ -127,12 +127,12 @@
 				<div id="meatitem">
 					<img src="Resources/images/food.jpeg" alt="">
 					<div id="meat_item_text">
-						<div id="meat_item_title">Shrimp</div>
+						<div id="meat_item_title">Fish</div>
 						<div id="meat_item_details">
-							Shrimp with Fries, Salad, Garlic Bread
+							Fish with Fries and Green Salad
 						</div>
 					</div>
-					<div id="meat_item_price">$25.00
+					<div id="meat_item_price">$55.00
 					</div>
 				</div>
 				<div id="hiddenOverlay" style="position:relative; width:100%; height:100%;"></div>
@@ -141,12 +141,12 @@
 				<div id="meatitem">
 					<img src="Resources/images/food.jpeg" alt="">
 					<div id="meat_item_text">
-						<div id="meat_item_title">Veggie</div>
+						<div id="meat_item_title">Shrimp</div>
 						<div id="meat_item_details">
-							Fries, Salad, Garlic Bread
+							Shrimp with Fries and Green Salad
 						</div>
 					</div>
-					<div id="meat_item_price">$25.00
+					<div id="meat_item_price">$75.00
 					</div>
 				</div>
 				<div id="hiddenOverlay" style="position:relative; width:100%; height:100%;"></div>
@@ -298,7 +298,7 @@
 			<ul id="cartordersul"></ul>
 		</div>
 		<div id="total">
-			Total: <span id="totalText">0.00</span>
+			Total: $<span id="totalText">0.00</span>
 		</div>
 		<div id="order_checkout">
 			<button>Checkout!</button>

@@ -1,3 +1,5 @@
+var $cart_count = $('#cart_count');
+
 var orders = [];
 var idCounter = 0;
 var cartCounter = 0;
@@ -60,6 +62,7 @@ function addOrder(o){
 	render();
 	idCounter++;
 	cartCounter++;
+	CounterCart();
 	calculatePrice();
 }
 
@@ -69,12 +72,35 @@ function deleteOrder(e){
 	orders.splice(i,1);
 	cartCounter--;
 	render();
+	CounterCart();
 	calculatePrice();
 }
 
 function render(){
 	CartDOM.html(Mustache.render(CartTemplate, {CartOrders: orders}));
 	registerDeleteEvent();
+}
+
+function CounterCart(){
+	if (cartCounter >= 1)
+		{
+			$cart_count.fadeIn(10);
+			$cart_count.velocity({top:'28%'},200);
+		}
+		else
+		{
+			$cart_count.velocity({top:'-50%'},300);
+			$cart_count.fadeOut(500);
+		}
+		if (cartCounter >= 10)
+			{
+				$cart_count.css('right','0.9%');
+			}
+			else
+			{
+				$cart_count.css('right','1.18%');
+			}
+	$cart_count.text(cartCounter);
 }
 
 function calculatePrice(){
