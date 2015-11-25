@@ -3,12 +3,14 @@
 <link rel="stylesheet" type="text/css" href="Resources/css/style.css">
 <link rel="stylesheet" type="text/css" href="Resources/css/animate.css">
 <link rel="stylesheet" type="text/css" href="Resources/css/fonts.css">
-<link rel="stylesheet" type="text/css" href="Resources/css/jquery-clockpicker.css">
+<link rel="stylesheet" type="text/css" href="Resources/css/jquery-ui.min.css">
+<link rel="stylesheet" type="text/css" href="Resources/css/jquery-timepicker.css">
 <script type="text/javascript" src="Resources/js/jquery.js"></script>
 <script type="text/javascript" src="Resources/js/scroll.js"></script>
 <script type="text/javascript" src="Resources/js/jquery-2.1.1.min.js"></script>
+<script type="text/javascript" src="Resources/js/jquery-ui.min.js"></script>
 <script type="text/javascript" src="Resources/js/jquery.maskedinput.js"></script>
-<script type="text/javascript" src="Resources/js/jquery-clockpicker.js"></script>
+<script type="text/javascript" src="Resources/js/jquery-timepicker.js"></script>
 <script type="text/javascript" src="Resources/js/mustache.js"></script>
 <script type="text/javascript" src="Resources/js/velocity.js"></script>
 
@@ -93,7 +95,7 @@
 					<div id="OrderInformationHeaderText">Order Information</div>
 				</div>
 				<div id="OrderInformationFormContainer">
-					<form action="action_page.php" method="post">
+					<form action="php/submitOrder.php" method="post">
 						<table>
 							<tr>
 								<td align="left"><label for="time">Pickup time:</label></td>
