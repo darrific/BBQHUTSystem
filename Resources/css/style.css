@@ -42,15 +42,15 @@ z-index: 20;
 #order_top
 {
 position: absolute;
-top: 13%;
-width: 75%;
-height: 32%;
+top: 10%;
+width: 100%;
+height: 20%;
 }
 
 #order_heading
 {
 position: absolute;
-top: 10%;
+top: 30px;
 width: 100%;
 text-align: center;
 font-family: caviardreamsregular;
@@ -60,7 +60,7 @@ font-size: 4vw;
 #order_subheading
 {
 position: absolute;
-top: 50%;
+top: 115px;
 width: 100%;
 text-align: center;
 font-family: opensansregular;
@@ -68,193 +68,277 @@ font-size: 1.2vw;
 font-style: italic;
 }
 
-#meatbox_heading
+#live_menu
 {
 position: absolute;
-top: 40%;
-left: 3.34%;
-width: 35%;
-height: 5%;
-text-align: left;
+top: 31%;
+left: 5%;
+width: 60%;
+height: 60%;
+border: solid 1px #B4CCB4;
+}
+
+#main_selector
+{
+position: absolute;
+width: 100%;
+height: 10%;
+background-color: #B4CCB4;
+}
+
+#choose_meat
+{
+position: absolute;
+left: 6.7%;
+width: 40%;
+height: 100%;
+cursor: pointer;
+border-left: solid 1px #9AAD9A;
+border-right: solid 1px #9AAD9A;
+color: white;
+background-color: #2A8811;
+}
+
+#choose_meat:hover
+{
+color: white;
+}
+
+#choose_meat_title
+{
+position: absolute;
+width: 100%;
+top: 10%;
+text-align: center;
 font-family: porterbold;
-font-size: 1.5vw;
+font-size: 20px;
+}
+
+#choose_meat_note
+{
+position: absolute;
+display: all;
+width: 100%;
+top: 50%;
+text-align: center;
+font-family: opensansregular;
+font-size: 15px;
+}
+
+#choose_side
+{
+position: absolute;
+left: 53.3%;
+width: 40%;
+height: 100%;
+border-left: solid 1px #9AAD9A;
+border-right: solid 1px #9AAD9A;
+cursor: pointer;
+}
+
+#choose_side:hover
+{
+color: white;
+}
+
+#choose_side_title
+{
+position: absolute;
+width: 100%;
+top: 30%;
+text-align: center;
+font-family: porterbold;
+font-size: 20px;
+}
+
+#choose_side_note
+{
+position: absolute;
+display: none;
+width: 100%;
+top: 50%;
+text-align: center;
+font-family: opensansregular;
+font-size: 15px;
+}
+
+#full_menu
+{
+position: absolute;
+top: 10%;
+left: 0;
+width: 100%;
+height: 90%;
 }
 
 #meatbox
 {
 position: absolute;
-top: 43.67%;
-left: 3.34%;
-width: 35%;
-height: 53%;
-border: solid 1px #B4CCB4;
+display: all;
+width: 100%;
+height: 100%;
 }
 
 #meatbox ul
 {
-margin-top: 1%;
 width: 100%;
-height: 98%;
+height: 100%;
 }
 
 #meatbox ul li
 {
-margin-top: 1%;
-margin-left: 1%;
-width: 98%;
-height: 15.4%;
+width: 48.8%;
+height: 31%;
+margin-top: 0.84%;
+margin-left: 0.8%;
+float: left;
 list-style-type: none;
-background-color: #2A8811;
 }
 
 #meatbox ul li:hover
 {
-background-color: #36AD16;
-color: #E3E3E3;
+background-color: #B4CCB4;
 cursor: pointer;
+}
+
+#meatitem
+{
+position: absolute;
+width: 48.8%;
+height: 31%;
 }
 
 #meatitem img
 {
-border-radius: 5em;
+border-radius: 100px;
 position: absolute;
-margin-top: 1%;
-margin-left: 1.5%;
-width: 10%;
+margin-top: 4.5%;
+margin-left: 3%;
+width: 20%;
 }
 
 #meat_item_text
 {
 position: absolute;
-width: 85%;
-height: 18%;
-margin-left: 13%;
+width: 72%;
+height: 100%;
+margin-left: 28%;
 }
 
 #meat_item_title
 {
-margin-top: 2%;
+margin-top: 12%;
 font-family: opensanssemibold;
-font-size: 1vw;
+font-size: 20px;
 }
 
 #meat_item_details
 {
 margin-top: 2%;
 font-family: opensansregular;
-font-size: 0.7vw;
+font-size: 14px;
 font-style: italic;
 }
 
 #meat_item_price
 {
-position: absolute;
 font-family: opensansregular;
-font-size: 1vw;
+font-size: 20px;
 margin-top: 0.8%;
 margin-left: 88%;
-}
-
-#sidesbox_heading
-{
-position: absolute;
-top: 40%;
-left: 41.66%;
-width: 30%;
-height: 5%;
-text-align: left;
-font-family: porterbold;
-font-size: 1.5vw;
 }
 
 #sidesbox
 {
 position: absolute;
-top: 43.67%;
-left: 41.66%;
-width: 30%;
-height: 53%;
-border: solid 1px #B4CCB4;
+display: none;
+width: 100%;
+height: 100%;
 }
 
 #sidesbox ul
 {
-margin-top: 0.4%;
 width: 100%;
-height: 98%;
+height: 100%;
 }
 
 #sidesbox ul li
 {
-margin-top: 1%;
-margin-left: 1%;
+width: 48.8%;
+height: 22.8%;
+margin-top: 0.84%;
+margin-left: 0.8%;
 float: left;
-width: 48.5%;
-height: 11.45%;
 list-style-type: none;
-background-color: #2A8811;
 }
 
 #sidesbox ul li:hover
 {
-background-color: #36AD16;
-color: #E3E3E3;
+background-color: #B4CCB4;
 cursor: pointer;
 }
 
-.sides_item{
-width:100%;
-height:100%;
-}
-
-.sides_item img
+#sides_item
 {
 position: absolute;
-margin-top: 1.6%;
-margin-left: 1.5%;
-width: 7%;
-border-radius: 5em;
+width: 48.8%;
+height: 22.2%;
+}
+
+#sides_item img
+{
+border-radius: 100px;
+margin-top: 3.5%;
+margin-left: 2%;
+width: 14%;
 }
 
 #sides_title
 {
 position: absolute;
-width: 27%;
-height: 9%;
-margin-left: 10%;
 font-family: opensanssemibold;
-font-size: 0.7vw;
-text-align: center;
-}
-
-#sides_note
-{
-position: absolute;
-margin-left: 10%;
-margin-top: 6%;
-font-size: 0.7vw;
-font-family: opensansregular;
+margin-top: -10%;
+margin-left: 20%;
+font-size: 20px;
 }
 
 #sides_price
 {
 position: absolute;
-margin-top: 1%;
-margin-left: 39%;
+margin-top: -17%;
+margin-left: 87%;
 font-family: opensansregular;
-font-size: 0.7vw;
-width:100%;
+font-size: 20px;
+}
+
+#cartbox
+{
+position: absolute;
+top: 26%;
+left: 70%;
+width: 25%;
+height: 65%;
+border: solid 1px #B4CCB4;
+}
+
+#cartbox_heading
+{
+position: absolute;
+top: 1.5%;
+width: 100%;
+height: 5%;
+text-align: center;
+font-family: porterbold;
+font-size: 1.5vw;
 }
 
 #cartorders
 {
 position: absolute;
-margin-left: -1.3px;
-top: 12%;
+top: 8%;
 width: 100%;
-height: 70%;
-border: solid 1px #B4CCB4;
-border-right: hidden;
+height: 76%;
+border-top: solid 1px #B4CCB4;
 overflow-x: none;
 overflow-y: auto;
 }
@@ -271,7 +355,7 @@ height: 99.8%;
 margin-top: 1%;
 margin-left: 1%;
 width: 98%;
-height: 11.45%;
+height: 15%;
 list-style-type: none;
 border-bottom: solid 1px #B4CCB4;
 cursor: pointer;
@@ -289,6 +373,7 @@ position: absolute;
 margin-top: 1.2%;
 margin-left: 1%;
 width: 12%;
+border-radius: 100px;
 }
 
 .cartorder_title
@@ -343,64 +428,22 @@ color: white;
 background-color: red;
 }
 
-.long_sides
-{
-margin-top: 2%;
-}
-
-.center_sides
-{
-margin-top: 3.5%;
-}
-
-#cart_divider
-{
-position: absolute;
-top: 15.7%;
-left: 73.37%;
-width: 1px;
-height: 82.3%;
-opacity: 0.4;
-background-color: #B4CCB4;
-}
-
-#cartbox
-{
-position: absolute;
-top: 12.7%;
-left: 75%;
-width: 25%;
-height: 87.3%;
-}
-
-#cartbox_heading
-{
-position: absolute;
-top: 5%;
-width: 100%;
-height: 5%;
-text-align: center;
-font-family: porterbold;
-font-size: 1.5vw;
-}
-
 #order_checkout
 {
 position: absolute;
-top: 85%;
-left: 10%;
-width: 80%;
+display: none;
+top: 94%;
+left: 90%;
+transform: translate(-50%,-50%);
+width: 50%;
 height: 5%;
 text-align: center;
-font-size: ;
-font-family: ;
 }
 
 #order_checkout button
 {
 color: black;
 padding: 5%;
-background-color: #2A8811;
 text-align: center;
 cursor: pointer;
 }
@@ -411,11 +454,14 @@ color: #E3E3E3;
 background-color: #36AD16;
 }
 
-#total{
+#total
+{
 position: absolute;
+display: none;
 font-family: opensanslight;
 font-size: 1vw;
-top:87%;
+top: 86%;
+left: 70%;
 }
 
 /*end of orders page*/
@@ -729,7 +775,6 @@ text-align: center;
 width: 100%;
 font-family: porterbold;
 font-size: 3vw;
-color: green;
 }
 
 #sec3_title
