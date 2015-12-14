@@ -4,7 +4,7 @@
   overflow-x: hidden; }
 
 #order_image img {
-  width: 60px; }
+  width: 70px; }
 
 #how_works img {
   width: 100px;
@@ -83,6 +83,11 @@
   -ms-user-select: none;
   user-select: none; }
 
+.badge_r {
+  background-color: red;
+  width: 10px;
+  border-radius: 10px; }
+
 #navbar_menu_button {
   border: 0px;
   background-color: none; }
@@ -134,5 +139,10 @@
 
 .shrink img {
   width: 30px; }
+
+.hiddenOverlay {
+  height: 80px;
+  width: 100%;
+  background-color: #FFF; }
 
 /*# sourceMappingURL=style.css.map */
