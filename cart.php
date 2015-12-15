@@ -9,11 +9,14 @@
 	<!-- <link rel="stylesheet" type="text/css" href="css/animate.css"> -->
 	<!-- <link rel="stylesheet" type="text/css" href="css/fonts.css"> -->
 	<link href="css/bootstrap.min.css" rel="stylesheet">
+	<link href="css/bootstrap-datetimepicker.min.css" rel="stylesheet">
+	<link href="css/jquery-ui.min.css" rel="stylesheet">
 	<script type="text/javascript" src="js/jquery.js"></script>
-	<!-- <script type="text/javascript" src="js/scroll.js"></script> -->
 	<script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
-	<script type="text/javascript" src="js/jquery.maskedinput.js"></script>
+	<script type="text/javascript" src="js/jquery-ui.min.js"></script>
+	<script type="text/javascript" src="js/moment.js"></script>
 	<script type="text/javascript" src="js/velocity.js"></script>
+	<script type="text/javascript" src="js/hammer.min.js"></script>
 	<script type="text/javascript" src="js/mustache.js"></script>
 	 <!-- <meta http-equiv="X-UA-Compatible" content="IE=edge"> -->
 	<meta charset="UTF-8">
@@ -104,25 +107,20 @@
 						<div class="jumbotron">
 							<form role="form">
 								<div class="form-group">
-									<label for="usr">Name</label>
-									<input type="text" class="form-control" id="usr">
+									<label for="consumerName">Name</label>
+									<input type="text" class="form-control" id="consumerName">
 								</div>
 								<div class="form-group">
-									<label for="usr">Telephone</label>
-									<input type="text" class="form-control" id="usr">
+									<label for="consumerNo">Cellphone</label>
+									<input type="text" class="form-control" id="consumerNo">
 								</div>
 							</form>
 						</div>
 					</div>
 				</div>
 				<div class="row">
-					<div class="col-xs-12 text-center b"><h3>Pickup Time</h3></div>
+					<div class="col-xs-12 text-center b"><h3>Pickup Time</h3><div id="time"></div></div>
 					<br>
-					<div class="col-xs-10 col-xs-offset-1">
-						<div class="jumbotron">
-							<h1 class="padding_1 text-center">Sayaad pls do dis</h1>
-						</div>
-					</div>
 				</div>
 			</div>
 		</div>
@@ -178,5 +176,7 @@
 	<footer>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 		<script src="js/bootstrap.min.js"></script>
+		<script type="text/javascript" src="js/bootstrap-datetimepicker.min.js"></script>
+		<script type="text/javascript" src="js/jquery.maskedinput.js"></script>
 		<script src="js/cart.js"></script>
 	</footer>

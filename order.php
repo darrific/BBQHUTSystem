@@ -63,7 +63,6 @@
 <script type="text/javascript" src="js/jquery.js"></script>
 <!-- <script type="text/javascript" src="js/scroll.js"></script> -->
 <script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
-<script type="text/javascript" src="js/jquery.maskedinput.js"></script>
 <script type="text/javascript" src="js/velocity.js"></script>
 <script type="text/javascript" src="js/hammer.min.js"></script>
 <script type="text/javascript" src="js/mustache.js"></script>
