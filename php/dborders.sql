@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 15, 2015 at 11:15 PM
+-- Generation Time: Dec 15, 2015 at 11:19 PM
 -- Server version: 5.6.17
 -- PHP Version: 5.5.12
 
@@ -44,12 +44,13 @@ CREATE TABLE IF NOT EXISTS `combos` (
 -- Dumping data for table `combos`
 --
 
-UPDATE `combos` SET `comboID` = 1,`name` = '1/4 Chicken',`details` = '1/4 Portion of Chicken with Fries and Green Salad',`price` = 45,`image` = 'images/bbq5.jpg' WHERE `combos`.`comboID` = 1;
-UPDATE `combos` SET `comboID` = 2,`name` = '1/2 Chicken',`details` = '1/2 Portion of Chicken with Fries and Green Salad',`price` = 55,`image` = 'images/bbq5.jpg' WHERE `combos`.`comboID` = 2;
-UPDATE `combos` SET `comboID` = 3,`name` = 'Lamb',`details` = 'Lamb Chops with Fries and Green Salad',`price` = 55,`image` = 'images/bbq5.jpg' WHERE `combos`.`comboID` = 3;
-UPDATE `combos` SET `comboID` = 4,`name` = 'Beef',`details` = 'Beef Steak with Fries and Green Salad',`price` = 55,`image` = 'images/bbq5.jpg' WHERE `combos`.`comboID` = 4;
-UPDATE `combos` SET `comboID` = 5,`name` = 'Fish',`details` = 'Kingfish with Fries and Green Salad',`price` = 55,`image` = 'images/bbq5.jpg' WHERE `combos`.`comboID` = 5;
-UPDATE `combos` SET `comboID` = 6,`name` = 'Shrimp',`details` = 'Shrimp with Fries and Green Salad',`price` = 75,`image` = 'images/bbq5.jpg' WHERE `combos`.`comboID` = 6;
+INSERT INTO `combos` (`comboID`, `name`, `details`, `price`, `image`) VALUES
+(1, '1/4 Chicken', '1/4 Portion of Chicken with Fries and Green Salad', 45, 'images/bbq5.jpg'),
+(2, '1/2 Chicken', '1/2 Portion of Chicken with Fries and Green Salad', 55, 'images/bbq5.jpg'),
+(3, 'Lamb', 'Lamb Chops with Fries and Green Salad', 55, 'images/bbq5.jpg'),
+(4, 'Beef', 'Beef Steak with Fries and Green Salad', 55, 'images/bbq5.jpg'),
+(5, 'Fish', 'Kingfish with Fries and Green Salad', 55, 'images/bbq5.jpg'),
+(6, 'Shrimp', 'Shrimp with Fries and Green Salad', 75, 'images/bbq5.jpg');
 
 -- --------------------------------------------------------
 
@@ -92,14 +93,15 @@ CREATE TABLE IF NOT EXISTS `sides` (
 -- Dumping data for table `sides`
 --
 
-UPDATE `sides` SET `sideID` = 1,`name` = 'Fries',`details` = NULL,`price` = 15 WHERE `sides`.`sideID` = 1;
-UPDATE `sides` SET `sideID` = 2,`name` = 'Garlic Bread',`details` = NULL,`price` = 4 WHERE `sides`.`sideID` = 2;
-UPDATE `sides` SET `sideID` = 3,`name` = 'Green Salad',`details` = NULL,`price` = 10 WHERE `sides`.`sideID` = 3;
-UPDATE `sides` SET `sideID` = 4,`name` = 'Wedges',`details` = NULL,`price` = 25 WHERE `sides`.`sideID` = 4;
-UPDATE `sides` SET `sideID` = 5,`name` = 'Cole slaw',`details` = NULL,`price` = 10 WHERE `sides`.`sideID` = 5;
-UPDATE `sides` SET `sideID` = 6,`name` = 'Baked Potatoes',`details` = NULL,`price` = 10 WHERE `sides`.`sideID` = 6;
-UPDATE `sides` SET `sideID` = 7,`name` = 'Wedges Combo',`details` = 'Wedges, garlic bread and green salad.',`price` = 35 WHERE `sides`.`sideID` = 7;
-UPDATE `sides` SET `sideID` = 8,`name` = 'Fries Combo',`details` = 'Fries, garlic bread and green salad.',`price` = 25 WHERE `sides`.`sideID` = 8;
+INSERT INTO `sides` (`sideID`, `name`, `details`, `price`) VALUES
+(1, 'Fries', NULL, 15),
+(2, 'Garlic Bread', NULL, 4),
+(3, 'Green Salad', NULL, 10),
+(4, 'Wedges', NULL, 25),
+(5, 'Cole slaw', NULL, 10),
+(6, 'Baked Potatoes', NULL, 10),
+(7, 'Wedges Combo', 'Wedges, garlic bread and green salad.', 35),
+(8, 'Fries Combo', 'Fries, garlic bread and green salad.', 25);
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
