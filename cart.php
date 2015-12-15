@@ -126,7 +126,7 @@
 		</div>
 		<hr>
 		<div class="col-xs-10 col-xs-offset-1">
-			<button type="button" class="btn btn-success btn-block text-center">
+			<button id="placeOrderButton" type="button" class="btn btn-success btn-block text-center">
 				Place order
 			</button>
 		</div>

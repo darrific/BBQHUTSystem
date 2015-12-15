@@ -23,6 +23,8 @@ $("div[id^='combo_item']").each(function(){
 		OrderObject.price = titleDetails.next().html().replace("<br>$", "");
 		OrderObject.img = ObjectCache.first().next().html().replace('<img src="','').replace('">','');
 		OrderObject.quantity = quantity;
+		OrderObject.type = "Combo";
+		OrderObject.ID = id;
 
 		for(var i = 0; i < order.items.length; i++){
 			if(JSON.stringify(OrderObject) === JSON.stringify(order.items[i])){
@@ -54,6 +56,8 @@ $("div[id^='side_item']").each(function(){
 		}
 		OrderObject.price = titleDetails.next().html().replace("<br>$", "");
 		OrderObject.quantity = quantity;
+		OrderObject.type = "Side";
+		OrderObject.ID = id;
 
 		for(var i = 0; i < order.items.length; i++){
 			if(JSON.stringify(OrderObject) === JSON.stringify(order.items[i])){
@@ -71,7 +75,7 @@ $("div[id^='side_item']").each(function(){
 });
 
 $('#ConfirmButton').on("click", function(){
-	$.post('php/ajax.php', {'OrderJSON': JSON.stringify(order)}, function(data, textStatus, xhr) {
+	$.post('php/ajax.php', {'OrderJSON': JSON.stringify(order), 'action': 'updateOrderJSON'}, function(data, textStatus, xhr) {
 		$(location).attr('href','cart.php');
 	});
 });
