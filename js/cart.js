@@ -1,7 +1,8 @@
 var order = JSON.parse($('#OrderJSON').html());
 var template = '{{#OrderItems}}<div class="row" id="TableItem"><div class="col-xs-1">{{quantity}}</div><div class="col-xs-5 col-xs-offset-1"><b>{{name}}</b></div><div class="col-xs-2">${{price}}</div><div class="col-xs-1 col-xs-offset-1"><span id="removeButton" class="glyphicon glyphicon glyphicon-remove-sign padding_1"></div><br></div>{{/OrderItems}}';
-var comp = "r3kt"
+var now = moment();
 
+now.add(30, "m");
 renderTable();
 
 function renderTable(){
@@ -28,7 +29,7 @@ function registerButtons(){
 						order.items.splice(i,1);
 					}
 					renderTable();
-					$.post('php/ajax.php', {'OrderJSON': JSON.stringify(order)}, function(data, textStatus, xhr) {});
+					$.post('php/ajax.php', {'OrderJSON': JSON.stringify(order), 'action': 'updateOrderJSON'}, function(data, textStatus, xhr){} );
 					break;
 				}
 			}
@@ -39,7 +40,26 @@ function registerButtons(){
 $('#time').datetimepicker({
 	inline: true,
 	sideBySide: true,
-	format: 'LT'
+	format: 'LT',
+	useCurrent: true,
+	stepping: 5,
+	defaultDate: now
 });
 
 $('#consumerNo').mask('999-9999', {placeholder:"#"});
+
+$('#placeOrderButton').on("click", function(){
+	var name = $('#consumerName').val();
+	var number =  $('#consumerNo').val();
+	var time = $('#time').data("DateTimePicker").date();
+	if(name && number && time){
+		order.pickup = time.format("X");
+		order.consumerName = name;
+		order.phoneNumber = number;
+		$.post('php/ajax.php', {'OrderJSON': JSON.stringify(order), 'action': 'sendOrder'}, function(data, textStatus, xhr) {
+			alert(data);
+		});
+	}else{
+		alert("You must fill out all of the fields!");
+	}
+});
