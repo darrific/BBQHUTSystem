@@ -1,1 +1,22 @@
 400x96
+
+
+<div class="row" id="index_landing"> 
+		<div class="col-xs-12 bg_3 bg-image ">
+			<img src="images/bbq3.jpg" alt=":/">
+			<div id="index_l" class="center">
+			<img src="images/LogoMe.png" style="width:85%" alt=":/">
+			<br>
+			<div class="row text-center">
+			 	<div class="col-xs-8 col-xs-offset-2 w ghost_button">
+			 		<h4><a class="w" href="order.php">Place Order</a></h4>
+			 	</div>
+			 	<br>
+			 	<div class="col-xs-8 col-xs-offset-2 w ghost_button">
+			 		<h4><a class="w" href="#about_header">About Us</a></h4>
+			 	</div>
+			</div>
+			<br>
+			</div>
+		</div>
+	</div>

@@ -1,6 +1,10 @@
-<?php 
-	$db = mysqli_connect('localhost','root','RootT3chn0logiesTT','dbOrders');
-	if (!$db) {
-	    die('Could not connect: ' . mysqli_error($db));
+<?php
+	$db = new mysqli('localhost','root','','dborders');
+
+	if ($db->connect_errno) {
+		echo "Error: Failed to make a MySQL connection: \n";
+		echo "Errno: " . $db->connect_errno . "\n";
+		echo "Error: " . $db->connect_error . "\n";
+		exit;
 	}
 ?>

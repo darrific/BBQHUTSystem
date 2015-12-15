@@ -4626,7 +4626,7 @@ fieldset[disabled] .navbar-default .btn-link:focus {
   color: #444;
   background-color: transparent;
 }
-.navbar-inverse {
+.navbar-inverse .navbar-toggle {
   border-color: #333;
 }
 .navbar-inverse .navbar-toggle:hover,
