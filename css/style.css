@@ -19,6 +19,10 @@
 #heading_v1 {
   padding: 0px; }
 
+#family_image img {
+  width: 120px;
+  border-radius: 120px; }
+
 .bg_1 {
   background-color: #000; }
 
@@ -49,6 +53,9 @@
 .ghost_button {
   border: 1px white solid;
   border-radius: 3px; }
+
+.strong_button {
+  background-color: #D09C1D; }
 
 .padding_20 {
   padding: 20px; }

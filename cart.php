@@ -21,7 +21,7 @@
 	<body>
 		<nav class="navbar navbar-inverse bg_3 navbar-fixed-top">
 			<div class="container">
-				<a href="index.html" class="navbar-brand">BBQH</a>
+				<a href="index.html" class="navbar-brand">Original Bar-B-Que Hut</a>
 				<button id="navbar_menu_button" class="navbar-toggle" data-toggle="collapse" data-target=".navHeaderCollapse">
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
@@ -34,29 +34,24 @@
 					<li><a href="menu.html">Menu</a></li>
 					<li><a href="#about">About</a></li>
 					<li><a href="#contact">Contact</a></li>
-					<li><button class="btn btn-warning btn-block"><a href="order.html">Place an Order</a></button></li>
+					<li><a href="family.html">Meet the Family</a></li>
+					<li><a href="catering_form.html">Catering Quote</a></li>
+					<li><a href="employment_application_form.pdf">Job Application</a></li>
+					<li><a href="order.html"><button class="btn btn-warning btn-block">Place an Order</button></a></li>
 					<br>
 					<li>
 						<ul id="navbar_social_media" class="list-inline">
-							<li><a href="http://www.facebook.com"><img src="images/socialmedia/facebook.png" alt=""></a></li>
-							<li><a href="http://www.twitter.com"><img src="images/socialmedia/twitter.png" alt=""></a></li>
-							<li><a href="http://www.instagram.com"><img src="images/socialmedia/instagram.png" alt=""></a></li>
+							<li><a href="http://www.facebook.com"><img src="images/socialmedia/facebook.png"></a></li>
+							<li><a href="http://www.twitter.com"><img src="images/socialmedia/twitter.png"></a></li>
+							<li><a href="http://www.instagram.com"><img src="images/socialmedia/instagram.png"></a></li>
 						</ul>
 					</li>
 				</ul>
 			</div>
 		</nav>
-		<br><br>
-		<div class="container"></div>
-		<div class="row header" id="cart_header">
-			<div class="thumbnail text-center">
-				<img src="images/header2.jpg" alt=":/">
-				<div class="caption">
-					<div class="col-xs-10 w col-xs-offset-1">
-						<h1>Cart</h1>
-					</div>
-				</div>
-			</div>
+		<br><br><br>
+		<div class="row header text-center" id="cart_header">
+			<h1>Cart</h1>
 		</div>
 		<div class="row">
 			<div class="col-xs-12 ">
@@ -146,12 +141,15 @@
 				<div class="row">
 					<div class="col-xs-4">
 						<b class="w">Navigation</b><br>
-						<a href="#">Home</a><br>
-						<a href="#">About</a><br>
-						<a href="#">Contact</a><br>
-						<a href="#">Menu</a><br>
-						<a href="#">Order</a>
-						<hr>
+						<a href="index.html">Home</a>
+						<a href="menu.html">Menu</a>
+						<a href="#about">About</a>
+						<a href="#contact">Contact</a>
+						<a href="family.html">Meet the Family</a>
+						<a href="catering_form.html">Catering Quote</a>
+						<a href="employment_application_form.pdf">Job Application</a>
+						<a href="order.html">Place an Order</a>
+						<br>
 					</div>
 					<div class="col-xs-4">
 						<b class="w">Social Media</b><br>
@@ -160,7 +158,6 @@
 						<a href="#">Instagram</a><br>
 						<br>
 						<br>
-						<hr>
 					</div>
 					<div class="col-xs-4">
 						<b class="w">Powered by:</b><br>
@@ -169,10 +166,9 @@
 						<br>
 						<br>
 						<br>
-						<hr>
 					</div>
 				</div>			
-			</div> 
+			</div>  
 			<br><br>
 		</div>	
 	</body>	
