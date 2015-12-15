@@ -57,6 +57,9 @@
 .strong_button {
   background-color: #D09C1D; }
 
+.del {
+  background-color: red; }
+
 .padding_20 {
   padding: 20px; }
 
