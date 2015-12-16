@@ -4,7 +4,7 @@
   overflow-x: hidden; }
 
 #order_image img {
-  width: 55px;
+  width: 60px;
   border-radius: 70px; }
 
 #how_works img {
@@ -34,13 +34,16 @@
   background-color: #444; }
 
 .bg_4 {
-  background-color: #666; }
+  background-color: #642922;
+  color: white; }
 
 .bg_5 {
-  background-color: #888; }
+  background-color: #421C17;
+  color: white; }
 
 .bg_6 {
-  background-color: #fff; }
+  background-color: #588C38;
+  color: white; }
 
 .bg_r {
   background-color: red; }
@@ -90,16 +93,26 @@
 
 .header_1 {
   font-family: caviardreamsregular;
-  font-size: 53px; }
+  font-size: 53px;
+  padding: 5px; }
 
 .header_2 {
   font-family: ultimapdultralight;
   font-weight: 900;
-  font-size: 30px; }
+  font-size: 30px;
+  padding: 5px; }
+
+.header_3 {
+  font-family: caviardreamsregular;
+  font-weight: 900;
+  font-size: 25px; }
 
 .default_text {
   font-family: opensansregular;
-  font-size: 20px; }
+  font-size: 15px; }
+
+.jumbotron_rounded {
+  border-radius: 5%; }
 
 .no_border {
   border-radius: 0px;
@@ -175,7 +188,7 @@
   width: 300px; }
 
 #reviews {
-  background-color: #00CE66; }
+  background-color: #345331; }
 
 #about_image img {
   width: 100%; }

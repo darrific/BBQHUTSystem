@@ -58,7 +58,7 @@
 
 <link rel="stylesheet" type="text/css" href="css/style.css">
 <!-- <link rel="stylesheet" type="text/css" href="css/animate.css"> -->
-<!-- <link rel="stylesheet" type="text/css" href="css/fonts.css"> -->
+<link rel="stylesheet" type="text/css" href="css/fonts.css">
 <link href="css/bootstrap.min.css" rel="stylesheet">
 <script type="text/javascript" src="js/jquery.js"></script>
 <!-- <script type="text/javascript" src="js/scroll.js"></script> -->
@@ -89,8 +89,8 @@
 			<ul class="nav navbar-nav navbar-right text-center">
 				<li><a href="index.html">Home</a></li>
 				<li><a href="menu.html">Menu</a></li>
-				<li><a href="#about">About</a></li>
-				<li><a href="#contact">Contact</a></li>
+				<li><a href="index.html#about_header">About</a></li>
+				<li><a href="index.html#contact_container">Contact</a></li>
 				<li><a href="family.html">Meet the Family</a></li>
 				<li><a href="catering_form.html">Catering Quote</a></li>
 				<li><a href="employment_application_form.pdf">Job Application</a></li>
@@ -109,7 +109,7 @@
 	<br><br><br>
 	<div class="row">
 		<div class="col-xs-12 text-center">
-			<h3>Why wait in line?</h3>
+			<h1 class="header_1">Express Ordering</h1>
 		</div>
 		<div class="col-xs-12 text-center">
 			<h5><i>Introducing our revolutionary Express Ordering System (EOS)</i></h5>
@@ -198,22 +198,27 @@
 	</div>
 	<div class="row">
 		<div class="col-xs-12 text-center"> 
-			<h5 class="padding_1">Press and hold to add an order. Repeat as necessary.</h5>
+			<h5 class="default_text padding_10">Press and hold to add an order. Repeat as necessary.</h5>
 		</div>
 	</div>
 	<br>
 	<div class="row">
 		<div class="col-xs-10 col-xs-offset-1">
-			<b>Combination Meals</b>
+			<b class="header_3">Combination Meals</b>
+			<br>
+			<hr>
 		</div>
 	</div>
 	<br>
 	<div class="row">
 		<div id="CombosUI" class="noselect col-xs-10 col-xs-offset-1"></div>
 	</div>
+	<br>
 	<div class="row">
 		<div class="col-xs-10 col-xs-offset-1">
-			<b>Sides</b>
+			<b class="header_3">Sides</b>
+			<br>
+			<hr>
 		</div>
 	</div>
 	<br>
@@ -227,13 +232,13 @@
 			<div class="row">
 				<div class="col-xs-4">
 					<b class="w">Navigation</b><br>
-					<a href="index.html">Home</a>
-					<a href="menu.html">Menu</a>
-					<a href="#about">About</a>
-					<a href="#contact">Contact</a>
-					<a href="family.html">Meet the Family</a>
-					<a href="catering_form.html">Catering Quote</a>
-					<a href="employment_application_form.pdf">Job Application</a>
+					<a href="index.html">Home</a><br>
+					<a href="menu.html">Menu</a><br>
+					<a href="index.html#about">About</a><br>
+					<a href="index.html#contact">Contact</a><br>
+					<a href="family.html">Meet the Family</a><br>
+					<a href="catering_form.html">Catering Quote</a><br>
+					<a href="employment_application_form.pdf">Job Application</a><br>
 					<a href="order.php">Place an Order</a>
 					<br>
 				</div>

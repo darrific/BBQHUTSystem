@@ -7,7 +7,7 @@
 
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<!-- <link rel="stylesheet" type="text/css" href="css/animate.css"> -->
-	<!-- <link rel="stylesheet" type="text/css" href="css/fonts.css"> -->
+	<link rel="stylesheet" type="text/css" href="css/fonts.css">
 	<link href="css/bootstrap.min.css" rel="stylesheet">
 	<link href="css/bootstrap-datetimepicker.min.css" rel="stylesheet">
 	<link href="css/jquery-ui.min.css" rel="stylesheet">
@@ -21,50 +21,50 @@
 	 <!-- <meta http-equiv="X-UA-Compatible" content="IE=edge"> -->
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
-	<title>Home | BBQH</title>
+	<title>Checkout | BBQH</title>
 
 	<head>
 	</head>
 
 	<body>
 		<nav class="navbar navbar-inverse bg_3 navbar-fixed-top">
-			<div class="container">
-				<a href="index.html" class="navbar-brand">Original Bar-B-Que Hut</a>
-				<button id="navbar_menu_button" class="navbar-toggle" data-toggle="collapse" data-target=".navHeaderCollapse">
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-				</button>
-			</div>
-			<div class="collapse navbar-collapse navHeaderCollapse">
-				<ul class="nav navbar-nav navbar-right text-center">
-					<li><a href="index.html">Home</a></li>
-					<li><a href="menu.html">Menu</a></li>
-					<li><a href="#about">About</a></li>
-					<li><a href="#contact">Contact</a></li>
-					<li><a href="family.html">Meet the Family</a></li>
-					<li><a href="catering_form.html">Catering Quote</a></li>
-					<li><a href="employment_application_form.pdf">Job Application</a></li>
-					<li><a href="order.php"><button class="btn btn-warning btn-block">Place an Order</button></a></li>
-					<br>
-					<li>
-						<ul id="navbar_social_media" class="list-inline">
-							<li><a href="http://www.facebook.com"><img src="images/socialmedia/facebook.png"></a></li>
-							<li><a href="http://www.twitter.com"><img src="images/socialmedia/twitter.png"></a></li>
-							<li><a href="http://www.instagram.com"><img src="images/socialmedia/instagram.png"></a></li>
-						</ul>
-					</li>
-				</ul>
-			</div>
-		</nav>
+		<div class="container">
+			<a href="index.html" class="navbar-brand">Original Bar-B-Que Hut</a>
+			<button id="navbar_menu_button" class="navbar-toggle" data-toggle="collapse" data-target=".navHeaderCollapse">
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+		</div>
+		<div class="collapse navbar-collapse navHeaderCollapse">
+			<ul class="nav navbar-nav navbar-right text-center">
+				<li><a href="index.html">Home</a></li>
+				<li><a href="menu.html">Menu</a></li>
+				<li><a href="index.html#about_header">About</a></li>
+				<li><a href="index.html#contact_container">Contact</a></li>
+				<li><a href="family.html">Meet the Family</a></li>
+				<li><a href="catering_form.html">Catering Quote</a></li>
+				<li><a href="employment_application_form.pdf">Job Application</a></li>
+				<li><a href="order.php"><button class="btn btn-warning btn-block">Place an Order</button></a></li>
+				<br>
+				<li>
+					<ul id="navbar_social_media" class="list-inline">
+						<li><a href="http://www.facebook.com"><img src="images/socialmedia/facebook.png"></a></li>
+						<li><a href="http://www.twitter.com"><img src="images/socialmedia/twitter.png"></a></li>
+						<li><a href="http://www.instagram.com"><img src="images/socialmedia/instagram.png"></a></li>
+					</ul>
+				</li>
+			</ul>
+		</div>
+	</nav>
 		<br><br><br>
 		<div class="row header text-center" id="cart_header">
-			<h1>Cart</h1>
+			<h1 class="header_1">Checkout</h1>
 		</div>
 		<div class="row">
 			<div class="col-xs-12 ">
 				<div class="container">
-					<h3>Last chance to edit your order.</h3>
+					<h3 class="default_text padding_5 text-center">Last chance to edit your order.</h3>
 					<br>	
 				</div>
 			</div>
@@ -79,14 +79,14 @@
 		<br><br>
 		<div class="row" id="cart_table_list">
 			<div class="col-xs-11" style="margin-left: 4.5%">
-				<div class="col-xs-1">Qty</div>
-				<div class="col-xs-5 col-xs-offset-1">Item</div>
-				<div class="col-xs-2">Price</div>
+				<div class="col-xs-2">Qty</div>
+				<div class="col-xs-4 col-xs-offset-1">Item</div>
+				<div class="col-xs-3">Price</div>
 				<hr>
 			</div>
 		</div>
 		<div class="row">
-			<div class="col-xs-10 col-xs-offset-1 bg_5 text-center">
+			<div class="col-xs-12 text-center">
 				<div class="container padding_20">
 					<div id="OrderTable"></div>
 				</div>
@@ -96,7 +96,7 @@
 		<div class="row">
 			<div class="container ">
 				<div class="row">
-					<div class="col-xs-12 text-center b"><h3>Enter Information</h3></div>
+					<div class="col-xs-12 text-center b"><h3 class="header_2">Enter Information</h3></div>
 					<br>
 					<div class="col-xs-10 col-xs-offset-1">
 						<div class="jumbotron">
@@ -115,7 +115,7 @@
 				</div>
 				<div class="row">
 					<div class="col-xs-12 text-center b">
-						<h3>Pickup Time</h3>
+						<h3 class="header_2">Pickup Time</h3>
 						<div class="row">
 							<div class="col-xs-8 bg_5 col-xs-offset-2">
 								<div id="time"></div>
@@ -147,41 +147,41 @@
 		</div>
 		<br><br><br>
 		<div class="row bg_2" id="footer">
-			<div class="col-xs-12 text-center">
-				<br>
-				<div class="row">
-					<div class="col-xs-4">
-						<b class="w">Navigation</b><br>
-						<a href="index.html">Home</a>
-						<a href="menu.html">Menu</a>
-						<a href="#about">About</a>
-						<a href="#contact">Contact</a>
-						<a href="family.html">Meet the Family</a>
-						<a href="catering_form.html">Catering Quote</a>
-						<a href="employment_application_form.pdf">Job Application</a>
-						<a href="order.php">Place an Order</a>
-						<br>
-					</div>
-					<div class="col-xs-4">
-						<b class="w">Social Media</b><br>
-						<a href="#">Facebook</a><br>
-						<a href="#">Twitter</a><br>
-						<a href="#">Instagram</a><br>
-						<br>
-						<br>
-					</div>
-					<div class="col-xs-4">
-						<b class="w">Powered by:</b><br>
-						<br>
-						<a href="#" class="r">Root Technologies</a>
-						<br>
-						<br>
-						<br>
-					</div>
-				</div>			
-			</div>  
-			<br><br>
-		</div>	
+		<div class="col-xs-12 text-center">
+			<br>
+			<div class="row">
+				<div class="col-xs-4">
+					<b class="w">Navigation</b><br>
+					<a href="index.html">Home</a><br>
+					<a href="menu.html">Menu</a><br>
+					<a href="index.html#about">About</a><br>
+					<a href="index.html#contact">Contact</a><br>
+					<a href="family.html">Meet the Family</a><br>
+					<a href="catering_form.html">Catering Quote</a><br>
+					<a href="employment_application_form.pdf">Job Application</a><br>
+					<a href="order.php">Place an Order</a>
+					<br>
+				</div>
+				<div class="col-xs-4">
+					<b class="w">Social Media</b><br>
+					<a href="#">Facebook</a><br>
+					<a href="#">Twitter</a><br>
+					<a href="#">Instagram</a><br>
+					<br>
+					<br>
+				</div>
+				<div class="col-xs-4">
+					<b class="w">Powered by:</b><br>
+					<br>
+					<a href="#" class="r">Root Technologies</a>
+					<br>
+					<br>
+					<br>
+				</div>
+			</div>			
+		</div> 
+		<br><br>
+	</div>	
 	</body>	
 	
 	<footer>
