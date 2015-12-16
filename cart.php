@@ -1,6 +1,6 @@
 <?php
 	session_start();
-	if($_SESSION["OrderJSON"]){
+	if(isset($_SESSION["OrderJSON"])){
 		echo '<div id="OrderJSON" style="display:none;">'.$_SESSION["OrderJSON"].'</div>';
 	}
 ?>
@@ -90,6 +90,12 @@
 				<div class="container padding_20">
 					<div id="OrderTable"></div>
 				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-xs-10 col-xs-offset-1 text_center">
+				<div class="col-xs-6">TOTAL</div>
+				<div class="col-xs-6" id="totalPrice"><span id="totalPriceSpan">$0.00</span></div>
 			</div>
 		</div>
 		<hr>
