@@ -1,6 +1,6 @@
 var order = {};
-var combosTemplate = '{{#ComboItems}}<div class="row" id="combo_item{{comboID}}"><div class="col-xs-12 col-xs-offset-0 bg_4"><div class="row padding_20"><div class="col-xs-1 text-center"><br><span id="badge_" class="badge_r padding_1">{{quantity}}</span></div><div id="order_image" class="col-xs-3"><img src="{{image}}" /></div><div class="col-xs-5"><b>{{name}}</b><br><i>{{details}}</i></div><div class="col-xs-2 w"><br>${{price}}</div></div></div></div>{{/ComboItems}}';
-var sidesTemplate = '{{#SidesItems}}<div class="row" id="side_item{{sideID}}"><div class="col-xs-12 col-xs-offset-0 bg_4"><div class="row padding_20"><div class="col-xs-1 text-center"><br><span id="badge_" class="badge_r padding_1">{{quantity}}</span></div><div class="col-xs-5"><b>{{name}}</b><br>{{#details}}<i>{{details}}</i>{{/details}}</div><div class="col-xs-2 w"><br>${{price}}</div></div></div></div>{{/SidesItems}}';
+var combosTemplate = '{{#ComboItems}}<div class="row" id="combo_item{{comboID}}"><div class="col-xs-12 col-xs-offset-0 bg_4"><div class="row padding_20"><div class="col-xs-1 text-center"><br><span id="badge_" class="badge_r padding_1">{{quantity}}</span></div><div id="order_image" class="col-xs-3"><img src="{{image}}" /></div><div class="col-xs-5"><b>{{name}}</b><br><i>{{details}}</i></div><div class="col-xs-2 w"><br>${{price}}</div></div></div></div><br>{{/ComboItems}}';
+var sidesTemplate = '{{#SidesItems}}<div class="row" id="side_item{{sideID}}"><div class="col-xs-12 col-xs-offset-0 bg_4"><div class="row padding_20"><div class="col-xs-2 text-center"><br><span id="badge_" class="badge_r padding_1">{{quantity}}</span></div><div class="col-xs-5 col-xs-offset-0 padding_10"><h4>{{name}}</h4>{{#details}}<i>{{details}}</i>{{/details}}</div><div class="col-xs-3 text-center w padding_20">${{price}}</div></div></div></div><br>{{/SidesItems}}';
 
 order.items = [];
 if($('#OrderJSON').length){
@@ -54,7 +54,7 @@ $("div[id^='side_item']").each(function(){
 		if((titleDetails.children().first().next() != null) && (typeof(titleDetails.children().first().next()) != 'undefined')){
 			OrderObject.details = titleDetails.children().first().next().html();
 		}
-		OrderObject.price = titleDetails.next().html().replace("<br>$", "");
+		OrderObject.price = titleDetails.next().html().replace("<br>$", "").replace("$","");
 		OrderObject.quantity = quantity;
 		OrderObject.type = "Side";
 		OrderObject.ID = id;

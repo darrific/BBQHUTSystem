@@ -4,10 +4,11 @@
   overflow-x: hidden; }
 
 #order_image img {
-  width: 70px; }
+  width: 55px;
+  border-radius: 70px; }
 
 #how_works img {
-  width: 100px;
+  width: 160px;
   border-radius: 100px; }
 
 #wait_image img {
@@ -60,6 +61,9 @@
 .del {
   background-color: red; }
 
+.padding_30 {
+  padding: 30px; }
+
 .padding_20 {
   padding: 20px; }
 
@@ -80,6 +84,22 @@
 
 .r {
   color: red; }
+
+.green_light {
+  color: #588C38; }
+
+.header_1 {
+  font-family: caviardreamsregular;
+  font-size: 53px; }
+
+.header_2 {
+  font-family: ultimapdultralight;
+  font-weight: 900;
+  font-size: 30px; }
+
+.default_text {
+  font-family: opensansregular;
+  font-size: 20px; }
 
 .no_border {
   border-radius: 0px;
@@ -128,7 +148,7 @@
   position: static; }
 
 #index_landing {
-  background-image: url(../images/bbq3.jpg); }
+  background-image: url(../images/bbq4.png); }
 
 .thumbnail {
   position: relative; }
@@ -153,5 +173,14 @@
 
 #index_logo img {
   width: 300px; }
+
+#reviews {
+  background-color: #00CE66; }
+
+#about_image img {
+  width: 100%; }
+
+#contact_container {
+  background-image: url(../images/map.PNG); }
 
 /*# sourceMappingURL=style.css.map */
