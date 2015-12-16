@@ -70,7 +70,6 @@ $("div[id^='side_item']").each(function(){
 
 		OrderObject.quantity = quantity;
 		order.items.push(OrderObject);
-		//alert(JSON.stringify(order));
 	});
 });
 

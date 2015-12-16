@@ -33,7 +33,7 @@
 				$combos .= $item->ID."-".$item->quantity."|";
 			}
 			if(strcmp($item->type, "Side")){
-				$combos .= $item->ID."-".$item->quantity."|";
+				$sides .= $item->ID."-".$item->quantity."|";
 			}
 		}
 		$db = new mysqli('localhost','root','','dborders');

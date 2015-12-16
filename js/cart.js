@@ -6,6 +6,13 @@ now.add(30, "m");
 renderTable();
 
 function renderTable(){
+	var totalPrice = 0;
+	for(var i = 0; i < order.items.length; i++){
+		var price = order.items[i].price;
+		var quantity = order.items[i].quantity;
+		totalPrice += (price*quantity);	
+	}
+	$('#totalPrice').html('<span id="totalPriceSpan">$'+totalPrice+'.00</span>');
 	$('#OrderTable').html(Mustache.render(template, {OrderItems : order.items}));
 	registerButtons();
 }
@@ -56,6 +63,7 @@ $('#placeOrderButton').on("click", function(){
 		order.pickup = time.format("X");
 		order.consumerName = name;
 		order.phoneNumber = number;
+		alert(JSON.stringify(order));
 		$.post('php/ajax.php', {'OrderJSON': JSON.stringify(order), 'action': 'sendOrder'}, function(data, textStatus, xhr) {
 			alert(data);
 		});
