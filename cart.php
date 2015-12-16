@@ -69,9 +69,9 @@
 				</div>
 			</div>
 			<div class="col-xs-10 col-xs-offset-1">
-				<a href="order.html">
+				<a href="order.php">
 					<button type="button" class="btn btn-info btn-block text-center">
-						Add item
+						Add Item
 					</button>
 				</a>
 			</div>
@@ -86,7 +86,7 @@
 			</div>
 		</div>
 		<div class="row">
-			<div class="col-xs-10 col-xs-offset-1 bg_5 text-center bg_r">
+			<div class="col-xs-10 col-xs-offset-1 bg_5 text-center">
 				<div class="container padding_20">
 					<div id="OrderTable"></div>
 				</div>
@@ -120,14 +120,29 @@
 					</div>
 				</div>
 				<div class="row">
-					<div class="col-xs-12 text-center b"><h3>Pickup Time</h3><div id="time"></div></div>
+					<div class="col-xs-12 text-center b">
+						<h3>Pickup Time</h3>
+						<div class="row">
+							<div class="col-xs-8 bg_5 col-xs-offset-2">
+								<div id="time"></div>
+							</div>
+						</div>
+						
+					</div>
 					<br>
 				</div>
 			</div>
 		</div>
+		<br>
 		<div class="row">
 			<div class="col-xs-10 r col-xs-offset-1">
-				<i><b>NOTE: You will be required to pickup within one hour of the time given.</b></i>
+				<b class="text-center">NOTE</b>
+				<h6><p>You will be required to collect your order within one hour of the time given.
+				Your order will be cancelled one hour after the set pickup time, with no exceptions.</p>
+				<p>By pressing/clicking the "Place Order" button, you agree to our Terms and Conditions
+				of use <a href="#">here</a>.	
+				</p></h6>
+
 			</div>
 		</div>
 		<hr>

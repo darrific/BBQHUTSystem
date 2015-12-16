@@ -112,7 +112,7 @@
 			<h3>Why wait in line?</h3>
 		</div>
 		<div class="col-xs-12 text-center">
-			<h4><i>Introducing our new Ordering System</i></h4>
+			<h5><i>Introducing our revolutionary Express Ordering System (EOS)</i></h5>
 		</div>
 	</div>
 	<br>
@@ -120,6 +120,14 @@
 		<div class="col-xs-10 col-xs-offset-1 text-center">
 			<div class="jumbotron">
 				<div class="row">
+					<div class="col-xs-12">
+						<h5>Simply follow the 5 steps:</h5>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-xs-12">
+						<h3>1</h3>
+					</div>
 					<div id="how_works" class="col-xs-8 col-xs-offset-2">
 						<img src="images/Animations/tutorial/image_1.svg" / alt=":/">
 					</div>
@@ -128,8 +136,10 @@
 							Repeat as necessary.</h5>
 					</div>
 				</div>
-				<br>
 				<div class="row">
+					<div class="col-xs-12">
+						<h3>2</h3>
+					</div>
 					<div id="how_works" class="col-xs-8 col-xs-offset-2">
 						<img src="images/Animations/tutorial/image_2.svg" / alt=":/">
 					</div>
@@ -137,8 +147,10 @@
 						<h5>Press the Confirm button.</h5>
 					</div>
 				</div>
-				<br>
 				<div class="row">
+					<div class="col-xs-12">
+						<h3>3</h3>
+					</div>
 					<div id="how_works" class="col-xs-8 col-xs-offset-2">
 						<img src="images/Animations/tutorial/image_3.svg" / alt=":/">
 					</div>
@@ -146,17 +158,21 @@
 						<h5>Set the time you will collect your order by and enter your contact information.</h5>
 					</div>
 				</div>
-				<br>
 				<div class="row">
+					<div class="col-xs-12">
+						<h3>4</h3>
+					</div>
 					<div id="how_works" class="col-xs-8 col-xs-offset-2">
 						<img src="images/Animations/tutorial/image_5.svg" / alt=":/">
 					</div>
 					<div class="col-xs-8 col-xs-offset-2 padding_20">
-						<h5>Press the Place Order button</h5>
+						<h5>Press the Place Order button.</h5>
 					</div>
 				</div>
-				<br>
 				<div class="row">
+					<div class="col-xs-12">
+						<h3>5</h3>
+					</div>
 					<div id="how_works" class="col-xs-8 col-xs-offset-2">
 						<img src="images/Animations/tutorial/image_6.svg" / alt=":/">
 					</div>
@@ -169,14 +185,20 @@
 		<div class="col-xs-10 col-xs-offset-1"><hr></div>
 		<div class="col-xs-10 col-xs-offset-1">
 			<a id="ConfirmURL">
-				<button id="ConfirmButton" class="btn btn-danger btn-block">Confirm Order</button>
+				<button id="ConfirmButton" class="btn btn-warning btn-block">Confirm Order</button>
+			</a>
+		</div>
+		<div class="col-xs-10 col-xs-offset-1"><hr></div>
+		<div class="col-xs-10 col-xs-offset-1">
+			<a id="ResetURL">
+				<button id="ResetButton" class="btn btn-danger btn-block">Reset All </button>
 			</a>
 		</div>
 		<div class="col-xs-10 col-xs-offset-1"><hr></div>
 	</div>
 	<div class="row">
 		<div class="col-xs-12 text-center"> 
-			<h4 class="padding_1">Press and hold to add an order</h4>
+			<h5 class="padding_1">Press and hold to add an order. Repeat as necessary.</h5>
 		</div>
 	</div>
 	<br>
@@ -186,15 +208,18 @@
 		</div>
 	</div>
 	<br>
-
-	<div id="CombosUI" class="noselect"></div>
+	<div class="row">
+		<div id="CombosUI" class="noselect col-xs-10 col-xs-offset-1"></div>
+	</div>
 	<div class="row">
 		<div class="col-xs-10 col-xs-offset-1">
 			<b>Sides</b>
 		</div>
 	</div>
 	<br>
-	<div id="SidesUI" class="noselect"></div>
+	<div class="row">
+		<div id="SidesUI" class="noselect col-xs-10 col-xs-offset-1"></div>
+	</div>
 	<br><br><br>
 	<div class="row bg_2" id="footer">
 		<div class="col-xs-12 text-center">
