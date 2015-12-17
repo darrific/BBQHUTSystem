@@ -1,16 +1,16 @@
 
 {
 
-	"HTMLFileName":"1.html",
+	"HTMLFileName":"logo_animated.html",
 	"symbol_stage":{
-		"dummyStageParentWidth":"550px",
-		"dummyStageParentHeight":"400px",
-		"defaultStageParentWidth":"550px",
+		"dummyStageParentWidth":"600px",
+		"dummyStageParentHeight":"600px",
+		"defaultStageParentWidth":"600px",
 		"element_${_Stage}":{
 			"timelineColor2":"0xcbbd71",
 			"timelineColor3":"0x7b7652",
 			"timelineColor":"0xeedf79"},
-		"defaultStageParentHeight":"400px"},
+		"defaultStageParentHeight":"600px"},
 	"PreloadAudio":"auto",
 	"CompZoomFactor":"100",
 	"StageZoomFactor":"100",

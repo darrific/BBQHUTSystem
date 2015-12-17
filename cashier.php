@@ -37,7 +37,7 @@
 					<hr>
 				</div>
 			</div>
-			<div class="row padding_20 bg_5 w">
+			<div class="row padding_20 bg_7 w">
 				<div class="row">
 					<div class="col-lg-7 col-lg-offset-1">
 						<div class="row">
@@ -45,7 +45,7 @@
 							<div class="col-lg-3"><h3>Darrien Persad</h3></div>
 							<div class="col-lg-3"><h3>8683609999</h3></div>
 						</div>
-						<div class="container bg_4">
+						<div class="container bg_8">
 							<h4>Breakdown:</h4>
 							<div class="row">
 								<div class="col-lg-1 col-lg-offset-1">

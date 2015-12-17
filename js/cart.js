@@ -63,9 +63,10 @@ $('#placeOrderButton').on("click", function(){
 		order.pickup = time.format("X");
 		order.consumerName = name;
 		order.phoneNumber = number;
-		alert(JSON.stringify(order));
+		// alert(JSON.stringify(order));
+		alert("Order Posted");
 		$.post('php/ajax.php', {'OrderJSON': JSON.stringify(order), 'action': 'sendOrder'}, function(data, textStatus, xhr) {
-			alert(data);
+			// alert(data);
 		});
 	}else{
 		alert("You must fill out all of the fields!");

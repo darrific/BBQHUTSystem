@@ -73,6 +73,12 @@ $("div[id^='side_item']").each(function(){
 	});
 });
 
+// $('#ResetButton').on("click", function(){
+// 	$.post('php/ajax.php', {'OrderJSON': JSON.stringify(order), 'action': 'clearOrderJSON'}, function(data, textStatus, xhr) {
+// 		render();
+// 	});
+// });
+
 $('#ConfirmButton').on("click", function(){
 	$.post('php/ajax.php', {'OrderJSON': JSON.stringify(order), 'action': 'updateOrderJSON'}, function(data, textStatus, xhr) {
 		$(location).attr('href','cart.php');

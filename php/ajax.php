@@ -8,6 +8,15 @@
 		case "sendOrder":
 			sendOrder();
 			break;
+		case "clearOrderJSON":
+			clearSession();
+			break;
+	}
+
+	function clearSession(){
+		echo "r3kt session\n";
+		session_start();
+		$_SESSION["OrderJSON"] = null;
 	}
 
 	function updateOrderJSON(){

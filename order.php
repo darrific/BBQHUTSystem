@@ -117,7 +117,7 @@
 	</div>
 	<br>
 	<div class="row">
-		<div class="col-xs-10 col-xs-offset-1 text-center">
+		<div class="col-xs-12 col-xs-offset-0 text-center">
 			<div class="jumbotron">
 				<div class="row">
 					<div class="col-xs-12">
@@ -190,14 +190,15 @@
 		</div>
 		<div class="col-xs-10 col-xs-offset-1"><hr></div>
 		<div class="col-xs-10 col-xs-offset-1">
-			<a id="ResetURL">
+			<a id="ResetSession">
 				<button id="ResetButton" class="btn btn-danger btn-block">Reset All </button>
 			</a>
 		</div>
 		<div class="col-xs-10 col-xs-offset-1"><hr></div>
 	</div>
+	<br>
 	<div class="row">
-		<div class="col-xs-12 text-center"> 
+		<div class="col-xs-12 jumbotron text-center"> 
 			<h5 class="default_text padding_10">Press and hold to add an order. Repeat as necessary.</h5>
 		</div>
 	</div>
@@ -209,7 +210,6 @@
 			<hr>
 		</div>
 	</div>
-	<br>
 	<div class="row">
 		<div id="CombosUI" class="noselect col-xs-10 col-xs-offset-1"></div>
 	</div>

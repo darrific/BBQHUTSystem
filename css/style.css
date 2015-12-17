@@ -45,6 +45,14 @@
   background-color: #588C38;
   color: white; }
 
+.bg_7 {
+  background-color: #555;
+  color: white; }
+
+.bg_8 {
+  background-color: #444;
+  color: white; }
+
 .bg_r {
   background-color: red; }
 
@@ -94,7 +102,8 @@
 .header_1 {
   font-family: caviardreamsregular;
   font-size: 53px;
-  padding: 5px; }
+  padding: 5px;
+  color: #345331; }
 
 .header_2 {
   font-family: ultimapdultralight;
@@ -187,13 +196,13 @@
 #index_logo img {
   width: 300px; }
 
-#reviews {
-  background-color: #345331; }
-
 #about_image img {
   width: 100%; }
 
 #contact_container {
   background-image: url(../images/map.PNG); }
+
+body {
+  background: url(../images/texture3.png); }
 
 /*# sourceMappingURL=style.css.map */
