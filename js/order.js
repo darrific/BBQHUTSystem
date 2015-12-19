@@ -70,6 +70,7 @@ $("div[id^='side_item']").each(function(){
 
 		OrderObject.quantity = quantity;
 		order.items.push(OrderObject);
+		//alert(JSON.stringify(order));
 	});
 });
 
@@ -95,7 +96,6 @@ function hidebadge(){
 	var value_badge = $("span[id^='badge_']").each(function(){
 		if ($(this).html() === "0") {
 				$(this).hide();
-			}
+		}
 	});
-	
 }
