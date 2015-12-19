@@ -1,5 +1,4 @@
 <?php
-
 	require 'dbconnect.php';
 	require 'stdObject.php';
 
@@ -19,6 +18,8 @@
 		case "updateBackendUI":
 			updateBackendUI($_POST["status"]);
 			break;
+		case "checkOverdue":
+			checkOverdue();
 	}
 
 	function clearSession(){
@@ -30,6 +31,41 @@
 		$OrderJSON = $_POST["OrderJSON"];
 		session_start();
 		$_SESSION["OrderJSON"] = $OrderJSON;
+	}
+
+	function checkOverdue(){
+		$db = new mysqli('localhost','root','','dborders');
+		if ($db->connect_errno){
+			echo "Error: Failed to make a MySQL connection: \n";
+			echo "Errno: " . $db->connect_errno . "\n";
+			echo "Error: " . $db->connect_error . "\n";
+			exit;
+		}
+
+		$Query = 'SELECT * FROM orders WHERE status="Packed"';
+		if(!($result = $db->query($Query))){
+			echo "Error: Query failed to execute: \n";
+		    echo "Query: ". $Query."\n";
+		    echo "Errno: ". $db->errno."\n";
+		    echo "Error: ". $db->error."\n";
+		    exit;
+		}
+
+		while($order = $result->fetch_assoc()){
+			if(isset($order['pickup'])){
+				$id = $order['orderID'];
+				if(intval($order['pickup']) < time()){
+					$Query2 = "UPDATE orders SET status=\"Overdue\" WHERE orderID=$id";
+					if(!($r = $db->query($Query2))){
+						echo "Error: Query failed to execute: \n";
+					    echo "Query: ". $Query2."\n";
+					    echo "Errno: ". $db->errno."\n";
+					    echo "Error: ". $db->error."\n";
+					    exit;
+					}
+				}
+			}
+		}
 	}
 
 	function sendOrder(){
