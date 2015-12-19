@@ -1,6 +1,6 @@
 <?php
-	require 'dbconnect.php';
 	require 'stdObject.php';
+	session_start();
 
 	switch($_POST["action"]){
 		case "updateOrderJSON":
@@ -20,16 +20,30 @@
 			break;
 		case "checkOverdue":
 			checkOverdue();
+			break;
+		case "getOrders":
+			getOrders();
+			break;
+		case "getCombos":
+			getCombos();
+			break;
+		case "getSides":
+			getSides();
+			break;
+	}
+
+	function getOrders(){
+		if(isset($_SESSION["OrderJSON"])){
+			echo $_SESSION["OrderJSON"];
+		}
 	}
 
 	function clearSession(){
-		session_start();
-		$_SESSION["OrderJSON"] = null;
+		unset($_SESSION["OrderJSON"]);
 	}
 
 	function updateOrderJSON(){
 		$OrderJSON = $_POST["OrderJSON"];
-		session_start();
 		$_SESSION["OrderJSON"] = $OrderJSON;
 	}
 
@@ -66,6 +80,74 @@
 				}
 			}
 		}
+	}
+
+	function getCombos(){
+		$combos = [];
+		$db = new mysqli('localhost','root','','dborders');
+		if ($db->connect_errno){
+			echo "Error: Failed to make a MySQL connection: \n";
+			echo "Errno: " . $db->connect_errno . "\n";
+			echo "Error: " . $db->connect_error . "\n";
+			exit;
+		}
+		$comboQuery = 'SELECT comboID,name,details,price,image FROM combos';
+		if(!($comboResult = $db->query($comboQuery))){
+			echo "Error: Query failed to execute: \n";
+		    echo "Query: ". $comboQuery."\n";
+		    echo "Errno: ". $db->errno."\n";
+		    echo "Error: ". $db->error."\n";
+		    exit;
+		}
+		while($combo = $comboResult->fetch_assoc()){
+			$combo['quantity'] = 0;
+			if (isset($_SESSION['OrderJSON'])){
+				$order = json_decode($_SESSION['OrderJSON']);
+				if(isset($order->items)){
+					foreach($order->items as $item){
+						if($combo['name'] == $item->name){
+							$combo['quantity'] = $item->quantity;
+						}
+					}
+				}
+			}
+			array_push($combos, $combo);
+		}
+		echo json_encode($combos);
+	}
+
+	function getSides(){
+		$sides = [];
+		$db = new mysqli('localhost','root','','dborders');
+		if ($db->connect_errno){
+			echo "Error: Failed to make a MySQL connection: \n";
+			echo "Errno: " . $db->connect_errno . "\n";
+			echo "Error: " . $db->connect_error . "\n";
+			exit;
+		}
+		$sidesQuery = 'SELECT sideID,name,details,price FROM sides';
+		if(!($sidesResult = $db->query($sidesQuery))){
+			echo "Error: Query failed to execute: \n";
+		    echo "Query: ". $sidesQuery."\n";
+		    echo "Errno: ". $db->errno."\n";
+		    echo "Error: ". $db->error."\n";
+		    exit;
+		}
+		while($side = $sidesResult->fetch_assoc()){
+			$side['quantity'] = 0;
+			if (isset($_SESSION['OrderJSON'])){
+				$order = json_decode($_SESSION['OrderJSON']);
+				if(isset($order->items)){
+					foreach($order->items as $item){
+						if($side['name'] == $item->name){
+							$side['quantity'] = $item->quantity;
+						}
+					}
+				}
+			}
+			array_push($sides, $side);
+		}
+		echo json_encode($sides);
 	}
 
 	function sendOrder(){

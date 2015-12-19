@@ -1,10 +1,3 @@
-<?php
-	session_start();
-	if(isset($_SESSION["OrderJSON"])){
-		echo '<div id="OrderJSON" style="display:none;">'.$_SESSION["OrderJSON"].'</div>';
-	}
-?>
-
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<!-- <link rel="stylesheet" type="text/css" href="css/animate.css"> -->
 	<link rel="stylesheet" type="text/css" href="css/fonts.css">
