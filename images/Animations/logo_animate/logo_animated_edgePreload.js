@@ -59,10 +59,10 @@ if (AdobeEdge.bootstrapLoading) { signaledLoading = true; AdobeEdge.loadResource
 
 loadResources(aLoader, doDelayLoad);
 
-var plSTF="width",ctrPlS="both",minPlW="0",maxPlW=undefined,plWidth="600px",plHeight="600px";
+var plSTF="width",ctrPlS="horizontal",minPlW="0",maxPlW=undefined,plWidth="600px",plHeight="600px";
 
 preContent={dom: [ ]};//simpleContent
 
 dlContent={dom: [ ]};//simpleContent
 
-})( "EDGE-257291637");
+})( "EDGE-3943755");

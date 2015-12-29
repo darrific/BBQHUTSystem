@@ -75,7 +75,7 @@
 	
 </head>
 
-<body>
+<body id="order_section">
 	<nav class="navbar navbar-inverse bg_3 navbar-fixed-top">
 		<div class="container">
 			<a href="index.html" class="navbar-brand">Original Bar-B-Que Hut</a>
@@ -106,16 +106,15 @@
 			</ul>
 		</div>
 	</nav>
-	<br><br><br>
-	<div class="row">
+	<br><br>
+	<div class="row" id="order_header_section">
 		<div class="col-xs-12 text-center">
 			<h1 class="header_1">Express Ordering</h1>
 		</div>
-		<div class="col-xs-12 text-center">
-			<h5><i>Introducing our revolutionary Express Ordering System (EOS)</i></h5>
+		<div class="col-xs-12 text-center r">
+			<h4><i><b>Introducing our revolutionary Express Ordering System (EOS)</b></i></h4>
 		</div>
 	</div>
-	<br>
 	<div class="row">
 		<div class="col-xs-12 col-xs-offset-0 text-center">
 			<div class="jumbotron">

@@ -20,7 +20,7 @@ var symbols = {
     build: "4.0.0.359",
     baseState: "Base State",
     scaleToFit: "width",
-    centerStage: "both",
+    centerStage: "horizontal",
     initialState: "Base State",
     gpuAccelerate: false,
     resizeInstances: false,
@@ -34,10 +34,10 @@ var symbols = {
     states: {
         "Base State": {
             "${_Stage}": [
-                ["color", "background-color", 'rgba(255,255,255,0.00)'],
-                ["style", "width", '600px'],
+                ["color", "background-color", 'rgba(255,255,255,1)'],
+                ["style", "overflow", 'hidden'],
                 ["style", "height", '600px'],
-                ["style", "overflow", 'hidden']
+                ["style", "width", '600px']
             ]
         }
     },
@@ -63,4 +63,4 @@ Edge.registerCompositionDefn(compId, symbols, fonts, resources, opts);
 $(window).ready(function() {
      Edge.launchComposition(compId);
 });
-})(jQuery, AdobeEdge, "EDGE-257291637");
+})(jQuery, AdobeEdge, "EDGE-3943755");
