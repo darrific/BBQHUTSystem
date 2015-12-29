@@ -1,20 +1,32 @@
-var order = JSON.parse($('#OrderJSON').html());
+var order = {};
 var template = '{{#OrderItems}}<div class="row bg_6 padding_10" id="TableItem"><div class="col-xs-1">{{quantity}}</div><div class="col-xs-5 col-xs-offset-1"><b>{{name}}</b></div><div class="col-xs-2 col-xs-offset-0">${{price}}</div><div class="col-xs-2 col-xs-offset-0"><span id="removeButton" class="rembut">X</div><br></div><br>{{/OrderItems}}';
 var now = moment();
 
 now.add(30, "m");
-renderTable();
+
+getData();
+
+function getData(){
+	$.post('php/ajax.php', {action: 'getOrders'}, function(data, textStatus, xhr) {
+		if(data.length){
+			order = $.parseJSON(data);
+			renderTable();
+		}
+	});
+}
 
 function renderTable(){
 	var totalPrice = 0;
-	for(var i = 0; i < order.items.length; i++){
-		var price = order.items[i].price;
-		var quantity = order.items[i].quantity;
-		totalPrice += (price*quantity);	
+	if(order.items){
+		for(var i = 0; i < order.items.length; i++){
+			var price = order.items[i].price;
+			var quantity = order.items[i].quantity;
+			totalPrice += (price*quantity);	
+		}
+		$('#totalPrice').html('<span id="totalPriceSpan">$'+totalPrice+'.00</span>');
+		$('#OrderTable').html(Mustache.render(template, {OrderItems : order.items}));
+		registerButtons();
 	}
-	$('#totalPrice').html('<span id="totalPriceSpan">$'+totalPrice+'.00</span>');
-	$('#OrderTable').html(Mustache.render(template, {OrderItems : order.items}));
-	registerButtons();
 }
 
 function registerButtons(){

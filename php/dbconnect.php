@@ -1,5 +1,4 @@
 <?php
-	global $db;
 	$db = new mysqli('localhost','root','','dborders');
 
 	if ($db->connect_errno) {
