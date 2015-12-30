@@ -70,7 +70,7 @@
 						<h3>1</h3>
 					</div>
 					<div id="how_works" class="col-xs-8 col-xs-offset-2">
-						<img src="images/Animations/tutorial/image_1.svg" / alt=":/">
+						<img src="images/tutorial/image_1.svg" / alt=":/">
 					</div>
 					<div class="col-xs-8 col-xs-offset-2 padding_20">
 						<h5>Tap and Hold the option you want to order. <br>
@@ -82,7 +82,7 @@
 						<h3>2</h3>
 					</div>
 					<div id="how_works" class="col-xs-8 col-xs-offset-2">
-						<img src="images/Animations/tutorial/image_2.svg" / alt=":/">
+						<img src="images/tutorial/image_2.svg" / alt=":/">
 					</div>
 					<div class="col-xs-8 col-xs-offset-2 padding_20">
 						<h5>Press the Confirm button.</h5>
@@ -93,7 +93,7 @@
 						<h3>3</h3>
 					</div>
 					<div id="how_works" class="col-xs-8 col-xs-offset-2">
-						<img src="images/Animations/tutorial/image_3.svg" / alt=":/">
+						<img src="images/tutorial/image_3.svg" / alt=":/">
 					</div>
 					<div class="col-xs-8 col-xs-offset-2 padding_20">
 						<h5>Set the time you will collect your order by and enter your contact information.</h5>
@@ -104,7 +104,7 @@
 						<h3>4</h3>
 					</div>
 					<div id="how_works" class="col-xs-8 col-xs-offset-2">
-						<img src="images/Animations/tutorial/image_5.svg" / alt=":/">
+						<img src="images/tutorial/image_5.svg" / alt=":/">
 					</div>
 					<div class="col-xs-8 col-xs-offset-2 padding_20">
 						<h5>Press the Place Order button.</h5>
@@ -115,7 +115,7 @@
 						<h3>5</h3>
 					</div>
 					<div id="how_works" class="col-xs-8 col-xs-offset-2">
-						<img src="images/Animations/tutorial/image_6.svg" / alt=":/">
+						<img src="images/tutorial/image_6.svg" / alt=":/">
 					</div>
 					<div class="col-xs-8 col-xs-offset-2 padding_20">
 						<h5>Skip those long lines and collect your order.</h5>
@@ -152,7 +152,7 @@
 		</div>
 	</div>
 	<div class="row">
-		<div id="CombosUI" class="noselect col-xs-10 col-xs-offset-1"></div>
+		<div id="CombosUI" class="noselect col-xs-12 col-xs-offset-0"></div>
 	</div>
 	<br>
 	<div class="row">
@@ -164,7 +164,7 @@
 	</div>
 	<br>
 	<div class="row">
-		<div id="SidesUI" class="noselect col-xs-10 col-xs-offset-1"></div>
+		<div id="SidesUI" class="noselect col-xs-12 col-xs-offset-0"></div>
 	</div>
 	<br><br><br>
 	<div class="row bg_2" id="footer">

@@ -80,8 +80,8 @@
 		<div class="row" id="cart_table_list">
 			<div class="col-xs-11" style="margin-left: 4.5%">
 				<div class="col-xs-2">Qty</div>
-				<div class="col-xs-4 col-xs-offset-1">Item</div>
-				<div class="col-xs-3">Price</div>
+				<div class="col-xs-3 col-xs-offset-0">Item</div>
+				<div class="col-xs-3 col-xs-offset-1">Price</div>
 				<hr>
 			</div>
 		</div>
@@ -137,8 +137,8 @@
 		<div class="row">
 			<div class="col-xs-10 r col-xs-offset-1">
 				<b class="text-center">NOTE</b>
-				<h6><p>You will be required to collect your order within one hour of the time given.
-				Your order will be cancelled one hour after the set pickup time, with no exceptions.</p>
+				<h6><p>To preserve the high quality of food you expect, you will be required to collect your order within ten minutes of the pickup time set.
+				Your order will be cancelled ten minutes after this time, with no exceptions.</p>
 				<p>By pressing/clicking the "Place Order" button, you agree to our Terms and Conditions
 				of use <a href="#">here</a>.	
 				</p></h6>
