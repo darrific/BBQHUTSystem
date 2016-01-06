@@ -9,3 +9,8 @@ var mainlion = (function(){
 
 
 })();
+
+$(document).ready(function(){
+	// var mainThing = document
+	alert('js loaded');
+});
