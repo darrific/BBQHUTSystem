@@ -45,12 +45,12 @@ CREATE TABLE IF NOT EXISTS `combos` (
 --
 
 INSERT INTO `combos` (`comboID`, `name`, `details`, `price`, `image`) VALUES
-(1, '1/4 Chicken', '1/4 Portion of Chicken with Fries and Green Salad', 45, 'images/bbq5.jpg'),
-(2, '1/2 Chicken', '1/2 Portion of Chicken with Fries and Green Salad', 55, 'images/bbq5.jpg'),
-(3, 'Lamb', 'Lamb Chops with Fries and Green Salad', 55, 'images/bbq5.jpg'),
-(4, 'Beef', 'Beef Steak with Fries and Green Salad', 55, 'images/bbq5.jpg'),
-(5, 'Fish', 'Kingfish with Fries and Green Salad', 55, 'images/bbq5.jpg'),
-(6, 'Shrimp', 'Shrimp with Fries and Green Salad', 75, 'images/bbq5.jpg');
+(1, '1/4 Chicken', '1/4 Portion of Chicken with Fries and Green Salad', 45, 'images/Food/t11.png'),
+(2, '1/2 Chicken', '1/2 Portion of Chicken with Fries and Green Salad', 55, 'images/Food/t10.png'),
+(3, 'Lamb', 'Lamb Chops with Fries and Green Salad', 55, 'images/Food/t6.png'),
+(4, 'Beef', 'Beef Steak with Fries and Green Salad', 55, 'images/Food/t9.png'),
+(5, 'Fish', 'Kingfish with Fries and Green Salad', 55, 'images/Food/t5.png'),
+(6, 'Shrimp', 'Shrimp with Fries and Green Salad', 75, 'images/Food/t3.png');
 
 -- --------------------------------------------------------
 

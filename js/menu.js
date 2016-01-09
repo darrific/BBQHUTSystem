@@ -1,31 +1,21 @@
-			var width= $(window).width() * 0.4;
-			var animation_speed= 500;
+$("#courses_section img").click(function(imgtag){
+    var theimg= imgtag.target;
+    var thesrc = theimg.getAttribute("src");
+    var scrollPos = $(window).scrollTop();
+    $('#displayimg').attr("src", thesrc);
+    $("#imgclick").css('margin-top',scrollPos);
+    $("#imgbox").css('margin-top',scrollPos);
+    $('#imgclick').fadeIn(1);
+});
 
-		$("#regular_meals_options li").click(function(tag){
-				$("#regular_meals_options li").removeClass("selected_option");
-		        var clickt= tag.target;
-		        var current_id = clickt.id; //grab currentid eg. rm0 - rm4
-		        var ide = current_id.substring(2); //returns id number
-	        	$("#regular_meals_images ul").animate({'margin-left': -(width*ide)}, animation_speed);
-	        	$("#"+current_id).addClass("selected_option");
-	        	var li_option = current_id;
-		    });
+$(window).scroll(function(){
+	$('#imgclick').fadeOut(1);
+});
 
-		$("#combination_meals_options li").click(function(tag2){
-				$("#combination_meals_options li").removeClass("selected_option");
-		        var clickt2= tag2.target;
-		        var current_id2 = clickt2.id; //grab currentid eg. rm0 - rm4
-		        var ide2 = current_id2.substring(2); //returns id number
-	        	$("#combination_meals_images ul").animate({'margin-left': -(width*ide2)}, animation_speed);
-	        	$("#"+current_id2).addClass("selected_option");
-	        	var li_option2 = current_id2;
-		    });
+$("#closebutton").click(function(){
+	$('#imgclick').fadeOut(1);
+});
 
-		$('a[href^="#"]').on('click', function(event) {
-
-			var target = $( $(this).attr('href') );
-
-			if( target.length ) {
-    			event.preventDefault();
-    			$('html, body').animate({scrollTop: target.offset().top}, 1000);}
-			});
+$("#overlayimg").click(function(){
+	$('#imgclick').fadeOut(1);
+});

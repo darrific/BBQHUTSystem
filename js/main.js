@@ -9,5 +9,5 @@ $(document).ready(function(){
 	circle.velocity({opacity: 0}, 1600).velocity({opacity: 1}, 1500);
 	tent.velocity({translateY: -100}, 1).velocity({translateY: 0, opacity: 1}, 1000);
 	bbqh.velocity({translateY: 100}, 500).velocity({translateY: 0, opacity: 1}, 1000);
-	original.velocity({translateY: -200}, 1500).velocity({translateY: 0, opacity: 1}, 100);
+	original.velocity({translateY: -200}, 1000).velocity({translateY: 0, opacity: 1}, 100);
 });
