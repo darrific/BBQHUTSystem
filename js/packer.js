@@ -66,6 +66,9 @@ function updatePackerUI(){
 				order = dataObject;
 				render();
 				registerButtons();
+				for(var o in order){
+					$.post('php/ajax.php', {action:"reachedTablet", id:order[o].realID}, function(data, textStatus, xhr) {});
+				}
 			}
     },
     complete: function() {

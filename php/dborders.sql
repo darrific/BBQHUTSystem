@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 15, 2015 at 11:19 PM
+-- Generation Time: Jan 10, 2016 at 12:17 AM
 -- Server version: 5.6.17
 -- PHP Version: 5.5.12
 
@@ -26,8 +26,6 @@ USE `dborders`;
 
 --
 -- Table structure for table `combos`
---
--- Creation: Dec 15, 2015 at 02:08 AM
 --
 
 DROP TABLE IF EXISTS `combos`;
@@ -57,8 +55,6 @@ INSERT INTO `combos` (`comboID`, `name`, `details`, `price`, `image`) VALUES
 --
 -- Table structure for table `orders`
 --
--- Creation: Dec 16, 2015 at 12:52 AM
---
 
 DROP TABLE IF EXISTS `orders`;
 CREATE TABLE IF NOT EXISTS `orders` (
@@ -68,16 +64,15 @@ CREATE TABLE IF NOT EXISTS `orders` (
   `pickup` bigint(20) unsigned NOT NULL,
   `consumerName` varchar(65) NOT NULL,
   `phoneNumber` int(11) NOT NULL,
-  `status` enum('Pending','Completed','Overdue','Removed') NOT NULL DEFAULT 'Pending' COMMENT '''waiting'',''completed'' or ''overdue''',
+  `status` enum('Pending','Packed','Paid','Overdue','Removed') NOT NULL DEFAULT 'Pending' COMMENT '''Pending'',''Packed'',''Paid'',''Overdue'',''Removed''',
+  `reachedTablet` int(11) NOT NULL DEFAULT '0',
   PRIMARY KEY (`orderID`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=4 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=6 ;
 
 -- --------------------------------------------------------
 
 --
 -- Table structure for table `sides`
---
--- Creation: Dec 14, 2015 at 09:16 PM
 --
 
 DROP TABLE IF EXISTS `sides`;
