@@ -1,33 +1,25 @@
 var fail = window.setTimeout(failure, 30000);
-var order = {};
-var reachedOrders = {};
 
-updateArrays();
-
-function updateArrays(){
-	$.post('php/ajax.php', {action: 'getOrders'}, function(data, textStatus, xhr) {
-		order = $.parseJSON(data);
-	});
-	$.post('php/ajax.php', {action: 'getReachedOrders'}, function(data, textStatus, xhr) {
-		reachedOrders = jQuery.parseJSON(data);
-	});
-	checkReached();
-}
+checkReached();
 
 function checkReached(){
-	if(order && reachedOrders){
-		for(reachedOrder in reachedOrders){
-			var consumerName = reachedOrders[reachedOrder].consumerName;
-			var ph = reachedOrders[reachedOrder].phoneNumber;
-			var ID = reachedOrders[reachedOrder].id;
-			if((consumerName == order.consumerName) && (ph == order.phoneNumber.replace("-", ""))){
+	$.post('php/ajax.php', {action: 'checkReached'}, function(data, textStatus, xhr) {
+		alert(data);
+		var repeat = setTimeout(checkReached, 5000);
+		switch(data){
+			case "No order":
 				window.clearTimeout(fail);
-				window.location.href = "success.php?id=" + ID;
-				return;
-			}
+				window.clearTimeout(repeat);
+				alert("You have not placed an order to process yet!");
+				window.location.href = 'failure.html';
+				break;
+			case "Reached":
+				window.clearTimeout(fail);
+				window.clearTimeout(repeat);
+				window.location.href = 'success.html';
+				break;
 		}
-	}
-	setTimeout(updateArrays, 5000);
+	});
 }
 
 function failure(){
