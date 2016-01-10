@@ -76,7 +76,6 @@ $('#placeOrderButton').on("click", function(){
 		order.consumerName = name;
 		order.phoneNumber = number;
 		// alert(JSON.stringify(order));
-		alert("Order Posted");
 		$.post('php/ajax.php', {'OrderJSON': JSON.stringify(order), 'action': 'sendOrder'}, function(data, textStatus, xhr) {
 			window.location.href = "loading.html";
 		});
