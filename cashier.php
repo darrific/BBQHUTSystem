@@ -52,75 +52,10 @@
 					<hr>
 				</div>
 			</div>
-			<div class="row padding_20 bg_7 w">
-				<div class="row padding_20 bg_7 w">
-					<div class="row">
-						<div class="col-lg-7 col-lg-offset-1">
-							<div class="row">
-								<div class="col-lg-2"><h2>0001</h2></div>
-								<div class="col-lg-3"><h3>Darrien Persad</h3></div>
-								<div class="col-lg-3"><h3>8683609999</h3></div>
-							</div>
-							<div class="container bg_8">
-								<h4>Breakdown:</h4>
-								<div class="row">
-									<div class="col-lg-1 col-lg-offset-1">
-										<h4>1</h4>
-									</div>
-									<div class="col-lg-2">
-										<h4>1/4 Chicken</h4>
-									</div>
-									<div class="col-lg-2">
-										<h4>$20</h4>
-									</div>
-								</div>
-								<div class="row">
-									<div class="col-lg-1 col-lg-offset-1">
-										<h4>1</h4>
-									</div>
-									<div class="col-lg-2">
-										<h4>1/4 Chicken</h4>
-									</div>
-									<div class="col-lg-2">
-										<h4>$20</h4>
-									</div>
-								</div>
-								<div class="row">
-									<div class="col-lg-1 col-lg-offset-1">
-										<h4>1</h4>
-									</div>
-									<div class="col-lg-2">
-										<h4>1/4 Chicken</h4>
-									</div>
-									<div class="col-lg-2">
-										<h4>$20</h4>
-									</div>
-								</div>
-								<br>
-							</div>
-						</div>
-						<br><br><br><br><br><br>
-						<div class="col-lg-4">
-							<div class="col-lg-5 col-lg-offset-1"><a href="#"><button class="btn btn-success btn-block"><h3>Paid</h3></button></a></div>
-							<div class="col-lg-5"><a href="#"><button class="btn btn-warning btn-block"><h3>Delete</h3></button></a></div>
-						</div>
-					</div>
-					<br>	
-					<div class="row">
-						<div class="col-lg-2 col-lg-offset-1">
-							<h2 class="padding_10"><b>Total: </b>$60.00</h2>
-						</div>
-						<div class="col-lg-3">
-							<h2 class="padding_10"><b>Pickup: </b> 6:35 PM</h2>
-						</div>
-						<div class="col-lg-3">
-							<h2 class="padding_10"><b>Status: </b>Delayed</h2>
-						</div>
-					</div>
-				</div>
+			<div id="injectOverdueHere" class="row padding_20 bg_7 w">
 			</div>
 		</div>
-		<div id="add_order" class="tab-pane fade"> <!-- ignore this code -->
+<!-- 	<div id="add_order" class="tab-pane fade">
 			<div class="row">
 				<div class="col-lg-12 col-lg-offset-0 text-left">
 					<div class="row">
@@ -163,7 +98,7 @@
 					</div>
 				</div>
 			</div>
-		</div>
+		</div> -->
 	</div>
 	<br><br><br><br><br>
 </body>
