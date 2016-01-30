@@ -4,7 +4,7 @@ checkReached();
 
 function checkReached(){
 	$.post('php/ajax.php', {action: 'checkReached'}, function(data, textStatus, xhr) {
-		alert(data);
+		//alert(data);
 		var repeat = setTimeout(checkReached, 5000);
 		switch(data){
 			case "No order":

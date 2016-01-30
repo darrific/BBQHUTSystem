@@ -39,7 +39,7 @@ function registerButtons(){
 			for(var o in order){
 				if(order[o].id == id){
 					$.post('php/ajax.php', {action:"updateOrderStatus", status:"Packed", id:order[o].realID}, function(data, textStatus, xhr) {
-						updatePackerUI();
+						instaUpdate();
 					});
 				}
 			}
@@ -48,6 +48,38 @@ function registerButtons(){
 }
 
 function updatePackerUI(){
+	$.ajax({
+	    cache: false,
+	    method: "POST",
+		url: 'php/ajax.php', 
+		data: {action:'updateBackendUI', status:"Pending"},
+		success: function(data) {
+			var dataObject = JSON.parse(data);
+		    	for(var o in dataObject){
+					var time = moment(dataObject[o].pickup, "X");
+					time = time.format("h:mm A");
+					dataObject[o].pickup = time;
+					dataObject[o].realID = dataObject[o].id;
+					dataObject[o].id = dataObject[o].id < 10000? pad(dataObject[o].id, 4) : dataObject[o].id % 10000;
+				}
+				if(!(JSON.stringify(order) === JSON.stringify(dataObject))){
+					var beep = new Audio("media/beep.wav");
+					beep.play();
+					order = dataObject;
+					render();
+					registerButtons();
+				}
+				for(var o in order){
+					$.post('php/ajax.php', {action:"reachedTablet", id:order[o].realID}, function(data, textStatus, xhr) {});
+				}
+		},
+		complete: function() {
+		  setTimeout(updatePackerUI, 10000);
+		}
+	});
+}
+
+function instaUpdate(){
   $.ajax({
   	cache: false,
   	method: "POST",
@@ -63,6 +95,8 @@ function updatePackerUI(){
 				dataObject[o].id = dataObject[o].id < 10000? pad(dataObject[o].id, 4) : dataObject[o].id % 10000;
 			}
 			if(!(JSON.stringify(order) === JSON.stringify(dataObject))){
+				var beep = new Audio("media/beep.wav");
+				beep.play();
 				order = dataObject;
 				render();
 				registerButtons();
@@ -71,8 +105,12 @@ function updatePackerUI(){
 				$.post('php/ajax.php', {action:"reachedTablet", id:order[o].realID}, function(data, textStatus, xhr) {});
 			}
     },
-    complete: function() {
-      setTimeout(updatePackerUI, 10000);
-    }
+    complete: function() {}
   });
 }
+
+$('#logout').on('click', function(){
+	$.post('php/ajax.php', {action:"clearSession"}, function(data, textStatus, xhr) {
+		window.location.href = 'http://m.originalbbqhut.com/backendlogin.php';
+	});
+});

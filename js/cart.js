@@ -1,5 +1,5 @@
 var order = {};
-var template = '{{#OrderItems}}<div class="row bg_6 padding_10" id="TableItem"><div class="col-xs-2">{{quantity}}</div><div class="col-xs-4 col-xs-offset-0"><b>{{name}}</b></div><div class="col-xs-2 col-xs-offset-0">${{price}}</div><div class="col-xs-3 col-xs-offset-0"><span id="removeButton" class="rembut w del padding_1">DELETE</div><br></div><br>{{/OrderItems}}';
+var template = '{{#OrderItems}}<div class="row bg_6 padding_10" id="TableItem"><div class="col-xs-2 col-sm-1 col-md-1">{{quantity}}</div><div class="col-xs-4 col-xs-offset-0 col-sm-3 col-md-2"><b>{{name}}</b></div><div class="col-xs-2 col-xs-offset-0 col-md-1 col-md-offset-1">${{price}}</div><div class="col-xs-3 col-xs-offset-0"><span id="removeButton" class="rembut">X</button></div><br></div><br>{{/OrderItems}}';
 var now = moment();
 
 now.add(30, "m");
@@ -62,7 +62,7 @@ $('#time').datetimepicker({
 	format: 'LT',
 	useCurrent: true,
 	stepping: 5,
-	defaultDate: now
+	defaultDate: 'now'
 });
 
 $('#consumerNo').mask('999-9999', {placeholder:"#"});
@@ -71,12 +71,32 @@ $('#placeOrderButton').on("click", function(){
 	var name = $('#consumerName').val();
 	var number =  $('#consumerNo').val();
 	var time = $('#time').data("DateTimePicker").date();
+	var now = moment().unix();
 	if(name && number && time){
 		order.pickup = time.format("X");
 		order.consumerName = name;
 		order.phoneNumber = number;
 		// alert(JSON.stringify(order));
-		$.post('php/ajax.php', {'OrderJSON': JSON.stringify(order), 'action': 'sendOrder'}, function(data, textStatus, xhr) {
+		$.post('php/ajax.php', {'OrderJSON': JSON.stringify(order), 'action': 'sendOrder', 'timePlaced':now}, function(data, textStatus, xhr) {
+			if(data == "not verified"){
+				alert("You did not complete the captcha successfully!");
+				window.location.href = "http://m.originalbbqhut.com/cart.php";
+				return;
+			}
+			if(data == "empty"){
+				alert('You do not have an order placed!');
+				window.location.href = "http://m.originalbbqhut.com/order.php";
+				return;
+			}
+			if(data == "spam"){
+				alert('You already placed an order!');
+				window.location.href = "failure.html";
+				return;
+			}
+			if(data == "early"){
+				alert('You cannot set an order to be picked up before the current time!');
+				return;
+			}
 			window.location.href = "loading.html";
 		});
 	}else{
